@@ -1,0 +1,259 @@
+'use client';
+
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { Container } from '@/components/Container';
+import { Section } from '@/components/Section';
+import { Card } from '@/components/Card';
+
+export default function About() {
+  return (
+    <>
+      <Header />
+      <main>
+        {/* Hero Section */}
+        <Section className="bg-gradient-to-br from-primary-50 to-accent-50 dark:from-neutral-900 dark:to-primary-900">
+          <Container>
+            <div className="text-center space-y-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white">
+                About Passport Legend
+              </h1>
+              <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+                Your trusted partner in global citizenship and residence opportunities
+              </p>
+            </div>
+          </Container>
+        </Section>
+
+        {/* Company Story */}
+        <Section className="bg-white dark:bg-neutral-800">
+          <Container>
+            <div className="grid gap-12 md:grid-cols-2 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6">
+                  Our Story
+                </h2>
+                <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+                  Founded in 2009, Passport Legend emerged from a vision to democratize access to
+                  global citizenship and residence programs. What started as a small advisory firm has
+                  grown into a leading international service provider.
+                </p>
+                <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+                  We've helped thousands of clients worldwide navigate the complex landscape of
+                  investment-based immigration. Our success is built on trust, expertise, and unwavering
+                  commitment to our clients' goals.
+                </p>
+                <p className="text-neutral-600 dark:text-neutral-400">
+                  Today, our team of certified advisors works across 6 continents, providing
+                  personalized guidance and handling every aspect of the citizenship and residency
+                  application process.
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-primary-200 to-accent-200 dark:from-primary-900 dark:to-accent-900 rounded-2xl h-96 flex items-center justify-center">
+                <div className="text-6xl">🌐</div>
+              </div>
+            </div>
+          </Container>
+        </Section>
+
+        {/* Mission & Values */}
+        <Section className="bg-neutral-50 dark:bg-neutral-900">
+          <Container>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-4">
+                Our Mission & Values
+              </h2>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-3">
+              <Card>
+                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3">
+                  Integrity
+                </h3>
+                <p className="text-neutral-600 dark:text-neutral-400">
+                  Complete transparency and honesty in all our dealings. We build lasting relationships
+                  on trust and ethical practices.
+                </p>
+              </Card>
+              <Card>
+                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3">
+                  Excellence
+                </h3>
+                <p className="text-neutral-600 dark:text-neutral-400">
+                  Committed to delivering the highest standard of service. We continuously improve our
+                  processes and expertise.
+                </p>
+              </Card>
+              <Card>
+                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3">
+                  Global Perspective
+                </h3>
+                <p className="text-neutral-600 dark:text-neutral-400">
+                  Deep understanding of international regulations and diverse client needs across
+                  cultures and jurisdictions.
+                </p>
+              </Card>
+            </div>
+          </Container>
+        </Section>
+
+        {/* Partnerships */}
+        <Section className="bg-white dark:bg-neutral-800">
+          <Container>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-4">
+                Partnerships & Collaborations
+              </h2>
+              <p className="text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+                We work with law firms, immigration consultants, and financial advisors worldwide to
+                provide comprehensive solutions.
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              <Card>
+                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-4">
+                  For Law Firms
+                </h3>
+                <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+                  We offer comprehensive referral programs and professional collaboration opportunities.
+                  Our certified advisors can support your immigration practice with expert guidance on
+                  investment-based residency and citizenship programs.
+                </p>
+                <p className="text-sm text-primary-600 dark:text-primary-400 font-semibold">
+                  Contact: partners@passportlegend.com
+                </p>
+              </Card>
+              <Card>
+                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-4">
+                  For Agents & Consultants
+                </h3>
+                <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+                  Join our network of qualified agents and earn attractive commissions. We provide
+                  training, marketing materials, and full operational support.
+                </p>
+                <p className="text-sm text-primary-600 dark:text-primary-400 font-semibold">
+                  Contact: agents@passportlegend.com
+                </p>
+              </Card>
+            </div>
+          </Container>
+        </Section>
+
+        {/* Office Locations */}
+        <Section className="bg-neutral-50 dark:bg-neutral-900">
+          <Container>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-4">
+                Global Offices
+              </h2>
+              <p className="text-neutral-600 dark:text-neutral-300">
+                Visit us at any of our international locations
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-3">
+              <Card>
+                <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-4">
+                  New York, USA
+                </h3>
+                <div className="space-y-3 text-neutral-600 dark:text-neutral-400">
+                  <p>
+                    <strong>Address:</strong>
+                    <br />
+                    123 Business Avenue
+                    <br />
+                    New York, NY 10001
+                  </p>
+                  <p>
+                    <strong>Phone:</strong>
+                    <br />
+                    +1 (212) 555-0123
+                  </p>
+                  <p>
+                    <strong>Hours:</strong>
+                    <br />
+                    Mon-Fri: 9 AM - 6 PM EST
+                  </p>
+                </div>
+              </Card>
+              <Card>
+                <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-4">
+                  London, UK
+                </h3>
+                <div className="space-y-3 text-neutral-600 dark:text-neutral-400">
+                  <p>
+                    <strong>Address:</strong>
+                    <br />
+                    456 Mayfair Plaza
+                    <br />
+                    London, W1A 2BX
+                  </p>
+                  <p>
+                    <strong>Phone:</strong>
+                    <br />
+                    +44 (20) 7946 0000
+                  </p>
+                  <p>
+                    <strong>Hours:</strong>
+                    <br />
+                    Mon-Fri: 9 AM - 6 PM GMT
+                  </p>
+                </div>
+              </Card>
+              <Card>
+                <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-4">
+                  Singapore
+                </h3>
+                <div className="space-y-3 text-neutral-600 dark:text-neutral-400">
+                  <p>
+                    <strong>Address:</strong>
+                    <br />
+                    789 Central Avenue
+                    <br />
+                    Singapore 188555
+                  </p>
+                  <p>
+                    <strong>Phone:</strong>
+                    <br />
+                    +65 6932 4320
+                  </p>
+                  <p>
+                    <strong>Hours:</strong>
+                    <br />
+                    Mon-Fri: 9 AM - 6 PM SGT
+                  </p>
+                </div>
+              </Card>
+            </div>
+          </Container>
+        </Section>
+
+        {/* Team Stats */}
+        <Section className="bg-primary-50 dark:bg-primary-900/20">
+          <Container>
+            <div className="grid gap-8 text-center md:grid-cols-4">
+              <div>
+                <p className="text-4xl font-bold text-primary-600 dark:text-primary-400">50+</p>
+                <p className="text-neutral-600 dark:text-neutral-300">Certified Advisors</p>
+              </div>
+              <div>
+                <p className="text-4xl font-bold text-primary-600 dark:text-primary-400">15+</p>
+                <p className="text-neutral-600 dark:text-neutral-300">Years Experience</p>
+              </div>
+              <div>
+                <p className="text-4xl font-bold text-primary-600 dark:text-primary-400">5000+</p>
+                <p className="text-neutral-600 dark:text-neutral-300">Clients Served</p>
+              </div>
+              <div>
+                <p className="text-4xl font-bold text-primary-600 dark:text-primary-400">6</p>
+                <p className="text-neutral-600 dark:text-neutral-300">Continents</p>
+              </div>
+            </div>
+          </Container>
+        </Section>
+      </main>
+      <Footer />
+    </>
+  );
+}
