@@ -38,7 +38,7 @@ export default function Home() {
                   worldwide.
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row">
-                  <Button size="lg" variant="primary" asChild>
+                  <Button size="lg" variant="secondary" asChild>
                     <Link href="/contact">Book a Consultation</Link>
                   </Button>
                   <Button size="lg" variant="outline" asChild>
