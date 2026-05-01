@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Check, Globe, BarChart3, Sparkles, TrendingUp, Plane, Users, Home, Milestone } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
@@ -16,17 +17,20 @@ export default function Residence() {
       <Header />
       <main>
         {/* Hero Section */}
-        <Section className="bg-gradient-to-br from-primary-50 to-accent-50 dark:from-neutral-900 dark:to-primary-900">
-          <Container>
-            <div className="text-center space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white">
-                Residence by Investment
+        <Section className="relative min-h-[50vh] flex items-center overflow-hidden bg-primary-900 text-white">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-accent-600),transparent_50%)] opacity-20" />
+          <div className="absolute inset-0 bg-neutral-900/40" />
+          <Container className="relative z-10">
+            <div className="text-center space-y-8 animate-fade-in-up">
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+                Residence by <span className="text-accent-400">Investment</span>
               </h1>
-              <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-neutral-200 max-w-3xl mx-auto font-light leading-relaxed">
                 Secure residency in world-class destinations. Live, work, and
                 invest in countries with exceptional quality of life, economic
                 opportunities, and lifestyle benefits.
               </p>
+              <div className="h-1 w-24 bg-accent-500 mx-auto rounded-full" />
             </div>
           </Container>
         </Section>
@@ -48,7 +52,7 @@ export default function Residence() {
               <ul className="space-y-3 text-neutral-600 dark:text-neutral-400">
                 <li className="flex gap-3">
                   <span className="text-primary-600 dark:text-primary-400 font-bold">
-                    ✓
+                    <Check size={16} className="text-primary-600 dark:text-primary-400" />
                   </span>
                   <span>
                     <strong>Real Estate:</strong> Purchase property meeting
@@ -57,7 +61,7 @@ export default function Residence() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary-600 dark:text-primary-400 font-bold">
-                    ✓
+                    <Check size={16} className="text-primary-600 dark:text-primary-400" />
                   </span>
                   <span>
                     <strong>Capital Investment:</strong> Deposit funds in
@@ -66,7 +70,7 @@ export default function Residence() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary-600 dark:text-primary-400 font-bold">
-                    ✓
+                    <Check size={16} className="text-primary-600 dark:text-primary-400" />
                   </span>
                   <span>
                     <strong>Business Establishment:</strong> Start and operate a
@@ -75,7 +79,7 @@ export default function Residence() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary-600 dark:text-primary-400 font-bold">
-                    ✓
+                    <Check size={16} className="text-primary-600 dark:text-primary-400" />
                   </span>
                   <span>
                     <strong>Job Creation:</strong> Create employment for local
@@ -105,50 +109,49 @@ export default function Residence() {
               {[
                 {
                   title: "Flexibility",
-                  description:
-                    "Keep your original citizenship while living abroad",
-                  icon: "🌐",
+                  description: "Keep your original citizenship while living abroad",
+                  icon: Globe,
                 },
                 {
                   title: "Tax Planning",
-                  description:
-                    "Strategic tax residency and planning opportunities",
-                  icon: "📊",
+                  description: "Strategic tax residency and planning opportunities",
+                  icon: BarChart3,
                 },
                 {
                   title: "Quality of Life",
                   description: "Access to world-class healthcare and education",
-                  icon: "✨",
+                  icon: Sparkles,
                 },
                 {
                   title: "Business Growth",
                   description: "Expand your business to new markets",
-                  icon: "📈",
+                  icon: TrendingUp,
                 },
                 {
                   title: "Schengen Access",
-                  description:
-                    "Travel freely in EU countries (select programs)",
-                  icon: "🛫",
+                  description: "Travel freely in EU countries (select programs)",
+                  icon: Plane,
                 },
                 {
                   title: "Family Sponsorship",
                   description: "Bring dependents with you",
-                  icon: "👪",
+                  icon: Users,
                 },
                 {
                   title: "Property Rights",
                   description: "Own and rent property freely",
-                  icon: "🏘️",
+                  icon: Home,
                 },
                 {
                   title: "Pathway to Citizenship",
                   description: "Many programs offer citizenship eligibility",
-                  icon: "🛤️",
+                  icon: Milestone,
                 },
               ].map((benefit, index) => (
                 <Card key={index} className="text-center">
-                  <div className="text-4xl mb-3">{benefit.icon}</div>
+                  <div className="text-primary-600 dark:text-primary-400 flex justify-center mb-4">
+                    <benefit.icon size={40} />
+                  </div>
                   <h3 className="font-semibold text-neutral-900 dark:text-white mb-2">
                     {benefit.title}
                   </h3>

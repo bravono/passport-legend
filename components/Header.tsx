@@ -9,6 +9,7 @@ import {
   getCitizenshipCountries,
   getResidenceCountries,
 } from "@/lib/data/countries";
+import { Sun, Moon, Menu, X, ChevronDown } from "lucide-react";
 
 const otherNavLinks = [
   { href: "/", label: "Home" },
@@ -64,16 +65,17 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-neutral-200 bg-white/80 backdrop-blur-md dark:border-neutral-700 dark:bg-neutral-900/80">
+    <header className="sticky top-0 z-50 w-full glass">
       <Container>
         <div className="flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-500 font-bold text-white">
-              PL
-            </div>
             <span className="hidden font-bold text-neutral-900 dark:text-white sm:inline">
-              <img src="assets/PL Logo Tra" alt="" />
+              <img
+                src="/assets/PL LOGO Transparent.png"
+                alt="Passport Legend"
+                className="h-50 w-auto"
+              />
             </span>
           </Link>
 
@@ -98,22 +100,12 @@ export function Header() {
             >
               <Link
                 href="/citizenship"
-                className="text-sm font-medium text-neutral-600 transition-colors hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400 flex items-center gap-1"
+                className="text-sm font-medium text-neutral-600 transition-all duration-300 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400 flex items-center gap-1 group"
               >
                 Citizenship
-                <svg
-                  className={`w-4 h-4 transition-transform ${openDropdown === "citizenship" ? "rotate-180" : ""}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                  />
-                </svg>
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-300 ${openDropdown === "citizenship" ? "rotate-180" : ""}`}
+                />
               </Link>
 
               {openDropdown === "citizenship" && (
@@ -152,22 +144,12 @@ export function Header() {
             >
               <Link
                 href="/residence"
-                className="text-sm font-medium text-neutral-600 transition-colors hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400 flex items-center gap-1"
+                className="text-sm font-medium text-neutral-600 transition-all duration-300 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400 flex items-center gap-1 group"
               >
                 Residence
-                <svg
-                  className={`w-4 h-4 transition-transform ${openDropdown === "residence" ? "rotate-180" : ""}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                  />
-                </svg>
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-300 ${openDropdown === "residence" ? "rotate-180" : ""}`}
+                />
               </Link>
 
               {openDropdown === "residence" && (
@@ -203,25 +185,13 @@ export function Header() {
             {mounted && (
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="rounded-lg p-2 text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800"
+                className="rounded-lg p-2 text-neutral-600 hover:bg-primary-50 dark:text-neutral-400 dark:hover:bg-primary-900/30 transition-all duration-300"
                 aria-label="Toggle theme"
               >
                 {theme === "dark" ? (
-                  <svg
-                    className="h-5 w-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M10.5 1.5H9.5V.5h1v1zm0 17H9.5v-1h1v1zM19 9.5v1h-1v-1h1zm-18 0v1H0v-1h1zM17.657 2.343L16.95 3.05l-.707-.707.707-.707zm-15.314 15.314l-.707.707-.707-.707.707-.707zm0-15.314l.707.707-.707.707-.707-.707zm15.314 15.314l.707-.707.707.707-.707.707zM10 5a5 5 0 110 10 5 5 0 010-10z" />
-                  </svg>
+                  <Sun className="h-5 w-5 animate-scale-up" />
                 ) : (
-                  <svg
-                    className="h-5 w-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                  </svg>
+                  <Moon className="h-5 w-5 animate-scale-up" />
                 )}
               </button>
             )}
@@ -229,37 +199,13 @@ export function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="rounded-lg p-2 text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800 md:hidden"
+              className="rounded-lg p-2 text-neutral-600 hover:bg-primary-50 dark:text-neutral-400 dark:hover:bg-primary-900/30 transition-all duration-300 md:hidden"
               aria-label="Toggle menu"
             >
               {mobileOpen ? (
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
+                <X className="h-6 w-6 animate-scale-up" />
               ) : (
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
+                <Menu className="h-6 w-6 animate-scale-up" />
               )}
             </button>
           </div>

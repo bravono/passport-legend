@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Check, Globe, ArrowRight, ChevronRight } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -51,32 +52,33 @@ export default function CountryPage({ params }: Props) {
       <Header />
       <main>
         {/* Hero Section */}
-        <Section className="relative bg-neutral-900 h-96 flex items-end">
+        <Section className="relative min-h-[60vh] flex items-end pb-12 overflow-hidden bg-neutral-900">
           <div
-            className="absolute inset-0 bg-cover bg-center opacity-60"
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105"
             style={{
               backgroundImage: `url('${country.heroImage}')`,
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/60 to-transparent" />
+          <div className="absolute inset-0 bg-primary-900/20 mix-blend-multiply" />
 
           <Container className="relative z-10">
-            <div className="mb-8">
-              <nav className="text-sm text-neutral-300 mb-4 flex gap-2">
-                <Link href="/" className="hover:text-white">
+            <div className="max-w-3xl animate-fade-in-up">
+              <nav className="text-sm font-medium text-neutral-300 mb-6 flex items-center gap-2">
+                <Link href="/" className="hover:text-accent-400 transition-colors">
                   Home
                 </Link>
-                <span>/</span>
-                <Link href={breadcrumbHref} className="hover:text-white">
+                <span className="opacity-50">/</span>
+                <Link href={breadcrumbHref} className="hover:text-accent-400 transition-colors">
                   {breadcrumbType}
                 </Link>
-                <span>/</span>
-                <span className="text-white font-semibold">{country.name}</span>
+                <span className="opacity-50">/</span>
+                <span className="text-accent-400">{country.name}</span>
               </nav>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
                 {country.name}
               </h1>
-              <p className="text-xl text-neutral-200 max-w-2xl">
+              <p className="text-xl md:text-2xl text-neutral-200 leading-relaxed font-light">
                 {country.shortDescription}
               </p>
             </div>
@@ -101,16 +103,16 @@ export default function CountryPage({ params }: Props) {
             <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-8">
               Key Benefits
             </h2>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-6 md:grid-cols-2">
               {country.sections.benefits.map((benefit, index) => (
-                <div key={index} className="flex gap-4">
+                <Card key={index} className="flex flex-row items-center gap-4 p-4 md:p-6 bg-white dark:bg-neutral-800">
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-6 w-6 rounded-md bg-primary-500 text-white">
-                      ✓
+                    <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-400">
+                      <Check size={20} strokeWidth={2.5} />
                     </div>
                   </div>
-                  <p className="text-neutral-600 dark:text-neutral-400">{benefit}</p>
-                </div>
+                  <p className="text-neutral-700 dark:text-neutral-300 font-medium leading-tight">{benefit}</p>
+                </Card>
               ))}
             </div>
           </Container>

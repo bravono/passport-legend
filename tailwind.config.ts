@@ -51,44 +51,32 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-geist-mono)", "monospace"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
       },
-      fontSize: {
-        xs: ["12px", { lineHeight: "16px" }],
-        sm: ["14px", { lineHeight: "20px" }],
-        base: ["16px", { lineHeight: "24px" }],
-        lg: ["18px", { lineHeight: "28px" }],
-        xl: ["20px", { lineHeight: "28px" }],
-        "2xl": ["24px", { lineHeight: "32px" }],
-        "3xl": ["30px", { lineHeight: "36px" }],
-        "4xl": ["36px", { lineHeight: "40px" }],
-        "5xl": ["48px", { lineHeight: "52px" }],
-        "6xl": ["60px", { lineHeight: "64px" }],
+      boxShadow: {
+        premium:
+          "0 10px 30px -5px rgba(27, 54, 93, 0.1), 0 4px 10px -2px rgba(212, 175, 55, 0.05)",
+        "premium-hover":
+          "0 20px 40px -5px rgba(27, 54, 93, 0.2), 0 10px 20px -2px rgba(212, 175, 55, 0.1)",
+        glass: "0 8px 32px 0 rgba(27, 54, 93, 0.1)",
       },
-      spacing: {
-        xs: "4px",
-        sm: "8px",
-        md: "12px",
-        lg: "16px",
-        xl: "24px",
-        "2xl": "32px",
-        "3xl": "48px",
-        "4xl": "64px",
-      },
-      transitionTimingFunction: {
-        "smooth": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-        "bounce": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+      borderRadius: {
+        xl: "1rem",
+        "2xl": "1.5rem",
+        "3xl": "2rem",
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-in-out",
-        "fade-in-up": "fadeInUp 0.6s ease-out",
+        "fade-in-up": "fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
         "slide-in-left": "slideInLeft 0.5s ease-out",
         "scale-up": "scaleUp 0.5s ease-out",
-        "page-enter": "pageEnter 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)",
-        "expand-width": "expandWidth 0.4s ease-out forwards",
-        "shimmer": "shimmer 2s infinite",
-        "float": "float 3s ease-in-out infinite",
-        "slide-down": "slideDown 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
-        "bounce-in": "bounceIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "page-enter": "pageEnter 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
+        "expand-width":
+          "expandWidth 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        shimmer: "shimmer 2.5s infinite linear",
+        float: "float 4s ease-in-out infinite",
+        "slide-down": "slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+        "bounce-in": "bounceIn 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
       },
       keyframes: {
         fadeIn: {

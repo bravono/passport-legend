@@ -1,13 +1,14 @@
-'use client';
+"use client";
 
-import { useState, FormEvent } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { Container } from '@/components/Container';
-import { Section } from '@/components/Section';
-import { Card } from '@/components/Card';
-import { Button } from '@/components/Button';
-import { getCountriesByType } from '@/lib/data/countries';
+import { useState, FormEvent } from "react";
+import { Check } from "lucide-react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Container } from "@/components/Container";
+import { Section } from "@/components/Section";
+import { Card } from "@/components/Card";
+import { Button } from "@/components/Button";
+import { getCountriesByType } from "@/lib/data/countries";
 
 interface FormData {
   name: string;
@@ -19,18 +20,22 @@ interface FormData {
 
 export default function Contact() {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    phone: '',
-    country: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    country: "",
+    message: "",
   });
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
-  const countries = getCountriesByType('both');
+  const countries = getCountriesByType("both");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -40,27 +45,27 @@ export default function Contact() {
 
   const validateForm = (): boolean => {
     if (!formData.name.trim()) {
-      setError('Name is required');
+      setError("Name is required");
       return false;
     }
     if (!formData.email.trim()) {
-      setError('Email is required');
+      setError("Email is required");
       return false;
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setError('Please enter a valid email');
+      setError("Please enter a valid email");
       return false;
     }
     if (!formData.phone.trim()) {
-      setError('Phone is required');
+      setError("Phone is required");
       return false;
     }
     if (!formData.message.trim()) {
-      setError('Message is required');
+      setError("Message is required");
       return false;
     }
-    setError('');
+    setError("");
     return true;
   };
 
@@ -72,20 +77,22 @@ export default function Contact() {
     }
 
     // Store to localStorage
-    const submissions = JSON.parse(localStorage.getItem('contact_submissions') || '[]');
+    const submissions = JSON.parse(
+      localStorage.getItem("contact_submissions") || "[]",
+    );
     submissions.push({
       ...formData,
       submittedAt: new Date().toISOString(),
     });
-    localStorage.setItem('contact_submissions', JSON.stringify(submissions));
+    localStorage.setItem("contact_submissions", JSON.stringify(submissions));
 
     // Reset form
     setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      country: '',
-      message: '',
+      name: "",
+      email: "",
+      phone: "",
+      country: "",
+      message: "",
     });
     setSubmitted(true);
 
@@ -100,16 +107,17 @@ export default function Contact() {
       <Header />
       <main>
         {/* Hero Section */}
-        <Section className="bg-gradient-to-br from-primary-50 to-accent-50 dark:from-neutral-900 dark:to-primary-900">
-          <Container>
-            <div className="text-center space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white">
-                Get in Touch
-              </h1>
-              <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
-                Schedule your free consultation with our expert advisors
-              </p>
-            </div>
+        <Section className="relative min-h-[40vh] flex items-center overflow-hidden bg-primary-900 text-white">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-accent-600),transparent_50%)] opacity-20" />
+          <div className="absolute inset-0 bg-neutral-900/40" />
+          <Container className="relative z-10 text-center space-y-6 animate-fade-in-up">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+              Get in <span className="text-accent-400">Touch</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-neutral-200 max-w-2xl mx-auto font-light leading-relaxed">
+              Schedule your free consultation with our expert advisors
+            </p>
+            <div className="h-1 w-24 bg-accent-500 mx-auto rounded-full" />
           </Container>
         </Section>
 
@@ -125,15 +133,18 @@ export default function Contact() {
 
                 {submitted && (
                   <div className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border border-green-400 dark:border-green-700 rounded-lg">
-                    <p className="text-green-800 dark:text-green-200 font-semibold">
-                      ✓ Thank you! Your message has been received. We'll contact you soon.
+                    <p className="text-green-800 dark:text-green-200 font-semibold flex items-center gap-2">
+                      <Check size={18} /> Thank you! Your message has been
+                      received. We'll contact you soon.
                     </p>
                   </div>
                 )}
 
                 {error && (
                   <div className="mb-6 p-4 bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-700 rounded-lg">
-                    <p className="text-red-800 dark:text-red-200 font-semibold">{error}</p>
+                    <p className="text-red-800 dark:text-red-200 font-semibold">
+                      {error}
+                    </p>
                   </div>
                 )}
 
@@ -230,7 +241,10 @@ export default function Contact() {
                     <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-2">
                       Email
                     </h3>
-                    <a href="mailto:hello@passportlegend.com" className="text-primary-600 dark:text-primary-400 hover:underline">
+                    <a
+                      href="mailto:hello@passportlegend.com"
+                      className="text-primary-600 dark:text-primary-400 hover:underline"
+                    >
                       hello@passportlegend.com
                     </a>
                     <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
@@ -242,11 +256,14 @@ export default function Contact() {
                     <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-2">
                       Phone
                     </h3>
-                    <a href="tel:+12125550123" className="text-primary-600 dark:text-primary-400 hover:underline">
-                      +1 (212) 555-0123
+                    <a
+                      href="tel:+2347081432919"
+                      className="text-primary-600 dark:text-primary-400 hover:underline"
+                    >
+                      +234 708 143 2919
                     </a>
                     <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
-                      Available Mon-Fri, 9 AM - 6 PM EST
+                      Available Mon-Fri, 9 AM - 6 PM GMT
                     </p>
                   </Card>
 
@@ -256,19 +273,18 @@ export default function Contact() {
                     </h3>
                     <div className="space-y-3 text-sm text-neutral-600 dark:text-neutral-400">
                       <div>
-                        <p className="font-semibold text-neutral-900 dark:text-white">New York, USA</p>
-                        <p>123 Business Avenue</p>
-                        <p>New York, NY 10001</p>
+                        <p className="font-semibold text-neutral-900 dark:text-white">
+                          1st floor,
+                        </p>
+                        <p>North westgate house, Harlow, Essex</p>
+                        <p>United Kingdom</p>
                       </div>
                       <div>
-                        <p className="font-semibold text-neutral-900 dark:text-white">London, UK</p>
-                        <p>456 Mayfair Plaza</p>
-                        <p>London, W1A 2BX</p>
-                      </div>
-                      <div>
-                        <p className="font-semibold text-neutral-900 dark:text-white">Singapore</p>
-                        <p>789 Central Avenue</p>
-                        <p>Singapore 188555</p>
+                        <p className="font-semibold text-neutral-900 dark:text-white">
+                          7th floor
+                        </p>
+                        <p>Churchgate tower, Central Business District,</p>
+                        <p>Abuja, Nigeria</p>
                       </div>
                     </div>
                   </Card>
@@ -290,27 +306,29 @@ export default function Contact() {
             <div className="grid gap-6 md:grid-cols-2">
               {[
                 {
-                  q: 'How long does the consultation take?',
-                  a: 'Initial consultations typically last 30-45 minutes. We tailor the discussion to your specific needs.',
+                  q: "How long does the consultation take?",
+                  a: "Initial consultations typically last 30-45 minutes. We tailor the discussion to your specific needs.",
                 },
                 {
-                  q: 'What information do I need to provide?',
-                  a: 'Basic information about your background, financial situation, and immigration goals. Detailed due diligence comes later.',
+                  q: "What information do I need to provide?",
+                  a: "Basic information about your background, financial situation, and immigration goals. Detailed due diligence comes later.",
                 },
                 {
-                  q: 'Is the consultation free?',
-                  a: 'Yes, our initial consultation is completely free and without obligation.',
+                  q: "Is the consultation free?",
+                  a: "Yes, our initial consultation is completely free and without obligation.",
                 },
                 {
-                  q: 'Do you guarantee approval?',
-                  a: 'We cannot guarantee approval, but our 98% success rate reflects our expertise and due diligence.',
+                  q: "Do you guarantee approval?",
+                  a: "We cannot guarantee approval, but our 98% success rate reflects our expertise and due diligence.",
                 },
               ].map((faq, index) => (
                 <Card key={index}>
                   <h3 className="font-semibold text-neutral-900 dark:text-white mb-2">
                     {faq.q}
                   </h3>
-                  <p className="text-neutral-600 dark:text-neutral-400">{faq.a}</p>
+                  <p className="text-neutral-600 dark:text-neutral-400">
+                    {faq.a}
+                  </p>
                 </Card>
               ))}
             </div>

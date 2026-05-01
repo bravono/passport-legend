@@ -10,11 +10,15 @@ interface CountryGridProps {
 export function CountryGrid({ countries }: CountryGridProps) {
   return (
     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {countries.map((country) => (
+      {countries.map((country, index) => (
         <Link
           key={country.id}
           href={`/countries/${country.slug}`}
-          className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl active:scale-95 hover:scale-105"
+          style={{
+            animation: `fadeInUp 0.6s ease-out forwards`,
+            animationDelay: `${index * 0.1}s`,
+          }}
+          className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 ease-smooth hover:shadow-2xl active:scale-95 hover:scale-105 opacity-0"
         >
           {/* Background Image */}
           <img

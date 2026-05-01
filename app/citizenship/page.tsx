@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Check, Globe, Briefcase, Users, Coins, Hospital, Home, Key, Shield } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
@@ -16,17 +17,20 @@ export default function Citizenship() {
       <Header />
       <main>
         {/* Hero Section */}
-        <Section className="bg-gradient-to-br from-primary-50 to-accent-50 dark:from-neutral-900 dark:to-primary-900">
-          <Container>
-            <div className="text-center space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white">
-                Citizenship by Investment
+        <Section className="relative min-h-[50vh] flex items-center overflow-hidden bg-primary-900 text-white">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-accent-600),transparent_50%)] opacity-20" />
+          <div className="absolute inset-0 bg-neutral-900/40" />
+          <Container className="relative z-10">
+            <div className="text-center space-y-8 animate-fade-in-up">
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+                Citizenship by <span className="text-accent-400">Investment</span>
               </h1>
-              <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-neutral-200 max-w-3xl mx-auto font-light leading-relaxed">
                 Gain citizenship in premium countries worldwide. Expand your
                 horizons with global mobility, visa-free travel, and unlimited
                 opportunities.
               </p>
+              <div className="h-1 w-24 bg-accent-500 mx-auto rounded-full" />
             </div>
           </Container>
         </Section>
@@ -47,7 +51,7 @@ export default function Citizenship() {
               <ul className="space-y-3 text-neutral-600 dark:text-neutral-400">
                 <li className="flex gap-3">
                   <span className="text-primary-600 dark:text-primary-400 font-bold">
-                    ✓
+                    <Check size={16} className="text-primary-600 dark:text-primary-400" />
                   </span>
                   <span>
                     <strong>Real Estate Investment:</strong> Purchasing property
@@ -56,7 +60,7 @@ export default function Citizenship() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary-600 dark:text-primary-400 font-bold">
-                    ✓
+                    <Check size={16} className="text-primary-600 dark:text-primary-400" />
                   </span>
                   <span>
                     <strong>Government Bonds:</strong> Investing in
@@ -65,7 +69,7 @@ export default function Citizenship() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary-600 dark:text-primary-400 font-bold">
-                    ✓
+                    <Check size={16} className="text-primary-600 dark:text-primary-400" />
                   </span>
                   <span>
                     <strong>Capital Transfer:</strong> Direct government fund
@@ -74,7 +78,7 @@ export default function Citizenship() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary-600 dark:text-primary-400 font-bold">
-                    ✓
+                    <Check size={16} className="text-primary-600 dark:text-primary-400" />
                   </span>
                   <span>
                     <strong>Business Investment:</strong> Creating jobs and
@@ -106,46 +110,48 @@ export default function Citizenship() {
                 {
                   title: "Visa Freedom",
                   description: "Travel visa-free to 140+ countries",
-                  icon: "🌍",
+                  icon: Globe,
                 },
                 {
                   title: "Business Opportunities",
                   description: "Unrestricted business and investment rights",
-                  icon: "💼",
+                  icon: Briefcase,
                 },
                 {
                   title: "Family Benefits",
                   description: "Include spouse and dependent children",
-                  icon: "👨‍👩‍👧‍👦",
+                  icon: Users,
                 },
                 {
                   title: "Tax Advantages",
                   description: "Access to favorable tax treaties",
-                  icon: "💰",
+                  icon: Coins,
                 },
                 {
                   title: "Healthcare & Education",
                   description: "Equal access to public services",
-                  icon: "🏥",
+                  icon: Hospital,
                 },
                 {
                   title: "Real Estate Rights",
                   description: "Property ownership and rental rights",
-                  icon: "🏠",
+                  icon: Home,
                 },
                 {
                   title: "Permanent Residence",
                   description: "Lifetime residency rights",
-                  icon: "🔑",
+                  icon: Key,
                 },
                 {
                   title: "Security",
                   description: "Stability and political security",
-                  icon: "🛡️",
+                  icon: Shield,
                 },
               ].map((benefit, index) => (
                 <Card key={index} className="text-center">
-                  <div className="text-4xl mb-3">{benefit.icon}</div>
+                  <div className="text-primary-600 dark:text-primary-400 flex justify-center mb-4">
+                    <benefit.icon size={40} />
+                  </div>
                   <h3 className="font-semibold text-neutral-900 dark:text-white mb-2">
                     {benefit.title}
                   </h3>

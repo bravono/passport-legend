@@ -16,6 +16,40 @@
   --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-serif);
+
+  --color-primary-50: #f0f4f8;
+  --color-primary-100: #d9e2ec;
+  --color-primary-200: #bcccdc;
+  --color-primary-300: #9fb3c8;
+  --color-primary-400: #829ab1;
+  --color-primary-500: #1b365d;
+  --color-primary-600: #183154;
+  --color-primary-700: #152946;
+  --color-primary-800: #112139;
+  --color-primary-900: #0e1a2b;
+
+  --color-accent-50: #fcf9f2;
+  --color-accent-100: #faf3e5;
+  --color-accent-200: #f5e7cc;
+  --color-accent-300: #f0dbb3;
+  --color-accent-400: #e6c180;
+  --color-accent-500: #d4af37;
+  --color-accent-600: #bf9d32;
+  --color-accent-700: #a98b2c;
+  --color-accent-800: #947a27;
+  --color-accent-900: #7f6821;
+
+  --shadow-premium: 0 10px 30px -5px rgba(27, 54, 93, 0.1), 0 4px 10px -2px rgba(212, 175, 55, 0.05);
+  --shadow-premium-hover: 0 20px 40px -5px rgba(27, 54, 93, 0.2), 0 10px 20px -2px rgba(212, 175, 55, 0.1);
+  --shadow-glass: 0 8px 32px 0 rgba(27, 54, 93, 0.1);
+
+  --transition-timing-function-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --animate-shimmer: shimmer 2.5s infinite linear;
+  --animate-fade-in: fadeIn 0.6s ease-in-out;
+  --animate-fade-in-up: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-scale-up: scaleUp 0.5s ease-out;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -88,4 +122,62 @@ a:hover {
 /* Smooth transitions for theme changes */
 * {
   @apply transition-colors duration-300;
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 dark:bg-neutral-900/70 backdrop-blur-md border border-white/20 dark:border-neutral-800/20 shadow-glass;
+  }
+
+  .glass-dark {
+    @apply bg-neutral-900/80 backdrop-blur-lg border border-neutral-800/30 shadow-glass;
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-accent-600 dark:from-primary-400 dark:to-accent-400;
+  }
+}
+
+h1, h2, h3, h4 {
+  @apply font-serif;
+}
+
+.section-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes scaleUp {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
 }

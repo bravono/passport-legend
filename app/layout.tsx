@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, Cormorant_Garamond } from 'next/font/google';
 import { Providers } from './providers';
 import './globals.css';
 
@@ -11,6 +11,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
+});
+
+const cormorantGaramond = Cormorant_Garamond({
+  variable: '--font-serif',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -33,10 +39,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="theme-color" content="#14b8a6" />
+        <meta name="theme-color" content="#1b365d" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${cormorantGaramond.variable} min-h-screen bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 antialiased`}
       >
         <Providers>{children}</Providers>
       </body>
