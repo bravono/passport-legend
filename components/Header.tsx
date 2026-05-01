@@ -70,11 +70,11 @@ export function Header() {
         <div className="flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <span className="hidden font-bold text-neutral-900 dark:text-white sm:inline">
+            <span className="font-bold text-neutral-900 dark:text-white">
               <img
                 src="/assets/PL LOGO Transparent.png"
                 alt="Passport Legend"
-                className="h-50 w-auto"
+                className="h-20 w-auto md:h-50"
               />
             </span>
           </Link>
