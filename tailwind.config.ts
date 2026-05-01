@@ -8,31 +8,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary: Teal
+        // Primary: Navy Blue
         primary: {
-          50: "#f0fdfa",
-          100: "#ccfbf1",
-          200: "#99f6e4",
-          300: "#5eead4",
-          400: "#2dd4bf",
-          500: "#14b8a6", // Main teal
-          600: "#0d9488",
-          700: "#0f766e",
-          800: "#115e59",
-          900: "#134e4a",
+          50: "#f0f4f8",
+          100: "#d9e2ec",
+          200: "#bcccdc",
+          300: "#9fb3c8",
+          400: "#829ab1",
+          500: "#1b365d", // Main navy
+          600: "#183154",
+          700: "#152946",
+          800: "#112139",
+          900: "#0e1a2b",
         },
-        // Accent: Cream/Warm
+        // Accent: Gold
         accent: {
-          50: "#fffbf0",
-          100: "#fef3c7",
-          200: "#fde68a",
-          300: "#fcd34d",
-          400: "#fbbf24",
-          500: "#f59e0b", // Warm gold/amber
-          600: "#d97706",
-          700: "#b45309",
-          800: "#92400e",
-          900: "#78350f",
+          50: "#fcf9f2",
+          100: "#faf3e5",
+          200: "#f5e7cc",
+          300: "#f0dbb3",
+          400: "#e6c180",
+          500: "#d4af37", // Main gold
+          600: "#bf9d32",
+          700: "#a98b2c",
+          800: "#947a27",
+          900: "#7f6821",
         },
         // Neutrals
         neutral: {
@@ -74,12 +74,21 @@ const config: Config = {
         "3xl": "48px",
         "4xl": "64px",
       },
+      transitionTimingFunction: {
+        "smooth": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+        "bounce": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+      },
       animation: {
         "fade-in": "fadeIn 0.6s ease-in-out",
         "fade-in-up": "fadeInUp 0.6s ease-out",
         "slide-in-left": "slideInLeft 0.5s ease-out",
         "scale-up": "scaleUp 0.5s ease-out",
-        "page-enter": "pageEnter 0.4s ease-out",
+        "page-enter": "pageEnter 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "expand-width": "expandWidth 0.4s ease-out forwards",
+        "shimmer": "shimmer 2s infinite",
+        "float": "float 3s ease-in-out infinite",
+        "slide-down": "slideDown 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "bounce-in": "bounceIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)",
       },
       keyframes: {
         fadeIn: {
@@ -99,8 +108,29 @@ const config: Config = {
           "100%": { opacity: "1", transform: "scale(1)" },
         },
         pageEnter: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        expandWidth: {
+          "0%": { width: "0" },
+          "100%": { width: "100%" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-1000px 0" },
+          "100%": { backgroundPosition: "1000px 0" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        slideDown: {
+          "0%": { opacity: "0", transform: "translateY(-10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        bounceIn: {
+          "0%": { opacity: "0", transform: "scale(0.9)" },
+          "50%": { opacity: "1" },
+          "100%": { transform: "scale(1)" },
         },
       },
     },
