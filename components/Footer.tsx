@@ -10,7 +10,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2">
               <img
-                src="/assets/PL LOGO Transparent.png"
+                src="/assets/Logo.svg"
                 alt="Passport Legend"
                 className="h-30 w-auto"
               />
@@ -112,7 +112,10 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-col items-center justify-between gap-4 text-sm text-neutral-600 dark:text-neutral-400 md:flex-row">
-          <p>&copy; {new Date().getFullYear()} Passport Legend. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Passport Legend. All rights
+            reserved.
+          </p>
           <div className="flex gap-4">
             <a
               href="#"

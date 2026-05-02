@@ -72,7 +72,7 @@ export function Header() {
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
             <span className="font-bold text-neutral-900 dark:text-white">
               <img
-                src="/assets/PL LOGO Transparent.png"
+                src="/assets/Logo.svg"
                 alt="Passport Legend"
                 className="h-20 w-auto md:h-50"
               />
