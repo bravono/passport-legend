@@ -36,21 +36,25 @@ export default function About() {
                   Our Story
                 </h2>
                 <p className="text-neutral-600 dark:text-neutral-400 mb-4">
-                  Founded in 2009, Passport Legend emerged from a vision to
-                  democratize access to global citizenship and residence
-                  programs. What started as a small advisory firm has grown into
-                  a leading international service provider.
+                  Passport Legend is a globally trusted firm specializing in
+                  residence and citizenship by investment, known for delivering
+                  tailored, high-value immigration solutions. Founded in 2019,
+                  Passport Legend is the preferred partner for thousands of
+                  international investors who rely on our expertise and
+                  personalised approach.
                 </p>
                 <p className="text-neutral-600 dark:text-neutral-400 mb-4">
-                  We've helped thousands of clients worldwide navigate the
-                  complex landscape of investment-based immigration. Our success
-                  is built on trust, expertise, and unwavering commitment to our
-                  clients' goals.
+                  A UK-owned and managed advisory operating through multiple
+                  global offices, we collaborate closely with governments
+                  worldwide to provide seamless access to leading residence and
+                  citizenship by investment programmes that deliver
+                  life-changing opportunities.
                 </p>
                 <p className="text-neutral-600 dark:text-neutral-400">
-                  Today, our team of certified advisors works across 6
-                  continents, providing personalized guidance and handling every
-                  aspect of the citizenship and residency application process.
+                  As an established, government-authorised advisory, our
+                  multidisciplinary international team of immigration investment
+                  experts supports clients at every stage of the process,
+                  ensuring exceptional outcomes.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-primary-200 to-accent-200 dark:from-primary-900 dark:to-accent-900 rounded-2xl h-96 flex items-center justify-center">
