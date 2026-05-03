@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { Globe, ClipboardList, Zap, Network, Landmark, Star, ArrowRight } from "lucide-react";
+import {
+  Globe,
+  ClipboardList,
+  Zap,
+  Network,
+  Landmark,
+  Star,
+  ArrowRight,
+} from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
@@ -19,7 +27,7 @@ export default function Home() {
         <Section className="relative min-h-[90vh] flex items-center overflow-hidden bg-white dark:bg-neutral-900">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-primary-100),transparent_50%)] dark:bg-[radial-gradient(circle_at_top_right,var(--color-primary-900),transparent_40%)] opacity-50" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,var(--color-accent-100),transparent_50%)] dark:bg-[radial-gradient(circle_at_bottom_left,var(--color-accent-900),transparent_40%)] opacity-30" />
-          
+
           <Container className="relative z-10">
             <div className="grid gap-12 md:grid-cols-2 items-center">
               <div className="space-y-8 animate-fade-in-up">
@@ -28,9 +36,7 @@ export default function Home() {
                 </div>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-neutral-900 dark:text-white">
                   Your Gateway to <br />
-                  <span className="text-gradient">
-                    Global Freedom
-                  </span>
+                  <span className="text-gradient">Global Freedom</span>
                 </h1>
                 <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-xl leading-relaxed">
                   Unlock world-class investment opportunities. Gain citizenship,
@@ -38,7 +44,7 @@ export default function Home() {
                   worldwide.
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row">
-                  <Button size="lg" variant="secondary" asChild>
+                  <Button size="lg" variant="primary" asChild>
                     <Link href="/contact">Book a Consultation</Link>
                   </Button>
                   <Button size="lg" variant="outline" asChild>
@@ -50,7 +56,11 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20 blur-3xl rounded-full" />
                 <div className="relative h-[500px] flex items-center justify-center animate-float">
                   <div className="p-12 rounded-3xl glass-dark shadow-2xl scale-125">
-                    <Globe size={160} strokeWidth={1} className="text-accent-400" />
+                    <Globe
+                      size={160}
+                      strokeWidth={1}
+                      className="text-accent-400"
+                    />
                   </div>
                 </div>
               </div>
@@ -81,8 +91,8 @@ export default function Home() {
                   Expert Guidance
                 </h3>
                 <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  Our team of specialists provides personalized advice tailored to your
-                  unique financial and personal situation.
+                  Our team of specialists provides personalized advice tailored
+                  to your unique financial and personal situation.
                 </p>
               </Card>
               <Card hover className="group">
@@ -93,8 +103,9 @@ export default function Home() {
                   Fast Processing
                 </h3>
                 <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  Streamlined internal processes and strong government ties ensure you get
-                  citizenship or residence faster than anywhere else.
+                  Streamlined internal processes and strong government ties
+                  ensure you get citizenship or residence faster than anywhere
+                  else.
                 </p>
               </Card>
               <Card hover className="group">
@@ -105,8 +116,8 @@ export default function Home() {
                   Global Network
                 </h3>
                 <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  Our presence across 6 continents provides you with local expertise and 
-                  exclusive access to worldwide opportunities.
+                  Our presence across 6 continents provides you with local
+                  expertise and exclusive access to worldwide opportunities.
                 </p>
               </Card>
             </div>
@@ -130,8 +141,11 @@ export default function Home() {
 
             <div className="grid gap-8 md:grid-cols-3">
               {featured.map((country) => (
-                <Link key={country.id} href={`/countries/${country.slug}`}>
-                  <Card hover className="h-full p-0 overflow-hidden flex flex-col group">
+                <Link key={country.id} href={country.type === 'citizenship' ? `/citizenship-by-investment/${country.slug}` : `/countries/${country.slug}`}>
+                  <Card
+                    hover
+                    className="h-full p-0 overflow-hidden flex flex-col group"
+                  >
                     <div className="relative h-56 w-full overflow-hidden">
                       <img
                         src={country.heroImage}
@@ -154,7 +168,10 @@ export default function Home() {
                       </p>
                       <div className="flex items-center gap-2 text-sm font-bold text-primary-600 dark:text-primary-400">
                         View Details
-                        <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-2" />
+                        <ArrowRight
+                          size={18}
+                          className="transition-transform duration-300 group-hover:translate-x-2"
+                        />
                       </div>
                     </div>
                   </Card>
@@ -206,7 +223,11 @@ export default function Home() {
                 <Card key={index}>
                   <div className="mb-4 flex gap-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} size={16} className="fill-accent-500 text-accent-500" />
+                      <Star
+                        key={i}
+                        size={16}
+                        className="fill-accent-500 text-accent-500"
+                      />
                     ))}
                   </div>
                   <p className="text-neutral-600 dark:text-neutral-400 mb-4">
@@ -276,7 +297,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-primary-900" />
           <div className="absolute inset-0 bg-gradient-to-br from-primary-600/40 to-accent-600/20" />
           <div className="absolute inset-0 section-shimmer opacity-20" />
-          
+
           <Container className="relative z-10">
             <div className="glass-dark p-12 md:p-20 rounded-[3rem] text-center border-accent-500/20 max-w-5xl mx-auto">
               <div className="space-y-8">
