@@ -213,8 +213,8 @@ export default function CountryPage({ params }: Props) {
                 .map((relatedCountry) => (
                   <Link
                     key={relatedCountry.id}
-                    href={`/countries/${relatedCountry.slug}`}
-                  >
+                    href={relatedCountry.type === 'citizenship' ? `/citizenship-by-investment/${relatedCountry.slug}` : `/residence-by-investment/${relatedCountry.slug}`}
+                  >     
                     <Card className="h-full">
                       <div className="mb-4 text-4xl">🌍</div>
                       <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-2">

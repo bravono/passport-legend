@@ -13,7 +13,7 @@ export function CountryGrid({ countries }: CountryGridProps) {
       {countries.map((country, index) => (
         <Link
           key={country.id}
-          href={`/countries/${country.slug}`}
+          href={country.type === 'citizenship' ? `/citizenship-by-investment/${country.slug}` : `/residence-by-investment/${country.slug}`}
           style={{
             animation: `fadeInUp 0.6s ease-out forwards`,
             animationDelay: `${index * 0.1}s`,

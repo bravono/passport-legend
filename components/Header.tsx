@@ -114,7 +114,7 @@ export function Header() {
                     {citizenshipCountries.map((country) => (
                       <Link
                         key={country.id}
-                        href={`/countries/${country.slug}`}
+                        href={country.type === 'citizenship' ? `/citizenship-by-investment/${country.slug}` : `/residence-by-investment/${country.slug}`}
                         className="group relative overflow-hidden rounded-lg transition-all duration-300 hover:shadow-lg active:scale-95 hover:scale-105"
                       >
                         <img
@@ -158,7 +158,7 @@ export function Header() {
                     {residenceCountries.map((country) => (
                       <Link
                         key={country.id}
-                        href={`/countries/${country.slug}`}
+                        href={country.type === 'citizenship' ? `/citizenship-by-investment/${country.slug}` : `/residence-by-investment/${country.slug}`}
                         className="group relative overflow-hidden rounded-lg transition-all duration-300 hover:shadow-lg active:scale-95 hover:scale-105"
                       >
                         <img
@@ -232,7 +232,7 @@ export function Header() {
                 {citizenshipCountries.map((country) => (
                   <Link
                     key={country.id}
-                    href={`/countries/${country.slug}`}
+                    href={country.type === 'citizenship' ? `/citizenship-by-investment/${country.slug}` : `/residence-by-investment/${country.slug}`}
                     onClick={() => setMobileOpen(false)}
                     className="group/item relative overflow-hidden rounded-lg"
                   >
@@ -259,7 +259,7 @@ export function Header() {
                 {residenceCountries.map((country) => (
                   <Link
                     key={country.id}
-                    href={`/countries/${country.slug}`}
+                    href={country.type === 'citizenship' ? `/citizenship-by-investment/${country.slug}` : `/residence-by-investment/${country.slug}`}
                     onClick={() => setMobileOpen(false)}
                     className="group/item relative overflow-hidden rounded-lg"
                   >
