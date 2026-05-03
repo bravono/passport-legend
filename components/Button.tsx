@@ -10,13 +10,13 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          'bg-gradient-to-r from-primary-600 to-primary-700 text-white hover:from-primary-700 hover:to-primary-800 shadow-primary-500/20 focus-visible:ring-primary-500',
+          'bg-gradient-to-r from-primary-600 to-primary-700 !text-white [&_a]:!text-white hover:from-primary-700 hover:to-primary-800 shadow-primary-500/20 focus-visible:ring-primary-500',
         secondary:
           'bg-neutral-100 text-neutral-900 hover:bg-neutral-200 active:bg-neutral-300 focus-visible:ring-neutral-500 dark:bg-neutral-800 dark:text-white dark:hover:bg-neutral-700',
         ghost:
           'text-primary-600 hover:bg-primary-50 active:bg-primary-100 focus-visible:ring-primary-500 dark:text-primary-400 dark:hover:bg-primary-900/30',
         accent:
-          'bg-gradient-to-r from-accent-500 to-accent-600 text-white hover:from-accent-600 hover:to-accent-700 shadow-accent-500/20 focus-visible:ring-accent-500',
+          'bg-gradient-to-r from-accent-500 to-accent-600 !text-white [&_a]:!text-white hover:from-accent-600 hover:to-accent-700 shadow-accent-500/20 focus-visible:ring-accent-500',
         outline:
           'border-2 border-primary-500/30 text-primary-600 hover:border-primary-500 hover:bg-primary-50 active:bg-primary-100 focus-visible:ring-primary-500 dark:border-primary-400/30 dark:text-primary-400 dark:hover:border-primary-400 dark:hover:bg-primary-900/30',
       },
