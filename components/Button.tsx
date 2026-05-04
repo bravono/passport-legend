@@ -12,7 +12,9 @@ const buttonVariants = cva(
         primary:
           'bg-gradient-to-r from-primary-600 to-primary-700 !text-white [&_a]:!text-white hover:from-primary-700 hover:to-primary-800 shadow-primary-500/20 focus-visible:ring-primary-500',
         secondary:
-          'bg-neutral-100 text-neutral-900 hover:bg-neutral-200 active:bg-neutral-300 focus-visible:ring-neutral-500 dark:bg-neutral-800 dark:text-white dark:hover:bg-neutral-700',
+          'bg-neutral-100 text-primary-900 hover:bg-neutral-200 active:bg-neutral-300 focus-visible:ring-neutral-500 dark:bg-neutral-800 dark:text-white dark:hover:bg-neutral-700',
+        white:
+          'bg-white text-primary-900 hover:bg-neutral-50 active:bg-neutral-100 focus-visible:ring-neutral-500 shadow-sm',
         ghost:
           'text-primary-600 hover:bg-primary-50 active:bg-primary-100 focus-visible:ring-primary-500 dark:text-primary-400 dark:hover:bg-primary-900/30',
         accent:
