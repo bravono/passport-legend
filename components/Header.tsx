@@ -23,6 +23,7 @@ export function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const citizenshipRef = useRef<HTMLDivElement>(null);
   const residenceRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { theme, setTheme } = useTheme();
 
   const citizenshipCountries = getCitizenshipCountries();
@@ -48,19 +49,17 @@ export function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleCitizenshipHover = (isEntering: boolean) => {
-    if (isEntering) {
-      setOpenDropdown("citizenship");
-    } else {
-      setOpenDropdown(null);
+  const handleHover = (type: "citizenship" | "residence" | null, isEntering: boolean) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
     }
-  };
-
-  const handleResidenceHover = (isEntering: boolean) => {
+    
     if (isEntering) {
-      setOpenDropdown("residence");
+      setOpenDropdown(type);
     } else {
-      setOpenDropdown(null);
+      timeoutRef.current = setTimeout(() => {
+        setOpenDropdown(null);
+      }, 300); // 300ms delay
     }
   };
 
@@ -94,8 +93,8 @@ export function Header() {
             {/* Citizenship Dropdown */}
             <div
               ref={citizenshipRef}
-              onMouseEnter={() => handleCitizenshipHover(true)}
-              onMouseLeave={() => handleCitizenshipHover(false)}
+              onMouseEnter={() => handleHover("citizenship", true)}
+              onMouseLeave={() => handleHover("citizenship", false)}
               className="relative"
             >
               <Link
@@ -138,8 +137,8 @@ export function Header() {
             {/* Residence Dropdown */}
             <div
               ref={residenceRef}
-              onMouseEnter={() => handleResidenceHover(true)}
-              onMouseLeave={() => handleResidenceHover(false)}
+              onMouseEnter={() => handleHover("residence", true)}
+              onMouseLeave={() => handleHover("residence", false)}
               className="relative"
             >
               <Link
