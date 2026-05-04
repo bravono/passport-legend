@@ -37,13 +37,20 @@ export default function Home() {
                   Global Citizenship Advisors
                 </div>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-neutral-900 dark:text-white">
-                  Your Gateway to <br />
-                  <span className="text-gradient">Global Freedom</span>
+                  Your Trusted <br />
+                  <span className="text-gradient">
+                    {" "}
+                    Gateway to Global Freedom
+                  </span>
                 </h1>
-                <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-xl leading-relaxed">
-                  Unlock world-class investment opportunities. Gain citizenship,
-                  residency, or tax advantages in premium jurisdictions
-                  worldwide.
+                <p className="text-lg md:text-xl lg:text-2xl font-semibold leading-[1.1] text-neutral-900 dark:text-white">
+                  Through Residence & Citizenship by Investment
+                </p>
+                <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-xl leading-relaxed">
+                  Partner with a leading consultancy trusted by ambitious
+                  investors worldwide to secure second residencies and
+                  passports. We make global mobility simple, strategic, and
+                  within reach
                 </p>
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <Button size="lg" variant="primary" asChild>
@@ -80,8 +87,8 @@ export default function Home() {
                 </h2>
                 <div className="h-1 w-24 bg-accent-500 mx-auto rounded-full" />
                 <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
-                  We guide you through the entire process of obtaining citizenship
-                  or residence in premium jurisdictions worldwide.
+                  We guide you through the entire process of obtaining
+                  citizenship or residence in premium jurisdictions worldwide.
                 </p>
               </div>
 
@@ -94,8 +101,8 @@ export default function Home() {
                     Expert Guidance
                   </h3>
                   <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                    Our team of specialists provides personalized advice tailored
-                    to your unique financial and personal situation.
+                    Our team of specialists provides personalized advice
+                    tailored to your unique financial and personal situation.
                   </p>
                 </Card>
                 <Card hover className="group">
@@ -146,7 +153,14 @@ export default function Home() {
 
               <div className="grid gap-8 md:grid-cols-3">
                 {featured.map((country) => (
-                  <Link key={country.id} href={country.type === 'citizenship' ? `/citizenship-by-investment/${country.slug}` : `/countries/${country.slug}`}>
+                  <Link
+                    key={country.id}
+                    href={
+                      country.type === "citizenship"
+                        ? `/citizenship-by-investment/${country.slug}`
+                        : `/countries/${country.slug}`
+                    }
+                  >
                     <Card
                       hover
                       className="h-full p-0 overflow-hidden flex flex-col group"
@@ -317,8 +331,8 @@ export default function Home() {
                     <span className="text-accent-400">Legendary Journey?</span>
                   </h2>
                   <p className="text-xl text-primary-100 max-w-2xl mx-auto font-light leading-relaxed">
-                    Schedule a free consultation with our expert team to find the
-                    perfect program for you.
+                    Schedule a free consultation with our expert team to find
+                    the perfect program for you.
                   </p>
                   <div className="pt-4">
                     <Button size="xl" variant="accent" asChild>
