@@ -425,11 +425,11 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                   Our experts are ready to guide you through every step of the {country.name} Residence by Investment process. Schedule your private consultation today.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
-                  <Button size="xl" className="bg-white text-primary-900 hover:bg-neutral-100 border-none px-12 rounded-full font-bold shadow-xl">
-                    Book Free Consultation
+                 <Button size="lg" variant="primary" asChild>
+                    <Link href="/contact">Book a Consultation</Link>
                   </Button>
-                  <Button size="xl" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-12 rounded-full backdrop-blur-sm">
-                    Contact via WhatsApp
+                  <Button size="lg" variant="secondary" asChild>
+                    <Link href="/citizenship">Explore Programs</Link>
                   </Button>
                 </div>
               </div>
