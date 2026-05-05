@@ -161,6 +161,12 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                   </h2>
                   <div className="prose prose-lg dark:prose-invert max-w-none text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
                     <p>{country.sections.overview}</p>
+                    {country.sections.about && (
+                      <>
+                        <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mt-8 mb-4 tracking-tight">About {country.name}</h3>
+                        <p>{country.sections.about}</p>
+                      </>
+                    )}
                   </div>
                 </div>
                 <div className="relative">
