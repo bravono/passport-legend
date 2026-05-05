@@ -1,33 +1,37 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Cormorant_Garamond } from 'next/font/google';
-import { Providers } from './providers';
-import './globals.css';
+import type { Metadata } from "next";
+import { Geist, Geist_Mono, Cormorant_Garamond } from "next/font/google";
+import { Providers } from "./providers";
+import "./globals.css";
 
 const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 const cormorantGaramond = Cormorant_Garamond({
-  variable: '--font-serif',
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  variable: "--font-serif",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: 'Passport Legend - Citizenship & Residence by Investment',
-  description: 'Unlock citizenship and residence opportunities worldwide. Expert guidance for investment-based immigration.',
-  metadataBase: new URL('https://passport-legend.com'),
+  title: "Passport Legend - Citizenship & Residence by Investment",
+  description:
+    "Unlock citizenship and residence opportunities worldwide. Expert guidance for investment-based immigration.",
+  metadataBase: new URL("https://passport-legend.com"),
+  icons: {
+    icon: "/assets/Logo.svg",
+  },
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://passport-legend.com',
-    siteName: 'Passport Legend',
+    type: "website",
+    locale: "en_US",
+    url: "https://passport-legend.com",
+    siteName: "Passport Legend",
   },
 };
 
