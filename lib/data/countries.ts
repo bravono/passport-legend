@@ -41,6 +41,7 @@ export interface Country {
   type: CountryType;
   shortDescription: string;
   heroImage: string;
+  brochureUrl?: string;
   sections: CountrySection;
 }
 
@@ -54,6 +55,7 @@ export const countries: Country[] = [
       "Premium citizenship by investment program in St Kitts & Nevis",
     heroImage:
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop",
+    brochureUrl: "https://drive.google.com/uc?export=download&id=1nThJ1h58EtFl9kQrDA2X7fe-IqqQjHfG",
     sections: {
       overview:
         "St Kitts & Nevis offers an attractive citizenship program for investors worldwide.",
@@ -90,6 +92,7 @@ export const countries: Country[] = [
     shortDescription: "Premium citizenship by investment program in Granada",
     heroImage:
       "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&h=600&fit=crop",
+    brochureUrl: "https://drive.google.com/uc?export=download&id=1ZZsSI6QxLLAiLurYgTT1zRcOAxGMJ5BI",
     sections: {
       overview:
         "Granada offers an attractive citizenship program for investors worldwide.",
@@ -164,6 +167,7 @@ export const countries: Country[] = [
       "Caribbean citizenship with fast processing and global mobility",
     heroImage:
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop",
+    brochureUrl: "https://drive.google.com/uc?export=download&id=1VS4EWV7c3zdBAj_cChK3n60Rp5RxEaE4",
     sections: {
       overview:
         "The Antigua and Barbuda Citizenship by Investment Program (CIP) was established following the Citizenship by Investment Act of 2013. It offers a straightforward and efficient path to a second citizenship in a beautiful Caribbean twin-island nation, providing investors with enhanced global mobility and financial freedom.",
@@ -271,6 +275,7 @@ export const countries: Country[] = [
     shortDescription: "Premium citizenship by investment program in Nauru",
     heroImage:
       "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&h=600&fit=crop",
+    brochureUrl: "https://drive.google.com/uc?export=download&id=1HRvMnBII8t3z4K4drLrGorV4yTfYehf_",
     sections: {
       overview:
         "Nauru offers an attractive citizenship program for investors worldwide.",
@@ -308,6 +313,7 @@ export const countries: Country[] = [
       "Premium citizenship by investment program in São Tomé & Príncipe",
     heroImage:
       "https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=1200&h=600&fit=crop",
+    brochureUrl: "https://drive.google.com/uc?export=download&id=1OStQXPzup_1hUI0hgxSd7j7U30hAAYgG",
     sections: {
       overview:
         "São Tomé & Príncipe offers an attractive citizenship program for investors worldwide.",
@@ -344,6 +350,7 @@ export const countries: Country[] = [
     shortDescription: "Premium citizenship by investment program in St Lucia",
     heroImage:
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=600&fit=crop",
+    brochureUrl: "https://drive.google.com/uc?export=download&id=1V_9XkfkeiWWtu69zpvYlp4S63bAO_d5I",
     sections: {
       overview:
         "St Lucia offers an attractive citizenship program for investors worldwide.",
@@ -380,6 +387,7 @@ export const countries: Country[] = [
     shortDescription: "Bridge between Europe and Asia",
     heroImage:
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=600&fit=crop",
+    brochureUrl: "https://drive.google.com/uc?export=download&id=1MjY1I0j6SlNCwF0lhI7sddUQLSoViAW8",
     sections: {
       overview:
         "Turkey offers accessible residency through real estate investment. Strategic location bridging Europe and Asia with rich cultural heritage.",
@@ -455,6 +463,7 @@ export const countries: Country[] = [
     shortDescription: "Premium citizenship by investment program in Vanuatu",
     heroImage:
       "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1200&h=600&fit=crop",
+    brochureUrl: "https://drive.google.com/uc?export=download&id=1FjRYi288AiIkPqQ8naQWp6y07gAod28k",
     sections: {
       overview:
         "Vanuatu offers an attractive citizenship program for investors worldwide.",

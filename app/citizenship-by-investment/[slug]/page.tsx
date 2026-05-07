@@ -115,6 +115,19 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                 <Button size="xl" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-10 rounded-full backdrop-blur-sm">
                   Download Brochure
                 </Button>
+                {country.brochureUrl ? (
+                  <a href={country.brochureUrl} target="_blank" rel="noopener noreferrer" download>
+                    <Button size="xl" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-10 rounded-full backdrop-blur-sm">
+                      Download Brochure
+                    </Button>
+                  </a>
+                ) : (
+                  <Link href="/contact">
+                    <Button size="xl" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-10 rounded-full backdrop-blur-sm">
+                      Request Brochure
+                    </Button>
+                  </Link>
+                )}
               </div>
             </div>
           </Container>
