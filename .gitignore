@@ -18,6 +18,7 @@
 /out/
 
 # production
+/content/blog/*.md
 /build
 
 # misc

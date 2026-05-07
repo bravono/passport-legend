@@ -13,6 +13,7 @@ import { Sun, Moon, Menu, X, ChevronDown } from "lucide-react";
 
 const otherNavLinks = [
   { href: "/", label: "Home" },
+  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];

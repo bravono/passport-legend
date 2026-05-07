@@ -58,6 +58,14 @@ export function Footer() {
                   About
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400"
+                >
+                  Blog
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -118,13 +126,13 @@ export function Footer() {
           </p>
           <div className="flex gap-4">
             <a
-              href="#"
+              href="/privacy-policy"
               className="hover:text-primary-600 dark:hover:text-primary-400"
             >
               Privacy Policy
             </a>
             <a
-              href="#"
+              href="/terms-of-service"
               className="hover:text-primary-600 dark:hover:text-primary-400"
             >
               Terms of Service
