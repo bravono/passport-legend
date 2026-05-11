@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Cormorant_Garamond } from "next/font/google";
-import { Providers } from "./providers";
+import { PageTransition } from "@/components/PageTransition";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -41,14 +41,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
         <meta name="theme-color" content="#1b365d" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${cormorantGaramond.variable} min-h-screen bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${cormorantGaramond.variable} min-h-screen bg-white text-primary-500 antialiased`}
       >
-        <Providers>{children}</Providers>
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );

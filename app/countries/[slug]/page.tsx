@@ -93,9 +93,14 @@ export default function CountryPage({ params }: Props) {
               <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6">
                 Overview
               </h2>
-              <p className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed">
-                {country.sections.overview}
-              </p>
+              <div className="space-y-4">
+                {country.sections.overview.items.map((item, index) => (
+                  <p key={index} className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed">
+                    {item.title && item.title !== "Summary" && <strong>{item.title}: </strong>}
+                    {item.description}
+                  </p>
+                ))}
+              </div>
             </Container>
           </Section>
         </ScrollReveal>
@@ -115,7 +120,7 @@ export default function CountryPage({ params }: Props) {
                         <Check size={20} strokeWidth={2.5} />
                       </div>
                     </div>
-                    <p className="text-neutral-700 dark:text-neutral-300 font-medium leading-tight">{benefit}</p>
+                    <p className="text-neutral-700 dark:text-neutral-300 font-medium leading-tight">{benefit.title}</p>
                   </Card>
                 ))}
               </div>
@@ -131,17 +136,27 @@ export default function CountryPage({ params }: Props) {
                 Investment Options
               </h2>
               <div className="grid gap-6 md:grid-cols-3">
-                {country.sections.investmentOptions.map((option, index) => (
-                  <Card key={index}>
-                    <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2">
-                      {option.title}
-                    </h3>
-                    <p className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-4">
-                      {option.amount}
-                    </p>
-                    <p className="text-neutral-600 dark:text-neutral-400">{option.description}</p>
-                  </Card>
-                ))}
+                {(!Array.isArray(country.sections.requirements) && country.sections.requirements?.investmentOptions?.items) ? (
+                  country.sections.requirements.investmentOptions.items.map((option, index) => (
+                    <Card key={index}>
+                      <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2">
+                        {option.title}
+                      </h3>
+                      <ul className="text-neutral-600 dark:text-neutral-400 space-y-2 mt-4">
+                        {option.list.map((listItem, i) => (
+                          <li key={i} className="flex gap-2">
+                            <span className="text-primary-500">•</span>
+                            <span>{listItem}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </Card>
+                  ))
+                ) : (
+                  <div className="col-span-3 text-center text-neutral-500 py-12">
+                    Please contact us for detailed investment options.
+                  </div>
+                )}
               </div>
             </Container>
           </Section>
@@ -155,7 +170,7 @@ export default function CountryPage({ params }: Props) {
                 Requirements
               </h2>
               <div className="grid gap-4 md:grid-cols-2">
-                {country.sections.requirements.map((requirement, index) => (
+                {(Array.isArray(country.sections.requirements) ? country.sections.requirements : (country.sections.requirements?.investmentRequirements?.items || [])).map((requirement, index) => (
                   <div key={index} className="flex gap-3">
                     <span className="text-primary-600 dark:text-primary-400 font-bold text-lg flex-shrink-0">
                       •
@@ -168,27 +183,7 @@ export default function CountryPage({ params }: Props) {
           </Section>
         </ScrollReveal>
 
-        {/* Timeline Section */}
-        <ScrollReveal direction="up" delay={0.2}>
-          <Section className="bg-white dark:bg-neutral-800">
-            <Container>
-              <div className="max-w-2xl">
-                <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6">
-                  Timeline
-                </h2>
-                <Card className="bg-primary-50 dark:bg-primary-900/20 border-primary-200 dark:border-primary-800">
-                  <p className="text-lg text-neutral-700 dark:text-neutral-300">
-                    <strong>Expected Duration:</strong> {country.sections.timeline}
-                  </p>
-                </Card>
-                <p className="text-neutral-600 dark:text-neutral-400 mt-4 text-sm">
-                  Timeline may vary based on individual circumstances, completeness of documentation,
-                  and government processing times.
-                </p>
-              </div>
-            </Container>
-          </Section>
-        </ScrollReveal>
+
 
         {/* CTA Section */}
         <ScrollReveal direction="up" delay={0.2}>
