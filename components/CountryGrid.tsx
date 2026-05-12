@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Country } from "@/lib/data/countries";
+import { Country } from "@/lib/data/countries-citizenship";
 
 interface CountryGridProps {
   countries: Country[];
@@ -13,7 +13,11 @@ export function CountryGrid({ countries }: CountryGridProps) {
       {countries.map((country, index) => (
         <Link
           key={country.id}
-          href={country.type === 'citizenship' ? `/citizenship-by-investment/${country.slug}` : `/residence-by-investment/${country.slug}`}
+          href={
+            country.type === "citizenship"
+              ? `/citizenship-by-investment/${country.slug}`
+              : `/residence-by-investment/${country.slug}`
+          }
           style={{
             animation: `fadeInUp 0.6s ease-out forwards`,
             animationDelay: `${index * 0.1}s`,

@@ -1,14 +1,14 @@
-import Link from 'next/link';
-import { Check, Globe, ArrowRight, ChevronRight } from 'lucide-react';
-import { notFound } from 'next/navigation';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { Container } from '@/components/Container';
-import { Section } from '@/components/Section';
-import { Card } from '@/components/Card';
-import { Button } from '@/components/Button';
-import { ScrollReveal } from '@/components/ScrollReveal';
-import { getCountryBySlug, countries } from '@/lib/data/countries';
+import Link from "next/link";
+import { Check, Globe, ArrowRight, ChevronRight } from "lucide-react";
+import { notFound } from "next/navigation";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Container } from "@/components/Container";
+import { Section } from "@/components/Section";
+import { Card } from "@/components/Card";
+import { Button } from "@/components/Button";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { getCountryBySlug, countries } from "@/lib/data/countries-citizenship";
 
 interface Props {
   params: {
@@ -27,8 +27,8 @@ export function generateMetadata({ params }: Props) {
 
   if (!country) {
     return {
-      title: 'Country Not Found',
-      description: 'The requested country page could not be found.',
+      title: "Country Not Found",
+      description: "The requested country page could not be found.",
     };
   }
 
@@ -45,8 +45,18 @@ export default function CountryPage({ params }: Props) {
     notFound();
   }
 
-  const breadcrumbType = country.type === 'citizenship' ? 'Citizenship' : country.type === 'residence' ? 'Residence' : 'Programs';
-  const breadcrumbHref = country.type === 'citizenship' ? '/citizenship' : country.type === 'residence' ? '/residence' : '/';
+  const breadcrumbType =
+    country.type === "citizenship"
+      ? "Citizenship"
+      : country.type === "residence"
+        ? "Residence"
+        : "Programs";
+  const breadcrumbHref =
+    country.type === "citizenship"
+      ? "/citizenship"
+      : country.type === "residence"
+        ? "/residence"
+        : "/";
 
   return (
     <>
@@ -66,11 +76,17 @@ export default function CountryPage({ params }: Props) {
           <Container className="relative z-10">
             <div className="max-w-3xl animate-fade-in-up">
               <nav className="text-sm font-medium text-neutral-300 mb-6 flex items-center gap-2">
-                <Link href="/" className="hover:text-accent-400 transition-colors">
+                <Link
+                  href="/"
+                  className="hover:text-accent-400 transition-colors"
+                >
                   Home
                 </Link>
                 <span className="opacity-50">/</span>
-                <Link href={breadcrumbHref} className="hover:text-accent-400 transition-colors">
+                <Link
+                  href={breadcrumbHref}
+                  className="hover:text-accent-400 transition-colors"
+                >
                   {breadcrumbType}
                 </Link>
                 <span className="opacity-50">/</span>
@@ -95,8 +111,13 @@ export default function CountryPage({ params }: Props) {
               </h2>
               <div className="space-y-4">
                 {country.sections.overview.items.map((item, index) => (
-                  <p key={index} className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed">
-                    {item.title && item.title !== "Summary" && <strong>{item.title}: </strong>}
+                  <p
+                    key={index}
+                    className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed"
+                  >
+                    {item.title && item.title !== "Summary" && (
+                      <strong>{item.title}: </strong>
+                    )}
                     {item.description}
                   </p>
                 ))}
@@ -114,13 +135,18 @@ export default function CountryPage({ params }: Props) {
               </h2>
               <div className="grid gap-6 md:grid-cols-2">
                 {country.sections.benefits.map((benefit, index) => (
-                  <Card key={index} className="flex flex-row items-center gap-4 p-4 md:p-6 bg-white dark:bg-neutral-800">
+                  <Card
+                    key={index}
+                    className="flex flex-row items-center gap-4 p-4 md:p-6 bg-white dark:bg-neutral-800"
+                  >
                     <div className="flex-shrink-0">
                       <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-400">
                         <Check size={20} strokeWidth={2.5} />
                       </div>
                     </div>
-                    <p className="text-neutral-700 dark:text-neutral-300 font-medium leading-tight">{benefit.title}</p>
+                    <p className="text-neutral-700 dark:text-neutral-300 font-medium leading-tight">
+                      {benefit.title}
+                    </p>
                   </Card>
                 ))}
               </div>
@@ -136,22 +162,25 @@ export default function CountryPage({ params }: Props) {
                 Investment Options
               </h2>
               <div className="grid gap-6 md:grid-cols-3">
-                {(!Array.isArray(country.sections.requirements) && country.sections.requirements?.investmentOptions?.items) ? (
-                  country.sections.requirements.investmentOptions.items.map((option, index) => (
-                    <Card key={index}>
-                      <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2">
-                        {option.title}
-                      </h3>
-                      <ul className="text-neutral-600 dark:text-neutral-400 space-y-2 mt-4">
-                        {option.list.map((listItem, i) => (
-                          <li key={i} className="flex gap-2">
-                            <span className="text-primary-500">•</span>
-                            <span>{listItem}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </Card>
-                  ))
+                {!Array.isArray(country.sections.requirements) &&
+                country.sections.requirements?.investmentOptions?.items ? (
+                  country.sections.requirements.investmentOptions.items.map(
+                    (option, index) => (
+                      <Card key={index}>
+                        <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2">
+                          {option.title}
+                        </h3>
+                        <ul className="text-neutral-600 dark:text-neutral-400 space-y-2 mt-4">
+                          {option.list.map((listItem, i) => (
+                            <li key={i} className="flex gap-2">
+                              <span className="text-primary-500">•</span>
+                              <span>{listItem}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </Card>
+                    ),
+                  )
                 ) : (
                   <div className="col-span-3 text-center text-neutral-500 py-12">
                     Please contact us for detailed investment options.
@@ -170,20 +199,24 @@ export default function CountryPage({ params }: Props) {
                 Requirements
               </h2>
               <div className="grid gap-4 md:grid-cols-2">
-                {(Array.isArray(country.sections.requirements) ? country.sections.requirements : (country.sections.requirements?.investmentRequirements?.items || [])).map((requirement, index) => (
+                {(Array.isArray(country.sections.requirements)
+                  ? country.sections.requirements
+                  : country.sections.requirements?.investmentRequirements
+                      ?.items || []
+                ).map((requirement, index) => (
                   <div key={index} className="flex gap-3">
                     <span className="text-primary-600 dark:text-primary-400 font-bold text-lg flex-shrink-0">
                       •
                     </span>
-                    <p className="text-neutral-600 dark:text-neutral-400">{requirement}</p>
+                    <p className="text-neutral-600 dark:text-neutral-400">
+                      {requirement}
+                    </p>
                   </div>
                 ))}
               </div>
             </Container>
           </Section>
         </ScrollReveal>
-
-
 
         {/* CTA Section */}
         <ScrollReveal direction="up" delay={0.2}>
@@ -194,7 +227,8 @@ export default function CountryPage({ params }: Props) {
                   Ready to Explore {country.name}?
                 </h2>
                 <p className="text-lg opacity-90 max-w-2xl mx-auto">
-                  Schedule a personalized consultation with our experts to learn how this program can work for you.
+                  Schedule a personalized consultation with our experts to learn
+                  how this program can work for you.
                 </p>
                 <Button size="lg" variant="secondary" asChild>
                   <Link href="/contact">Book Your Consultation</Link>
@@ -213,17 +247,17 @@ export default function CountryPage({ params }: Props) {
               </h2>
               <div className="grid gap-6 md:grid-cols-3">
                 {countries
-                  .filter(
-                    (c) =>
-                      c.type === country.type &&
-                      c.id !== country.id
-                  )
+                  .filter((c) => c.type === country.type && c.id !== country.id)
                   .slice(0, 3)
                   .map((relatedCountry) => (
                     <Link
                       key={relatedCountry.id}
-                      href={relatedCountry.type === 'citizenship' ? `/citizenship-by-investment/${relatedCountry.slug}` : `/residence-by-investment/${relatedCountry.slug}`}
-                    >     
+                      href={
+                        relatedCountry.type === "citizenship"
+                          ? `/citizenship-by-investment/${relatedCountry.slug}`
+                          : `/residence-by-investment/${relatedCountry.slug}`
+                      }
+                    >
                       <Card className="h-full">
                         <div className="mb-4 text-4xl">🌍</div>
                         <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-2">

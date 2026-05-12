@@ -4,10 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Container } from "./Container";
 import { Button } from "./Button";
-import {
-  getCitizenshipCountries,
-  getResidenceCountries,
-} from "@/lib/data/countries";
+import { getCitizenshipCountries } from "@/lib/data/countries-citizenship";
+import { getResidenceCountries } from "@/lib/data/countries-residence";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 export function Header() {
@@ -36,11 +34,14 @@ export function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleHover = (type: "citizenship" | "residence" | null, isEntering: boolean) => {
+  const handleHover = (
+    type: "citizenship" | "residence" | null,
+    isEntering: boolean,
+  ) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
-    
+
     if (isEntering) {
       setOpenDropdown(type);
     } else {

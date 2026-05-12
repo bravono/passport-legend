@@ -1,5 +1,15 @@
 import Link from "next/link";
-import { Check, Globe, Briefcase, Users, Coins, Hospital, Home, Key, Shield } from "lucide-react";
+import {
+  Check,
+  Globe,
+  Briefcase,
+  Users,
+  Coins,
+  Hospital,
+  Home,
+  Key,
+  Shield,
+} from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
@@ -7,7 +17,7 @@ import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
 import { CountryGrid } from "@/components/CountryGrid";
-import { getCitizenshipCountries } from "@/lib/data/countries";
+import { getCitizenshipCountries } from "@/lib/data/countries-citizenship";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export default function Citizenship() {
@@ -25,7 +35,8 @@ export default function Citizenship() {
           <Container className="relative z-10">
             <div className="text-center space-y-8 animate-fade-in-up">
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-                Citizenship by <span className="text-accent-400">Investment</span>
+                Citizenship by{" "}
+                <span className="text-accent-400">Investment</span>
               </h1>
               <p className="text-xl md:text-2xl text-neutral-200 max-w-3xl mx-auto font-light leading-relaxed">
                 Gain citizenship in premium countries worldwide. Expand your
@@ -54,16 +65,22 @@ export default function Citizenship() {
                 <ul className="space-y-3 text-neutral-600 dark:text-neutral-400">
                   <li className="flex gap-3">
                     <span className="text-primary-600 dark:text-primary-400 font-bold">
-                      <Check size={16} className="text-primary-600 dark:text-primary-400" />
+                      <Check
+                        size={16}
+                        className="text-primary-600 dark:text-primary-400"
+                      />
                     </span>
                     <span>
-                      <strong>Real Estate Investment:</strong> Purchasing property
-                      or commercial real estate
+                      <strong>Real Estate Investment:</strong> Purchasing
+                      property or commercial real estate
                     </span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary-600 dark:text-primary-400 font-bold">
-                      <Check size={16} className="text-primary-600 dark:text-primary-400" />
+                      <Check
+                        size={16}
+                        className="text-primary-600 dark:text-primary-400"
+                      />
                     </span>
                     <span>
                       <strong>Government Bonds:</strong> Investing in
@@ -72,7 +89,10 @@ export default function Citizenship() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary-600 dark:text-primary-400 font-bold">
-                      <Check size={16} className="text-primary-600 dark:text-primary-400" />
+                      <Check
+                        size={16}
+                        className="text-primary-600 dark:text-primary-400"
+                      />
                     </span>
                     <span>
                       <strong>Capital Transfer:</strong> Direct government fund
@@ -81,7 +101,10 @@ export default function Citizenship() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary-600 dark:text-primary-400 font-bold">
-                      <Check size={16} className="text-primary-600 dark:text-primary-400" />
+                      <Check
+                        size={16}
+                        className="text-primary-600 dark:text-primary-400"
+                      />
                     </span>
                     <span>
                       <strong>Business Investment:</strong> Creating jobs and
@@ -90,10 +113,10 @@ export default function Citizenship() {
                   </li>
                 </ul>
                 <p className="text-neutral-600 dark:text-neutral-400 text-lg">
-                  In return, you gain full citizenship with all associated rights,
-                  including visa-free travel to numerous countries, ability to
-                  live and work anywhere in the country, and for many programs,
-                  include your family members.
+                  In return, you gain full citizenship with all associated
+                  rights, including visa-free travel to numerous countries,
+                  ability to live and work anywhere in the country, and for many
+                  programs, include your family members.
                 </p>
               </div>
             </Container>

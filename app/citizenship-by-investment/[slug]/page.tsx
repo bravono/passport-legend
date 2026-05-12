@@ -25,7 +25,7 @@ import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
 
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { getCountryBySlug, countries } from "@/lib/data/countries";
+import { getCountryBySlug, countries } from "@/lib/data/countries-citizenship";
 
 interface Props {
   params: Promise<{
@@ -67,14 +67,34 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
   }
 
   const sections = [
-    { id: "country-info", label: "Country Info", show: !!country.sections.about },
-    { id: "benefits", label: "Benefits", show: country.sections.benefits.length > 0 },
-    { id: "requirements", label: "Requirement", show: !!country.sections.requirements },
-    { id: "process", label: "Process", show: !!(country.sections.process || country.sections.appProcess) },
-    { id: "legal-basis", label: "Legal Basis", show: !!country.sections.legalBasis },
+    {
+      id: "country-info",
+      label: "Country Info",
+      show: !!country.sections.about,
+    },
+    {
+      id: "benefits",
+      label: "Benefits",
+      show: country.sections.benefits.length > 0,
+    },
+    {
+      id: "requirements",
+      label: "Requirement",
+      show: !!country.sections.requirements,
+    },
+    {
+      id: "process",
+      label: "Process",
+      show: !!(country.sections.process || country.sections.appProcess),
+    },
+    {
+      id: "legal-basis",
+      label: "Legal Basis",
+      show: !!country.sections.legalBasis,
+    },
     { id: "faq", label: "FAQ", show: !!country.sections.faqs },
     { id: "overview", label: "Overview", show: !!country.sections.overview },
-  ].filter(s => s.show);
+  ].filter((s) => s.show);
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 font-sans">
@@ -112,8 +132,6 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                 {country.name} <br />
                 <span className="text-accent-500">Citizenship</span>
               </h1>
-
-          
 
               <div className="flex flex-wrap gap-4">
                 <Link href="/contact">
@@ -181,8 +199,6 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
             </nav>
           </Container>
         </div>
-
-
 
         {/* Country Info Section */}
         {country.sections.about && (
@@ -275,7 +291,8 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {country.sections.benefits.map((benefit, index) => {
-                  const Icon = (LucideIcons as any)[benefit.icon] || LucideIcons.Check;
+                  const Icon =
+                    (LucideIcons as any)[benefit.icon] || LucideIcons.Check;
 
                   return (
                     <Card
@@ -297,8 +314,14 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                       {benefit.items && benefit.items.length > 0 && (
                         <ul className="space-y-2 relative z-10">
                           {benefit.items.map((item, idx) => (
-                            <li key={idx} className="flex items-start gap-2 text-sm text-neutral-600 dark:text-neutral-400">
-                              <Check size={14} className="mt-1 text-accent-600 flex-shrink-0" />
+                            <li
+                              key={idx}
+                              className="flex items-start gap-2 text-sm text-neutral-600 dark:text-neutral-400"
+                            >
+                              <Check
+                                size={14}
+                                className="mt-1 text-accent-600 flex-shrink-0"
+                              />
                               <span>{item}</span>
                             </li>
                           ))}
@@ -328,7 +351,8 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                     {country.sections.appProcess?.title || "The Process"}
                   </h2>
                   <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light">
-                    {country.sections.appProcess?.description || "A transparent and streamlined journey toward your second citizenship."}
+                    {country.sections.appProcess?.description ||
+                      "A transparent and streamlined journey toward your second citizenship."}
                   </p>
                 </div>
 
@@ -336,7 +360,10 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                   <div className="absolute left-[31px] md:left-1/2 top-0 bottom-0 w-[2px] bg-accent-100 dark:bg-accent-900/30 -translate-x-1/2" />
 
                   <div className="space-y-12">
-                    {(country.sections.process || (country.sections.appProcess?.process as any[])).map((step: any, index: number) => (
+                    {(
+                      country.sections.process ||
+                      (country.sections.appProcess?.process as any[])
+                    ).map((step: any, index: number) => (
                       <div
                         key={index}
                         className={`relative flex items-center gap-12 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
@@ -361,7 +388,9 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                                 <ul className="space-y-2">
                                   {step.list?.map((li: string, i: number) => (
                                     <li key={i} className="flex gap-2">
-                                      <span className="text-accent-500 mt-1.5">•</span>
+                                      <span className="text-accent-500 mt-1.5">
+                                        •
+                                      </span>
                                       <span>{li}</span>
                                     </li>
                                   ))}
@@ -396,15 +425,124 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                           Eligibility
                         </div>
                         <h2 className="text-4xl font-bold text-neutral-900 dark:text-white mb-6 tracking-tight">
-                          {country.sections.requirements.investmentRequirements?.title || "Program Requirements"}
+                          {country.sections.requirements.investmentRequirements
+                            ?.title || "Program Requirements"}
                         </h2>
                         <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
-                          {country.sections.requirements.investmentRequirements?.description}
+                          {
+                            country.sections.requirements.investmentRequirements
+                              ?.description
+                          }
                         </p>
                       </div>
 
                       <div className="space-y-4">
-                        {country.sections.requirements.investmentRequirements?.items?.map((item, index) => (
+                        {country.sections.requirements.investmentRequirements?.items?.map(
+                          (item, index) => (
+                            <div
+                              key={index}
+                              className="flex gap-4 p-5 bg-neutral-50 dark:bg-neutral-900/50 rounded-2xl border border-neutral-100 dark:border-neutral-800 group hover:border-accent-600/30 transition-all duration-300"
+                            >
+                              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400 flex items-center justify-center group-hover:bg-accent-600 group-hover:text-white transition-colors mt-0.5">
+                                <Check size={14} strokeWidth={3} />
+                              </div>
+                              <p className="text-neutral-700 dark:text-neutral-300 font-medium leading-snug">
+                                {item}
+                              </p>
+                            </div>
+                          ),
+                        )}
+                      </div>
+
+                      {country.sections.requirements.investmentRequirements
+                        ?.note && (
+                        <div className="p-6 bg-accent-50/50 dark:bg-accent-900/10 rounded-2xl border border-accent-100/50 dark:border-accent-900/20">
+                          <p className="text-sm text-neutral-600 dark:text-neutral-400 italic leading-relaxed">
+                            <span className="font-bold text-accent-700 dark:text-accent-400 not-italic mr-1">
+                              Note:
+                            </span>
+                            {
+                              country.sections.requirements
+                                .investmentRequirements.note
+                            }
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Right Column: Investment Options */}
+                  {!Array.isArray(country.sections.requirements) &&
+                    country.sections.requirements.investmentOptions && (
+                      <div className="space-y-12">
+                        <div>
+                          <div className="inline-block px-4 py-1.5 bg-accent-50 dark:bg-accent-900/20 text-accent-700 dark:text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
+                            Investment Routes
+                          </div>
+                          <h2 className="text-4xl font-bold text-neutral-900 dark:text-white mb-6 tracking-tight">
+                            {
+                              country.sections.requirements.investmentOptions
+                                .title
+                            }
+                          </h2>
+                          <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+                            {
+                              country.sections.requirements.investmentOptions
+                                .description
+                            }
+                          </p>
+                        </div>
+
+                        <div className="space-y-6">
+                          {country.sections.requirements.investmentOptions.items.map(
+                            (option, index) => (
+                              <div
+                                key={index}
+                                className="p-8 bg-white dark:bg-neutral-800 rounded-3xl shadow-xl shadow-neutral-200/20 dark:shadow-none border border-neutral-100 dark:border-neutral-700 hover:shadow-2xl hover:shadow-accent-600/5 transition-all duration-500 group"
+                              >
+                                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-4 group-hover:text-accent-600 transition-colors">
+                                  {option.title}
+                                </h3>
+                                <ul className="space-y-3">
+                                  {option.list.map((listItem, i) => (
+                                    <li
+                                      key={i}
+                                      className="flex gap-3 text-neutral-600 dark:text-neutral-400 font-light"
+                                    >
+                                      <div className="w-1.5 h-1.5 rounded-full bg-accent-500 mt-2 flex-shrink-0" />
+                                      <span>{listItem}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ),
+                          )}
+                        </div>
+
+                        {country.sections.requirements.investmentOptions
+                          .note && (
+                          <p className="text-sm text-neutral-500 italic">
+                            {
+                              country.sections.requirements.investmentOptions
+                                .note
+                            }
+                          </p>
+                        )}
+                      </div>
+                    )}
+
+                  {/* Fallback for legacy array requirements */}
+                  {Array.isArray(country.sections.requirements) && (
+                    <div className="col-span-full max-w-3xl mx-auto w-full">
+                      <div className="inline-block px-4 py-1.5 bg-accent-50 dark:bg-accent-900/20 text-accent-700 dark:text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
+                        Requirement
+                      </div>
+                      <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-12 tracking-tight text-center">
+                        Eligibility{" "}
+                        <span className="text-accent-600">Criteria</span>
+                      </h2>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {country.sections.requirements.map((item, index) => (
                           <div
                             key={index}
                             className="flex gap-4 p-5 bg-neutral-50 dark:bg-neutral-900/50 rounded-2xl border border-neutral-100 dark:border-neutral-800 group hover:border-accent-600/30 transition-all duration-300"
@@ -418,86 +556,6 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                           </div>
                         ))}
                       </div>
-
-                      {country.sections.requirements.investmentRequirements?.note && (
-                        <div className="p-6 bg-accent-50/50 dark:bg-accent-900/10 rounded-2xl border border-accent-100/50 dark:border-accent-900/20">
-                          <p className="text-sm text-neutral-600 dark:text-neutral-400 italic leading-relaxed">
-                            <span className="font-bold text-accent-700 dark:text-accent-400 not-italic mr-1">Note:</span>
-                            {country.sections.requirements.investmentRequirements.note}
-                          </p>
-                        </div>
-                      )}
-                    </div>
-                  )}
-
-                  {/* Right Column: Investment Options */}
-                  {!Array.isArray(country.sections.requirements) && country.sections.requirements.investmentOptions && (
-                    <div className="space-y-12">
-                      <div>
-                        <div className="inline-block px-4 py-1.5 bg-accent-50 dark:bg-accent-900/20 text-accent-700 dark:text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
-                          Investment Routes
-                        </div>
-                        <h2 className="text-4xl font-bold text-neutral-900 dark:text-white mb-6 tracking-tight">
-                          {country.sections.requirements.investmentOptions.title}
-                        </h2>
-                        <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
-                          {country.sections.requirements.investmentOptions.description}
-                        </p>
-                      </div>
-
-                      <div className="space-y-6">
-                        {country.sections.requirements.investmentOptions.items.map((option, index) => (
-                          <div
-                            key={index}
-                            className="p-8 bg-white dark:bg-neutral-800 rounded-3xl shadow-xl shadow-neutral-200/20 dark:shadow-none border border-neutral-100 dark:border-neutral-700 hover:shadow-2xl hover:shadow-accent-600/5 transition-all duration-500 group"
-                          >
-                            <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-4 group-hover:text-accent-600 transition-colors">
-                              {option.title}
-                            </h3>
-                            <ul className="space-y-3">
-                              {option.list.map((listItem, i) => (
-                                <li key={i} className="flex gap-3 text-neutral-600 dark:text-neutral-400 font-light">
-                                  <div className="w-1.5 h-1.5 rounded-full bg-accent-500 mt-2 flex-shrink-0" />
-                                  <span>{listItem}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
-
-                      {country.sections.requirements.investmentOptions.note && (
-                        <p className="text-sm text-neutral-500 italic">
-                          {country.sections.requirements.investmentOptions.note}
-                        </p>
-                      )}
-                    </div>
-                  )}
-
-                  {/* Fallback for legacy array requirements */}
-                  {Array.isArray(country.sections.requirements) && (
-                    <div className="col-span-full max-w-3xl mx-auto w-full">
-                       <div className="inline-block px-4 py-1.5 bg-accent-50 dark:bg-accent-900/20 text-accent-700 dark:text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
-                          Requirement
-                        </div>
-                        <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-12 tracking-tight text-center">
-                          Eligibility <span className="text-accent-600">Criteria</span>
-                        </h2>
-                        <div className="grid md:grid-cols-2 gap-4">
-                          {country.sections.requirements.map((item, index) => (
-                            <div
-                              key={index}
-                              className="flex gap-4 p-5 bg-neutral-50 dark:bg-neutral-900/50 rounded-2xl border border-neutral-100 dark:border-neutral-800 group hover:border-accent-600/30 transition-all duration-300"
-                            >
-                              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400 flex items-center justify-center group-hover:bg-accent-600 group-hover:text-white transition-colors mt-0.5">
-                                <Check size={14} strokeWidth={3} />
-                              </div>
-                              <p className="text-neutral-700 dark:text-neutral-300 font-medium leading-snug">
-                                {item}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
                     </div>
                   )}
                 </div>
@@ -634,16 +692,16 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                       <div className="absolute top-8 right-10 text-8xl font-bold text-neutral-200/50 dark:text-neutral-800/30 select-none group-hover:text-accent-600/10 transition-colors duration-500 font-mono">
                         {String(item.no).padStart(2, "0")}
                       </div>
-                      
+
                       <div className="relative z-10">
                         <div className="w-12 h-12 rounded-2xl bg-white dark:bg-neutral-800 shadow-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
                           <div className="w-2 h-2 rounded-full bg-accent-600 animate-pulse" />
                         </div>
-                        
+
                         <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4 group-hover:text-accent-600 transition-colors duration-300">
                           {item.title}
                         </h3>
-                        
+
                         <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
                           {item.description}
                         </p>

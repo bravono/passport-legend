@@ -14,7 +14,7 @@ import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
-import { getFeaturedCountries } from "@/lib/data/countries";
+import { getFeaturedCountries } from "@/lib/data/countries-citizenship";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export default function Home() {

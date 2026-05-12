@@ -1,5 +1,15 @@
 import Link from "next/link";
-import { Check, Globe, BarChart3, Sparkles, TrendingUp, Plane, Users, Home, Milestone } from "lucide-react";
+import {
+  Check,
+  Globe,
+  BarChart3,
+  Sparkles,
+  TrendingUp,
+  Plane,
+  Users,
+  Home,
+  Milestone,
+} from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
@@ -7,7 +17,7 @@ import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
 import { CountryGrid } from "@/components/CountryGrid";
-import { getResidenceCountries } from "@/lib/data/countries";
+import { getResidenceCountries } from "@/lib/data/countries-residence";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export default function Residence() {
@@ -55,7 +65,10 @@ export default function Residence() {
                 <ul className="space-y-3 text-neutral-600 dark:text-neutral-400">
                   <li className="flex gap-3">
                     <span className="text-primary-600 dark:text-primary-400 font-bold">
-                      <Check size={16} className="text-primary-600 dark:text-primary-400" />
+                      <Check
+                        size={16}
+                        className="text-primary-600 dark:text-primary-400"
+                      />
                     </span>
                     <span>
                       <strong>Real Estate:</strong> Purchase property meeting
@@ -64,7 +77,10 @@ export default function Residence() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary-600 dark:text-primary-400 font-bold">
-                      <Check size={16} className="text-primary-600 dark:text-primary-400" />
+                      <Check
+                        size={16}
+                        className="text-primary-600 dark:text-primary-400"
+                      />
                     </span>
                     <span>
                       <strong>Capital Investment:</strong> Deposit funds in
@@ -73,16 +89,22 @@ export default function Residence() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary-600 dark:text-primary-400 font-bold">
-                      <Check size={16} className="text-primary-600 dark:text-primary-400" />
+                      <Check
+                        size={16}
+                        className="text-primary-600 dark:text-primary-400"
+                      />
                     </span>
                     <span>
-                      <strong>Business Establishment:</strong> Start and operate a
-                      local business
+                      <strong>Business Establishment:</strong> Start and operate
+                      a local business
                     </span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary-600 dark:text-primary-400 font-bold">
-                      <Check size={16} className="text-primary-600 dark:text-primary-400" />
+                      <Check
+                        size={16}
+                        className="text-primary-600 dark:text-primary-400"
+                      />
                     </span>
                     <span>
                       <strong>Job Creation:</strong> Create employment for local
@@ -91,9 +113,9 @@ export default function Residence() {
                   </li>
                 </ul>
                 <p className="text-neutral-600 dark:text-neutral-400 text-lg">
-                  Residence permits typically range from 1-10 years and can often
-                  be renewed indefinitely. Many programs offer a pathway to
-                  citizenship after a certain period of residence.
+                  Residence permits typically range from 1-10 years and can
+                  often be renewed indefinitely. Many programs offer a pathway
+                  to citizenship after a certain period of residence.
                 </p>
               </div>
             </Container>
@@ -114,17 +136,20 @@ export default function Residence() {
                 {[
                   {
                     title: "Flexibility",
-                    description: "Keep your original citizenship while living abroad",
+                    description:
+                      "Keep your original citizenship while living abroad",
                     icon: Globe,
                   },
                   {
                     title: "Tax Planning",
-                    description: "Strategic tax residency and planning opportunities",
+                    description:
+                      "Strategic tax residency and planning opportunities",
                     icon: BarChart3,
                   },
                   {
                     title: "Quality of Life",
-                    description: "Access to world-class healthcare and education",
+                    description:
+                      "Access to world-class healthcare and education",
                     icon: Sparkles,
                   },
                   {
@@ -134,7 +159,8 @@ export default function Residence() {
                   },
                   {
                     title: "Schengen Access",
-                    description: "Travel freely in EU countries (select programs)",
+                    description:
+                      "Travel freely in EU countries (select programs)",
                     icon: Plane,
                   },
                   {

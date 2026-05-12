@@ -25,7 +25,7 @@ import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
 
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { getCountryBySlug, countries } from "@/lib/data/countries";
+import { getCountryBySlug, countries } from "@/lib/data/countries-residence";
 
 interface Props {
   params: Promise<{
@@ -263,7 +263,6 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
             </div>
           </ScrollReveal>
         )}
-
 
         {/* Benefits Section */}
         <ScrollReveal direction="up" delay={0.2}>

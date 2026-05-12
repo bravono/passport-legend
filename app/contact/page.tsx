@@ -8,7 +8,7 @@ import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
-import { getCountriesByType } from "@/lib/data/countries";
+import { getCountriesByType } from "@/lib/data/countries-citizenship";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 interface FormData {
