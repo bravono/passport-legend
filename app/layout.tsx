@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Cormorant_Garamond } from "next/font/google";
+import { Roboto, Geist_Mono, Cormorant_Garamond } from "next/font/google";
 import { PageTransition } from "@/components/PageTransition";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import "./globals.css";
 
-const geistSans = Geist({
+const roboto = Roboto({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
 });
 
 const geistMono = Geist_Mono({
@@ -46,9 +48,10 @@ export default function RootLayout({
         <meta name="theme-color" content="#1b365d" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${cormorantGaramond.variable} min-h-screen bg-white text-primary-500 antialiased`}
+        className={`${roboto.variable} ${geistMono.variable} ${cormorantGaramond.variable} min-h-screen bg-white text-primary-500 antialiased`}
       >
         <PageTransition>{children}</PageTransition>
+        <WhatsAppButton />
       </body>
     </html>
   );
