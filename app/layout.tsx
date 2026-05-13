@@ -48,7 +48,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#1b365d" />
       </head>
       <body
-        className={`${roboto.variable} ${geistMono.variable} ${cormorantGaramond.variable} min-h-screen bg-white text-primary-500 antialiased`}
+        className={`${roboto.variable} min-h-screen bg-white text-primary-500 antialiased`}
       >
         <PageTransition>{children}</PageTransition>
         <WhatsAppButton />
