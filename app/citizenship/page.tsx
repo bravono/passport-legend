@@ -18,16 +18,66 @@ import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
 import { CountryGrid } from "@/components/CountryGrid";
 import { getCitizenshipCountries } from "@/lib/data/countries-citizenship";
+import { CountrySection } from "@/components/CountrySection";
+import { RequirementsSection } from "@/components/RequirementsSection";
+import { EligibilitySection } from "@/components/EligibilitySection";
+import { ProcessSection } from "@/components/ProcessSection";
 import { ScrollReveal } from "@/components/ScrollReveal";
-
 export default function Citizenship() {
   const countries = getCitizenshipCountries();
+
+  const cbiSteps = [
+    {
+      title: "Assessment and Onboarding",
+      description:
+        "Consult Passport Legacy's client advisors for expert guidance, complemented by their rigorous due diligence checks to ensure sound financial decisions.",
+      details: [
+        "Consult with Passport Legacy's client advisors.",
+        "Passport Legacy's due diligence check is conducted.",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1573164067005-446df1a01791?q=80&w=2070&auto=format&fit=crop",
+    },
+    {
+      title: "Application Preparation",
+      description:
+        "Our processing team collates personal documents from the client, completing and submitting the necessary government paperwork for their application.",
+      details: [
+        "Our team assists with the collection and legalization of documents.",
+        "Preparation and signatures of Government forms.",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2011&auto=format&fit=crop",
+    },
+    {
+      title: "Application Submission",
+      description:
+        "When the file is ready, it will be sent to the Citizenship by Investment Unit (CIU) of the respective country for processing. A confirmation is shared with clients.",
+      details: [
+        "The team lodges the application with the government.",
+        "Follow ups are conducted and clarifications are provided, if needed.",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop",
+    },
+    {
+      title: "Certificate and Passport",
+      description:
+        "   Once the application is approved, our team will collect the certificates of naturalization and the original passports.",
+      details: [
+        "Original documents are sent to our main office.",
+        "Client advisor meets with the client to handover the certificate and passport.",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1544253942-0fbc35daff1f?q=80&w=2069&auto=format&fit=crop",
+    },
+  ];
 
   return (
     <>
       <Header />
       <main>
-        {/* Hero Section */}
+        {/* Section 1: Hero (Navy Blue) */}
         <Section className="relative min-h-[50vh] flex items-center overflow-hidden bg-primary-900 text-white">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544253942-0fbc35daff1f?q=80&w=2069&auto=format&fit=crop')] bg-cover bg-center opacity-30" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-accent-600),transparent_50%)] opacity-20" />
@@ -35,84 +85,80 @@ export default function Citizenship() {
           <Container className="relative z-10">
             <div className="text-center space-y-8 animate-fade-in-up">
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-                Citizenship by{" "}
-                <span className="text-accent-400">Investment</span>
+                Best Citizenship by <br />
+                <span className="text-accent-400">Investment Programmes</span>
               </h1>
-              <p className="text-xl md:text-2xl text-neutral-200 max-w-3xl mx-auto font-light leading-relaxed">
-                Gain citizenship in premium countries worldwide. Expand your
-                horizons with global mobility, visa-free travel, and unlimited
-                opportunities.
+              <p className="text-xl md:text-2xl text-neutral-200 max-w-4xl mx-auto font-light leading-relaxed">
+                Citizenship by investment (CBI) programmes allow foreign
+                individuals to acquire citizenship in new countries in exchange
+                for an investment in the host country. These programmes are
+                designed to attract foreign capital, stimulate economic
+                development, and enhance international relations, whilst giving
+                investors access to higher levels of mobility, tax optimization
+                and lifestyle benefits.
               </p>
               <div className="h-1 w-24 bg-accent-500 mx-auto rounded-full" />
             </div>
           </Container>
         </Section>
-
-        {/* Intro Section */}
+        <CountrySection countries={countries} />
+        {/* Section 2: Intro (Navy Blue) */}
         <ScrollReveal direction="up" delay={0.2}>
-          <Section className="bg-white dark:bg-neutral-800">
+          <Section className="bg-primary-900 text-white">
             <Container>
               <div className="max-w-3xl mx-auto space-y-6">
-                <h2 className="text-3xl font-bold text-neutral-900 dark:text-white">
+                <h2 className="text-3xl font-bold text-white">
                   What is Citizenship by Investment?
                 </h2>
-                <p className="text-neutral-600 dark:text-neutral-400 text-lg">
+                <p className="text-primary-100 text-lg">
                   Citizenship by Investment (CBI) programs allow individuals to
                   obtain a second (or new) citizenship through making a
                   significant financial investment in a country. This investment
                   typically takes the form of:
                 </p>
-                <ul className="space-y-3 text-neutral-600 dark:text-neutral-400">
+                <ul className="space-y-3 text-primary-200">
                   <li className="flex gap-3">
-                    <span className="text-primary-600 dark:text-primary-400 font-bold">
-                      <Check
-                        size={16}
-                        className="text-primary-600 dark:text-primary-400"
-                      />
+                    <span className="text-accent-400 font-bold">
+                      <Check size={16} className="text-accent-400" />
                     </span>
                     <span>
-                      <strong>Real Estate Investment:</strong> Purchasing
-                      property or commercial real estate
+                      <strong className="text-white">
+                        Real Estate Investment:
+                      </strong>{" "}
+                      Purchasing property or commercial real estate
                     </span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-primary-600 dark:text-primary-400 font-bold">
-                      <Check
-                        size={16}
-                        className="text-primary-600 dark:text-primary-400"
-                      />
+                    <span className="text-accent-400 font-bold">
+                      <Check size={16} className="text-accent-400" />
                     </span>
                     <span>
-                      <strong>Government Bonds:</strong> Investing in
-                      government-backed securities
+                      <strong className="text-white">Government Bonds:</strong>{" "}
+                      Investing in government-backed securities
                     </span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-primary-600 dark:text-primary-400 font-bold">
-                      <Check
-                        size={16}
-                        className="text-primary-600 dark:text-primary-400"
-                      />
+                    <span className="text-accent-400 font-bold">
+                      <Check size={16} className="text-accent-400" />
                     </span>
                     <span>
-                      <strong>Capital Transfer:</strong> Direct government fund
-                      contributions
+                      <strong className="text-white">Capital Transfer:</strong>{" "}
+                      Direct government fund contributions
                     </span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-primary-600 dark:text-primary-400 font-bold">
-                      <Check
-                        size={16}
-                        className="text-primary-600 dark:text-primary-400"
-                      />
+                    <span className="text-accent-400 font-bold">
+                      <Check size={16} className="text-accent-400" />
                     </span>
                     <span>
-                      <strong>Business Investment:</strong> Creating jobs and
-                      investing in local businesses
+                      <strong className="text-white">
+                        Business Investment:
+                      </strong>{" "}
+                      Creating jobs and investing in local businesses
                     </span>
                   </li>
                 </ul>
-                <p className="text-neutral-600 dark:text-neutral-400 text-lg">
+                <p className="text-primary-100 text-lg">
                   In return, you gain full citizenship with all associated
                   rights, including visa-free travel to numerous countries,
                   ability to live and work anywhere in the country, and for many
@@ -123,14 +169,15 @@ export default function Citizenship() {
           </Section>
         </ScrollReveal>
 
-        {/* Benefits Section */}
+        {/* Section 3: Benefits (White) */}
         <ScrollReveal direction="up" delay={0.2}>
-          <Section className="bg-neutral-50 dark:bg-neutral-900">
+          <Section className="bg-white">
             <Container>
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-neutral-900 dark:text-white">
+                <h2 className="text-3xl font-bold text-primary-900 mb-4">
                   Benefits of Citizenship
                 </h2>
+                <div className="h-1 w-24 bg-accent-500 mx-auto rounded-full" />
               </div>
 
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -176,14 +223,17 @@ export default function Citizenship() {
                     icon: Shield,
                   },
                 ].map((benefit, index) => (
-                  <Card key={index} className="text-center">
-                    <div className="text-primary-600 dark:text-primary-400 flex justify-center mb-4">
+                  <Card
+                    key={index}
+                    className="bg-white border-neutral-100 shadow-lg hover:shadow-xl transition-shadow text-center p-6"
+                  >
+                    <div className="text-primary-600 flex justify-center mb-4">
                       <benefit.icon size={40} />
                     </div>
-                    <h3 className="font-semibold text-neutral-900 dark:text-white mb-2">
+                    <h3 className="font-semibold text-primary-900 mb-2">
                       {benefit.title}
                     </h3>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                    <p className="text-sm text-neutral-600">
                       {benefit.description}
                     </p>
                   </Card>
@@ -193,17 +243,32 @@ export default function Citizenship() {
           </Section>
         </ScrollReveal>
 
-        {/* Countries Grid */}
+        {/* Section 4: Requirements (Navy Blue) */}
+        <RequirementsSection />
+
+        {/* Section 5: Eligibility Roadmap (White) */}
+        <EligibilitySection />
+
+        {/* Section 6: Process (Navy Blue) */}
+        <ProcessSection
+          title="CBI Application Process"
+          subtitle="Application processes are straightforward and typically take between 2-6 months between initiating the process and obtaining citizenship."
+          steps={cbiSteps}
+          theme="dark"
+        />
+
+        {/* Section 7: Countries Grid (White) */}
         <ScrollReveal direction="up" delay={0.2}>
-          <Section className="bg-white dark:bg-neutral-800">
+          <Section className="bg-white">
             <Container>
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-4">
+                <h2 className="text-3xl font-bold text-primary-900 mb-4">
                   Available Programs ({countries.length})
                 </h2>
-                <p className="text-neutral-600 dark:text-neutral-300">
+                <p className="text-neutral-600">
                   Explore citizenship opportunities across diverse regions
                 </p>
+                <div className="h-1 w-24 bg-accent-500 mx-auto rounded-full mt-4" />
               </div>
 
               <CountryGrid countries={countries} />
@@ -211,21 +276,24 @@ export default function Citizenship() {
           </Section>
         </ScrollReveal>
 
-        {/* CTA Section */}
+        {/* Section 8: CTA (Navy Blue) */}
         <ScrollReveal direction="up" delay={0.2}>
-          <Section className="bg-gradient-to-r from-primary-600 to-primary-700 dark:from-primary-500 dark:to-primary-600 text-white">
-            <Container>
-              <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold">
-                  Ready to Explore Your Options?
-                </h2>
-                <p className="text-lg opacity-90 max-w-2xl mx-auto">
-                  Schedule a free consultation to learn about the citizenship
-                  programs best suited to your goals.
-                </p>
-                <Button size="lg" variant="secondary" asChild>
-                  <Link href="/contact">Book Your Consultation</Link>
-                </Button>
+          <Section className="relative bg-primary-900 text-white overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.05),transparent_70%)]" />
+            <Container className="relative z-10">
+              <div className="max-w-4xl mx-auto rounded-[3rem] bg-gradient-to-br from-primary-800 to-primary-900 p-12 md:p-20 text-center border border-primary-700 shadow-2xl">
+                <div className="space-y-8">
+                  <h2 className="text-3xl md:text-5xl font-bold text-white">
+                    Ready to Explore Your Options?
+                  </h2>
+                  <p className="text-lg text-primary-100 max-w-2xl mx-auto">
+                    Schedule a free consultation to learn about the citizenship
+                    programs best suited to your goals.
+                  </p>
+                  <Button size="lg" variant="accent" asChild>
+                    <Link href="/contact">Book Your Consultation</Link>
+                  </Button>
+                </div>
               </div>
             </Container>
           </Section>
