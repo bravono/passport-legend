@@ -22,6 +22,7 @@ import { CountrySection } from "@/components/CountrySection";
 import { RequirementsSection } from "@/components/RequirementsSection";
 import { EligibilitySection } from "@/components/EligibilitySection";
 import { ProcessSection } from "@/components/ProcessSection";
+import { FaqSection } from "@/components/FaqSection";
 import { ScrollReveal } from "@/components/ScrollReveal";
 export default function Citizenship() {
   const countries = getCitizenshipCountries();
@@ -71,6 +72,25 @@ export default function Citizenship() {
       image:
         "https://images.unsplash.com/photo-1544253942-0fbc35daff1f?q=80&w=2069&auto=format&fit=crop",
     },
+  ];
+
+  const citizenshipFaqs = [
+    {
+      q: "What is Citizenship by Investment?",
+      a: "Citizenship by Investment (CBI) is a process where individuals can acquire a second citizenship and passport by making a significant financial contribution or investment in a host country, typically in real estate, government bonds, or a national development fund."
+    },
+    {
+      q: "How to Get Citizenship by Investment?",
+      a: "The process involves choosing a program, passing a rigorous due diligence check, making the required investment, and submitting an application through an authorized agent like Passport Legend. Once approved, you receive a certificate of naturalization and your new passport."
+    },
+    {
+      q: "Which Countries Allow Citizenship by Investment?",
+      a: "Several countries offer official CBI programs, including Caribbean nations like St. Kitts & Nevis, Grenada, Antigua & Barbuda, and St. Lucia, as well as European and Asian options like Türkiye and São Tomé & Príncipe."
+    },
+    {
+      q: "What Residence by Investment programmes does Passport Legend offer?",
+      a: "Passport Legend offers a wide range of residency programs including the Greek Golden Visa, Cyprus Permanent Residence, Canada Start-up Visa, and various European programs that provide a pathway to residency through investment."
+    }
   ];
 
   return (
@@ -276,9 +296,15 @@ export default function Citizenship() {
           </Section>
         </ScrollReveal>
 
-        {/* Section 8: CTA (Navy Blue) */}
+        {/* Section 8: FAQ (Navy Blue) */}
+        <FaqSection 
+          faqs={citizenshipFaqs}
+          theme="dark"
+        />
+
+        {/* Section 9: CTA (White) */}
         <ScrollReveal direction="up" delay={0.2}>
-          <Section className="relative bg-primary-900 text-white overflow-hidden">
+          <Section className="relative bg-white overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.05),transparent_70%)]" />
             <Container className="relative z-10">
               <div className="max-w-4xl mx-auto rounded-[3rem] bg-gradient-to-br from-primary-800 to-primary-900 p-12 md:p-20 text-center border border-primary-700 shadow-2xl">
