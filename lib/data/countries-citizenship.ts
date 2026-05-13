@@ -199,22 +199,22 @@ export const countries: Country[] = [
         {
           title: "USD 250,000",
           description: "USD 250,000 (Minimum Investment by Donation)",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "USD 325,000",
           description: "USD 325,000 (Minimum Investment in Real Estate)",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "6 Months",
           description: "6 Months (Time to Citizenship)",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "Free Visa",
           description: "Free Visa (Access to 162 Countries)",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -419,69 +419,69 @@ St. Kitts & Nevis is a British Commonwealth country with a strong rule of law, s
           title: "Dual Citizenship",
           subTitle: "Grenada passport holders can hold dual citizenship.",
           items: [],
-          icon: "",
+          icon: "Globe",
         },
         {
           title: "Low Tax Rate",
           subTitle:
             "Grenada Citizenship offers exemption from taxation on capital gains, inheritance, wealth, gifts, or foreign income.",
           items: [],
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "Application Time",
           subTitle:
             "The Grenada citizenship application process typically takes a minimum of 6 months to complete",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "For Family",
           subTitle:
             "A single applicant can apply for his/her family members as dependants, including the main applicant’s spouse, children (biological or adopted) under 30 years of age, dependant parents, and siblings above the age of 18.",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "Citizenship",
           subTitle:
             "Grenada Citizenship is passed on to all future generations; newborn children and a newly married wife can be added for free.",
           items: [],
-          icon: "",
+          icon: "Users",
         },
         {
           title: "Education",
           subTitle:
             "Access to the largest offshore Medical University, St. George’s University, of the United States of America in Grenada.",
           items: [],
-          icon: "",
+          icon: "Heart",
         },
         {
           title: "Visa-Free Access",
           subTitle:
             "Grenadian citizens can travel visa-free and visa-on-arrival to a total of 143 countries.",
-          icon: "",
+          icon: "Globe",
         },
         {
           title: "US E-2 Treaty Visa",
           subTitle:
             "A gateway to acquire a US E-2 Treaty Visa – The only Caribbean Citizenship program that offers it.",
-          icon: "",
+          icon: "Globe",
         },
       ],
       importantDetails: [
         {
           title: "USD 235,000",
           description: "Minimum Investment by Donation",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "6 Months",
           description: "Time to Citizenship",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "143+ Countries",
           description: "Visa - Free Access",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -660,17 +660,17 @@ Current population as of 2025: 117,276`,
         {
           title: "USD 235,000",
           description: "Minimum Investment by Donation",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "6 Months",
           description: "Time to Citizenship",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "143+ Countries",
           description: "Visa - Free Access",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -769,19 +769,19 @@ Current population as of 2025: 117,276`,
           title: "$230,000",
           description:
             "National Development Fund (NDF) (A one-time non-refundable contribution to the government fund for a family of up to four.)",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "$300,000",
           description:
             "Real Estate Investment (Investment in a government-approved real estate project, which must be held for at least five years.)",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "$260,000",
           description:
             "University of the West Indies (UWI) Fund (A contribution option specifically for large families of six or more people.)",
-          icon: "",
+          icon: "GraduationCap",
         },
       ],
       requirements: {
@@ -975,17 +975,17 @@ Current population as of 2025: 94,094`,
         {
           title: "USD 105,000",
           description: "Minimum Investment by Donation",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "3 - 4 Months",
           description: "Time to Citizenship",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "107 Countries",
           description: "Visa - Free Access",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -1169,17 +1169,17 @@ São Tomé & Príncipe’s economy is mainly driven by agriculture (primarily th
         {
           title: "USD 90,000",
           description: "Contribution to the National Transformation Fund",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "2 - 3 Months",
           description: "Time to Citizenship",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "93+ Countries",
           description: "Visa-Free Access",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -1407,22 +1407,22 @@ As a member of various international organisations, including the United Nations
         {
           title: "USD 240,000",
           description: "  Minimum Investment by Donation",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "USD 300,000",
           description: "Minimum Investment in Real Estate",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "12-14 Months",
           description: "Time to Citizenship",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "Free Visa",
           description: "Access to 147 Countries",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -1605,22 +1605,22 @@ The current population as of 2025 : 180,043`,
         {
           title: "          USD 500,000",
           description: "Minimum Capital Investment",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "          USD 400,000",
           description: "Minimum Investment In Real Estate",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "          6 Months",
           description: "Time to Citizenship",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "          111 Countries",
           description: "Visa - Free Access",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -1804,17 +1804,17 @@ The current population as of 2025 : 87,629,938`,
         {
           title: "USD 130,000",
           description: "Minimum Investment by Donation",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "3 - 5 Months",
           description: "Time to Citizenship",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "112 Countries",
           description: "Visa - Free Access",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {

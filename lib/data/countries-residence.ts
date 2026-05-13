@@ -181,12 +181,12 @@ export const countries: Country[] = [
         {
           title: "USD 250,000",
           description: "Minimum Investment",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "12 - 16 Months",
           description: "Time to Residency",
-          icon: "",
+          icon: "Clock",
         },
       ],
       requirements: {
@@ -320,17 +320,17 @@ Cyprus continues to attract international investors from all over the globe, and
         {
           title: "EUR 300,000",
           description: "Minimum Investment",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "2 - 3 Months",
           description: "Time to Residency",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "Cyprus",
           description: "Visa Free Access",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -525,22 +525,22 @@ The current population as of 2025: 1,367,468`,
         {
           title: "EUR 500,000",
           description: "Min-Investment in High-Demand Municipalities",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "EUR 250,000",
           description: "Minimum Investment in Other Areas",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "2 - 3 Months",
           description: "Time to Residency",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "Free Visa",
           description: "Schengen Area",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -742,17 +742,17 @@ The current population as of 2025: 9,967,275`,
         {
           title: "EUR 250,000",
           description: "Minimum Investment",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "4 Months",
           description: "Time To Residency",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "Free Visa",
           description: "Schengen Area",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -959,17 +959,17 @@ Eurozone – Since 2014, Latvia has been a member of the Eurozone, using the Eur
         {
           title: "EUR 60,000",
           description: "Minimum Investment",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "6 Months",
           description: "Time To Residency",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "Free Visa",
           description: "Schengen Area",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -1185,17 +1185,17 @@ The current population as of 2025 : 1,858,298`,
         {
           title: "EUR 110,000",
           description: "Minimum Investment",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "6 Months",
           description: "Time to Residency",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "Malta",
           description: "Schengen Area",
-          icon: "",
+          icon: "Check",
         },
       ],
       requirements: {
@@ -1444,17 +1444,17 @@ Current population as of 2025: 546,673`,
         {
           title: "USD 500,000",
           description: "Minimum Investment in Panama Stock Exchange",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "3 - 5 Months",
           description: "Time To Residency",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "Free Visa",
           description: "The right to live, work, and study in Panama",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -1638,25 +1638,25 @@ Its economy is primarily service based, driven by sectors such as logistics, fin
           title: "EUR 250,000",
           description:
             "Real Estate Investment (Purchase property in approved regions for Golden Visa)",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "EUR 500.000",
           description:
             "Capital Transfer (Direct capital investment in Portuguese business or financial institutions)",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "12 - 16 Months",
           description:
             "Job Creation (Invest in creating jobs for Portuguese residents)",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "Free Visa",
           description:
             "Job Creation (Invest in creating jobs for Portuguese residents)",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -1857,17 +1857,17 @@ The current population as of 2025 : 10,415,328`,
         {
           title: "CHF 250,000/year",
           description: "Minimum Investment",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "3 - 6 Months",
           description: "Time to Residency",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "Visa - Free Access",
           description: "Schengen Countries",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -2026,17 +2026,17 @@ The current population as of  2025 : 8,955,693`,
         {
           title: "USD 24,800",
           description: "Minimum Investment By Donation",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "4 - 5 Months",
           description: "Time to Citizenship",
-          icon: "",
+          icon: "Clock",
         },
         {
           title: "Thailand",
           description: "Visa - Free Access",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -2216,12 +2216,12 @@ The current population as of 2025 : 71,632,347`,
         {
           title: "USD 10,000",
           description: "Minimum Investment (Business Setup)",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "1-4 Weeks",
           description: "Time to Residency",
-          icon: "",
+          icon: "Clock",
         },
       ],
       requirements: {
@@ -2418,12 +2418,12 @@ The current population as of 2025 : 11,263,050`,
         {
           title: "GBP 50,000",
           description: "Minimum Investment",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "4 - 6 Months",
           description: "Time to Residency",
-          icon: "",
+          icon: "Clock",
         },
       ],
       requirements: {
@@ -2574,23 +2574,23 @@ The population as of 2025 : 69,442,865`,
         {
           title: "USD 800,000",
           description: "Minimum Investment (Principle return in 5 - 6 years)",
-          icon: "",
+          icon: "Coins",
         },
         {
           title: "Concurrent Filing",
           description:
             "For applicants inside the USA to gain immediate right to work / Re-entry permit",
-          icon: "",
+          icon: "Briefcase",
         },
         {
           title: "Access to work, live, and study",
           description: "Anywhere in the USA",
-          icon: "",
+          icon: "GraduationCap",
         },
         {
           title: "189 Countries",
           description: "Visa - Free Access",
-          icon: "",
+          icon: "Globe",
         },
       ],
       requirements: {
@@ -2740,17 +2740,17 @@ The current population as of 2025 : 346,794,259`,
         {
           title: "",
           description: "",
-          icon: "",
+          icon: "Check",
         },
         {
           title: "",
           description: "",
-          icon: "",
+          icon: "Check",
         },
         {
           title: "",
           description: "",
-          icon: "",
+          icon: "Check",
         },
       ],
       requirements: {

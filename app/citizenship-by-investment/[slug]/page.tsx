@@ -23,7 +23,7 @@ import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
-
+import { OverviewSection } from "@/components/OverviewSection";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { getCountryBySlug, countries } from "@/lib/data/countries-citizenship";
 
@@ -273,7 +273,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
         <ScrollReveal direction="up" delay={0.2}>
           <Section
             id="benefits"
-            className="bg-neutral-50 dark:bg-neutral-900 py-24 md:py-32 scroll-mt-24"
+            className="bg-white dark:bg-neutral-950 py-24 md:py-32 scroll-mt-24"
           >
             <Container>
               <div className="text-center max-w-3xl mx-auto mb-20">
@@ -340,24 +340,24 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
           <ScrollReveal direction="up" delay={0.2}>
             <Section
               id="process"
-              className="bg-neutral-50 dark:bg-neutral-900 py-24 md:py-32 scroll-mt-24"
+              className="bg-primary-900 text-white py-24 md:py-32 scroll-mt-24"
             >
               <Container>
                 <div className="text-center max-w-3xl mx-auto mb-20">
-                  <div className="inline-block px-4 py-1.5 bg-accent-50 dark:bg-accent-900/20 text-accent-700 dark:text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
+                  <div className="inline-block px-4 py-1.5 bg-accent-500/10 text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase border border-accent-500/20">
                     Step-by-Step
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-6 tracking-tight">
+                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
                     {country.sections.appProcess?.title || "The Process"}
                   </h2>
-                  <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light">
+                  <p className="text-lg text-primary-100 font-light">
                     {country.sections.appProcess?.description ||
                       "A transparent and streamlined journey toward your second citizenship."}
                   </p>
                 </div>
 
                 <div className="relative max-w-5xl mx-auto">
-                  <div className="absolute left-[31px] md:left-1/2 top-0 bottom-0 w-[2px] bg-accent-100 dark:bg-accent-900/30 -translate-x-1/2" />
+                  <div className="absolute left-[31px] md:left-1/2 top-0 bottom-0 w-[2px] bg-white/10 -translate-x-1/2" />
 
                   <div className="space-y-12">
                     {(
@@ -370,22 +370,22 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                       >
                         <div className="hidden md:block w-1/2" />
 
-                        <div className="absolute left-[31px] md:left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white dark:bg-neutral-800 border-4 border-accent-50 dark:border-accent-900/30 flex items-center justify-center z-10">
-                          <span className="text-xl font-bold text-accent-600 dark:text-accent-400">
+                        <div className="absolute left-[31px] md:left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-primary-800 border-4 border-primary-700 flex items-center justify-center z-10 shadow-xl">
+                          <span className="text-xl font-bold text-accent-400">
                             {index + 1}
                           </span>
                         </div>
 
                         <div className="w-full md:w-1/2 pl-24 md:pl-0">
                           <div
-                            className={`p-8 bg-white dark:bg-neutral-800 rounded-3xl shadow-lg shadow-neutral-500/5 border border-neutral-100 dark:border-neutral-700 hover:border-accent-400/30 transition-colors ${index % 2 === 0 ? "md:text-left" : "md:text-right"}`}
+                            className={`p-8 bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-accent-500/30 transition-all ${index % 2 === 0 ? "md:text-left" : "md:text-right"}`}
                           >
-                            <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3">
+                            <h3 className="text-xl font-bold text-white mb-3">
                               {step.title || step.item}
                             </h3>
-                            <div className="text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+                            <div className="text-primary-100 font-light leading-relaxed">
                               {step.description || (
-                                <ul className="space-y-2">
+                                <ul className={`space-y-2 flex flex-col ${index % 2 === 0 ? "md:items-start" : "md:items-end"}`}>
                                   {step.list?.map((li: string, i: number) => (
                                     <li key={i} className="flex gap-2">
                                       <span className="text-accent-500 mt-1.5">
@@ -569,32 +569,32 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
           <ScrollReveal direction="up" delay={0.2}>
             <Section
               id="legal-basis"
-              className="bg-neutral-50 dark:bg-neutral-900 py-24 md:py-32 scroll-mt-24"
+              className="bg-primary-900 text-white py-24 md:py-32 scroll-mt-24"
             >
               <Container>
                 <div className="max-w-4xl mx-auto">
-                  <div className="inline-block px-4 py-1.5 bg-accent-50 dark:bg-accent-900/20 text-accent-700 dark:text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
+                  <div className="inline-block px-4 py-1.5 bg-accent-500/10 text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase border border-accent-500/20">
                     Legal Framework
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-8 tracking-tight">
+                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight">
                     {country.sections.legalBasis.title}
                   </h2>
-                  <div className="p-8 md:p-12 bg-white dark:bg-neutral-800 rounded-[2.5rem] border border-neutral-100 dark:border-neutral-700 shadow-xl shadow-neutral-500/5">
+                  <div className="p-8 md:p-12 bg-white/5 backdrop-blur-sm rounded-[2.5rem] border border-white/10 shadow-2xl">
                     <div className="space-y-8">
-                      <div className="flex gap-6 items-start">
-                        <div className="w-16 h-16 rounded-2xl bg-accent-50 dark:bg-accent-900/20 text-accent-600 dark:text-accent-400 flex items-center justify-center flex-shrink-0">
+                      <div className="flex flex-col md:flex-row gap-8 items-start">
+                        <div className="w-16 h-16 rounded-2xl bg-white/10 text-accent-400 flex items-center justify-center flex-shrink-0">
                           <ShieldCheck size={32} />
                         </div>
-                        <div className="prose prose-lg dark:prose-invert max-w-none text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
+                        <div className="prose prose-lg prose-invert max-w-none text-primary-100 leading-relaxed font-light">
                           <p>{country.sections.legalBasis.description}</p>
                         </div>
                       </div>
 
-                      <div className="grid gap-4 pl-22">
+                      <div className="grid gap-4 md:pl-24">
                         {country.sections.legalBasis.items.map((item, idx) => (
                           <div key={idx} className="flex items-center gap-3">
                             <div className="w-1.5 h-1.5 rounded-full bg-accent-500" />
-                            <p className="text-neutral-600 dark:text-neutral-400 font-light">
+                            <p className="text-primary-100 font-light">
                               {item}
                             </p>
                           </div>
@@ -602,7 +602,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                       </div>
 
                       {country.sections.legalBasis.note && (
-                        <div className="mt-8 p-6 bg-neutral-50 dark:bg-neutral-900/50 rounded-2xl border border-neutral-100 dark:border-neutral-800 italic text-sm text-neutral-500 dark:text-neutral-400">
+                        <div className="mt-8 p-6 bg-primary-800/50 rounded-2xl border border-white/10 italic text-sm text-primary-200">
                           Note: {country.sections.legalBasis.note}
                         </div>
                       )}
@@ -619,7 +619,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
           <ScrollReveal direction="up" delay={0.2}>
             <Section
               id="faq"
-              className="bg-neutral-50 dark:bg-neutral-900 py-24 md:py-32 scroll-mt-24"
+              className="bg-white dark:bg-neutral-950 py-24 md:py-32 scroll-mt-24"
             >
               <Container>
                 <div className="text-center max-w-3xl mx-auto mb-20">
@@ -663,84 +663,41 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
         )}
         {/* Overview Section */}
         {country.sections.overview && (
-          <ScrollReveal direction="up" delay={0.2}>
-            <Section
-              id="overview"
-              className="bg-white dark:bg-neutral-950 py-24 md:py-32 scroll-mt-24 overflow-hidden"
-            >
-              <Container>
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
-                  <div className="max-w-2xl">
-                    <div className="inline-block px-4 py-1.5 bg-accent-50 dark:bg-accent-900/20 text-accent-700 dark:text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
-                      Quick Look
-                    </div>
-                    <h2 className="text-4xl md:text-6xl font-bold text-neutral-900 dark:text-white tracking-tight">
-                      {country.sections.overview.title}
-                    </h2>
-                  </div>
-                  <div className="text-neutral-500 dark:text-neutral-500 font-mono text-sm hidden md:block">
-                    PROGRAM SUMMARY / {country.name.toUpperCase()}
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {country.sections.overview.items.map((item, index) => (
-                    <div
-                      key={index}
-                      className="group relative p-10 bg-neutral-50 dark:bg-neutral-900/50 rounded-[2.5rem] border border-neutral-100 dark:border-neutral-800 hover:border-accent-600/30 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-600/5"
-                    >
-                      <div className="absolute top-8 right-10 text-8xl font-bold text-neutral-200/50 dark:text-neutral-800/30 select-none group-hover:text-accent-600/10 transition-colors duration-500 font-mono">
-                        {String(item.no).padStart(2, "0")}
-                      </div>
-
-                      <div className="relative z-10">
-                        <div className="w-12 h-12 rounded-2xl bg-white dark:bg-neutral-800 shadow-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                          <div className="w-2 h-2 rounded-full bg-accent-600 animate-pulse" />
-                        </div>
-
-                        <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4 group-hover:text-accent-600 transition-colors duration-300">
-                          {item.title}
-                        </h3>
-
-                        <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
-                          {item.description}
-                        </p>
-                      </div>
-
-                      <div className="absolute bottom-0 left-10 right-10 h-1 bg-accent-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full" />
-                    </div>
-                  ))}
-                </div>
-              </Container>
-            </Section>
-          </ScrollReveal>
+          <OverviewSection 
+            title={country.sections.overview.title}
+            items={country.sections.overview.items}
+            countryName={country.name}
+            theme="dark"
+          />
         )}
 
         {/* Final CTA Section */}
         <ScrollReveal direction="up" delay={0.2}>
-          <Section className="relative overflow-hidden py-32">
-            <div className="absolute inset-0 bg-primary-900" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,var(--color-accent-600),transparent_50%)] opacity-30" />
-            <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" />
+          <Section className="relative overflow-hidden py-32 bg-white">
+            <div className="absolute inset-0 bg-white" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,var(--color-accent-500),transparent_50%)] opacity-5" />
 
             <Container className="relative z-10">
-              <div className="max-w-4xl mx-auto text-center space-y-10">
-                <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter">
-                  Ready to become a <br />
-                  <span className="text-accent-400">Global Citizen?</span>
-                </h2>
-                <p className="text-xl text-neutral-200 font-light max-w-2xl mx-auto leading-relaxed">
-                  Our experts are ready to guide you through every step of the{" "}
-                  {country.name} Citizenship by Investment process. Schedule
-                  your private consultation today.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
-                  <Button size="lg" variant="primary" asChild>
-                    <Link href="/contact">Book a Consultation</Link>
-                  </Button>
-                  <Button size="lg" variant="secondary" asChild>
-                    <Link href="/citizenship">Explore Programs</Link>
-                  </Button>
+              <div className="max-w-5xl mx-auto rounded-[4rem] bg-gradient-to-br from-primary-800 to-primary-900 p-12 md:p-24 text-center border border-primary-700 shadow-2xl relative overflow-hidden group">
+                <div className="absolute inset-0 bg-accent-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="relative z-10 space-y-10">
+                  <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter">
+                    Ready to become a <br />
+                    <span className="text-accent-400">Global Citizen?</span>
+                  </h2>
+                  <p className="text-xl text-primary-100 font-light max-w-2xl mx-auto leading-relaxed">
+                    Our experts are ready to guide you through every step of the{" "}
+                    {country.name} Citizenship by Investment process. Schedule
+                    your private consultation today.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
+                    <Button size="xl" variant="accent" className="px-12 py-6 text-lg" asChild>
+                      <Link href="/contact">Book a Consultation</Link>
+                    </Button>
+                    <Button size="xl" variant="outline" className="px-12 py-6 text-lg border-white/30 text-white hover:bg-white/10" asChild>
+                      <Link href="/citizenship">Explore Programs</Link>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </Container>

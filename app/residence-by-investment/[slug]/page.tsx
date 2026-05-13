@@ -23,7 +23,7 @@ import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
-
+import { OverviewSection } from "@/components/OverviewSection";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { getCountryBySlug, countries } from "@/lib/data/countries-residence";
 
@@ -268,7 +268,7 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
         <ScrollReveal direction="up" delay={0.2}>
           <Section
             id="benefits"
-            className="bg-neutral-50 dark:bg-neutral-900 py-24 md:py-32 scroll-mt-24"
+            className="bg-white dark:bg-neutral-950 py-24 md:py-32 scroll-mt-24"
           >
             <Container>
               <div className="text-center max-w-3xl mx-auto mb-20">
@@ -331,7 +331,7 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
           <ScrollReveal direction="up" delay={0.2}>
             <Section
               id="requirements"
-              className="bg-white dark:bg-neutral-950 py-24 md:py-32 scroll-mt-24"
+              className="bg-primary-900 text-white py-24 md:py-32 scroll-mt-24"
             >
               <Container>
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
@@ -339,14 +339,14 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                   {!Array.isArray(country.sections.requirements) && (
                     <div className="space-y-12">
                       <div>
-                        <div className="inline-block px-4 py-1.5 bg-accent-50 dark:bg-accent-900/20 text-accent-700 dark:text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
+                        <div className="inline-block px-4 py-1.5 bg-accent-500/10 text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase border border-accent-500/20">
                           Eligibility
                         </div>
-                        <h2 className="text-4xl font-bold text-neutral-900 dark:text-white mb-6 tracking-tight">
+                        <h2 className="text-4xl font-bold text-white mb-6 tracking-tight">
                           {country.sections.requirements.investmentRequirements
                             ?.title || "Program Requirements"}
                         </h2>
-                        <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+                        <p className="text-lg text-primary-100 font-light leading-relaxed">
                           {country.sections.requirements.investmentRequirements
                             ?.description ||
                             `To qualify for the ${country.name} Residence by Investment Program, applicants must meet the following core requirements:`}
@@ -358,12 +358,12 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                           (item, index) => (
                             <div
                               key={index}
-                              className="flex gap-4 p-5 bg-neutral-50 dark:bg-neutral-900/50 rounded-2xl border border-neutral-100 dark:border-neutral-800 group hover:border-accent-600/30 transition-all duration-300"
+                              className="flex gap-4 p-5 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 group hover:border-accent-500/30 transition-all duration-300"
                             >
-                              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400 flex items-center justify-center group-hover:bg-accent-600 group-hover:text-white transition-colors mt-0.5">
+                              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent-500/10 text-accent-400 flex items-center justify-center group-hover:bg-accent-600 group-hover:text-white transition-colors mt-0.5">
                                 <Check size={14} strokeWidth={3} />
                               </div>
-                              <p className="text-neutral-700 dark:text-neutral-300 font-medium leading-snug">
+                              <p className="text-primary-100 font-medium leading-snug">
                                 {item}
                               </p>
                             </div>
@@ -373,9 +373,9 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
 
                       {country.sections.requirements.investmentRequirements
                         ?.note && (
-                        <div className="p-6 bg-accent-50/50 dark:bg-accent-900/10 rounded-2xl border border-accent-100/50 dark:border-accent-900/20">
-                          <p className="text-sm text-neutral-600 dark:text-neutral-400 italic leading-relaxed">
-                            <span className="font-bold text-accent-700 dark:text-accent-400 not-italic mr-1">
+                        <div className="p-6 bg-primary-800/50 rounded-2xl border border-white/10">
+                          <p className="text-sm text-primary-200 italic leading-relaxed">
+                            <span className="font-bold text-accent-400 not-italic mr-1">
                               Note:
                             </span>
                             {
@@ -393,16 +393,16 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                     country.sections.requirements.investmentOptions && (
                       <div className="space-y-12">
                         <div>
-                          <div className="inline-block px-4 py-1.5 bg-accent-50 dark:bg-accent-900/20 text-accent-700 dark:text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
+                          <div className="inline-block px-4 py-1.5 bg-accent-500/10 text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase border border-accent-500/20">
                             Investment Routes
                           </div>
-                          <h2 className="text-4xl font-bold text-neutral-900 dark:text-white mb-6 tracking-tight">
+                          <h2 className="text-4xl font-bold text-white mb-6 tracking-tight">
                             {
                               country.sections.requirements.investmentOptions
                                 .title
                             }
                           </h2>
-                          <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+                          <p className="text-lg text-primary-100 font-light leading-relaxed">
                             {
                               country.sections.requirements.investmentOptions
                                 .description
@@ -415,16 +415,16 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                             (option, index) => (
                               <div
                                 key={index}
-                                className="p-8 bg-white dark:bg-neutral-800 rounded-3xl shadow-xl shadow-neutral-200/20 dark:shadow-none border border-neutral-100 dark:border-neutral-700 hover:shadow-2xl hover:shadow-accent-600/5 transition-all duration-500 group"
+                                className="p-8 bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-accent-500/30 transition-all duration-500 group"
                               >
-                                <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-4 group-hover:text-accent-600 transition-colors">
+                                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-accent-500 transition-colors">
                                   {option.title}
                                 </h3>
                                 <ul className="space-y-3">
                                   {option.list.map((listItem, i) => (
                                     <li
                                       key={i}
-                                      className="flex gap-3 text-neutral-600 dark:text-neutral-400 font-light"
+                                      className="flex gap-3 text-primary-100 font-light"
                                     >
                                       <div className="w-1.5 h-1.5 rounded-full bg-accent-500 mt-2 flex-shrink-0" />
                                       <span>{listItem}</span>
@@ -438,7 +438,7 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
 
                         {country.sections.requirements.investmentOptions
                           .note && (
-                          <p className="text-sm text-neutral-500 italic">
+                          <p className="text-sm text-primary-300 italic">
                             {
                               country.sections.requirements.investmentOptions
                                 .note
@@ -451,23 +451,23 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                   {/* Fallback for legacy array requirements */}
                   {Array.isArray(country.sections.requirements) && (
                     <div className="col-span-full max-w-3xl mx-auto w-full">
-                      <div className="inline-block px-4 py-1.5 bg-accent-50 dark:bg-accent-900/20 text-accent-700 dark:text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
+                      <div className="inline-block px-4 py-1.5 bg-accent-500/10 text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase border border-accent-500/20">
                         Requirement
                       </div>
-                      <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-12 tracking-tight text-center">
+                      <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 tracking-tight text-center">
                         Eligibility{" "}
-                        <span className="text-accent-600">Criteria</span>
+                        <span className="text-accent-400">Criteria</span>
                       </h2>
                       <div className="grid md:grid-cols-2 gap-4">
                         {country.sections.requirements.map((item, index) => (
                           <div
                             key={index}
-                            className="flex gap-4 p-5 bg-neutral-50 dark:bg-neutral-900/50 rounded-2xl border border-neutral-100 dark:border-neutral-800 group hover:border-accent-600/30 transition-all duration-300"
+                            className="flex gap-4 p-5 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 group hover:border-accent-500/30 transition-all duration-300"
                           >
-                            <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400 flex items-center justify-center group-hover:bg-accent-600 group-hover:text-white transition-colors mt-0.5">
+                            <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent-500/10 text-accent-400 flex items-center justify-center group-hover:bg-accent-600 group-hover:text-white transition-colors mt-0.5">
                               <Check size={14} strokeWidth={3} />
                             </div>
-                            <p className="text-neutral-700 dark:text-neutral-300 font-medium leading-snug">
+                            <p className="text-primary-100 font-medium leading-snug">
                               {item}
                             </p>
                           </div>
@@ -557,14 +557,14 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
           <ScrollReveal direction="up" delay={0.2}>
             <Section
               id="faq"
-              className="bg-neutral-50 dark:bg-neutral-900 py-24 md:py-32 scroll-mt-24"
+              className="bg-primary-900 text-white py-24 md:py-32 scroll-mt-24"
             >
               <Container>
                 <div className="text-center max-w-3xl mx-auto mb-20">
-                  <div className="inline-block px-4 py-1.5 bg-accent-50 dark:bg-accent-900/20 text-accent-700 dark:text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
+                  <div className="inline-block px-4 py-1.5 bg-accent-500/10 text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase border border-accent-500/20">
                     Common Questions
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-6 tracking-tight">
+                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
                     {country.sections.faqs.title}
                   </h2>
                 </div>
@@ -573,13 +573,13 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                   {country.sections.faqs.qAndA.map((faq, index) => (
                     <details
                       key={index}
-                      className="group bg-white dark:bg-neutral-800 rounded-3xl border border-neutral-100 dark:border-neutral-700 overflow-hidden shadow-sm"
+                      className="group bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 overflow-hidden shadow-2xl"
                     >
                       <summary className="flex items-center justify-between p-8 cursor-pointer list-none">
-                        <h3 className="text-xl font-bold text-neutral-900 dark:text-white pr-8">
+                        <h3 className="text-xl font-bold text-white pr-8">
                           {faq.q}
                         </h3>
-                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-neutral-50 dark:bg-neutral-900 flex items-center justify-center text-neutral-400 group-open:bg-accent-600 group-open:text-white transition-all duration-300">
+                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-accent-400 group-open:bg-accent-600 group-open:text-white transition-all duration-300">
                           <ChevronRight
                             className="group-open:rotate-90 transition-transform duration-300"
                             size={20}
@@ -587,8 +587,8 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                         </div>
                       </summary>
                       <div className="px-8 pb-8">
-                        <div className="h-[1px] w-full bg-neutral-100 dark:bg-neutral-700 mb-6" />
-                        <p className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed font-light">
+                        <div className="h-[1px] w-full bg-white/10 mb-6" />
+                        <p className="text-primary-100 text-lg leading-relaxed font-light">
                           {faq.a}
                         </p>
                       </div>
@@ -602,84 +602,41 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
 
         {/* Overview Section */}
         {country.sections.overview && (
-          <ScrollReveal direction="up" delay={0.2}>
-            <Section
-              id="overview"
-              className="bg-white dark:bg-neutral-950 py-24 md:py-32 scroll-mt-24 overflow-hidden"
-            >
-              <Container>
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
-                  <div className="max-w-2xl">
-                    <div className="inline-block px-4 py-1.5 bg-accent-50 dark:bg-accent-900/20 text-accent-700 dark:text-accent-400 text-xs font-bold rounded-full mb-6 tracking-widest uppercase">
-                      Quick Look
-                    </div>
-                    <h2 className="text-4xl md:text-6xl font-bold text-neutral-900 dark:text-white tracking-tight">
-                      {country.sections.overview.title}
-                    </h2>
-                  </div>
-                  <div className="text-neutral-500 dark:text-neutral-500 font-mono text-sm hidden md:block">
-                    PROGRAM SUMMARY / {country.name.toUpperCase()}
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {country.sections.overview.items.map((item, index) => (
-                    <div
-                      key={index}
-                      className="group relative p-10 bg-neutral-50 dark:bg-neutral-900/50 rounded-[2.5rem] border border-neutral-100 dark:border-neutral-800 hover:border-accent-600/30 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-600/5"
-                    >
-                      <div className="absolute top-8 right-10 text-8xl font-bold text-neutral-200/50 dark:text-neutral-800/30 select-none group-hover:text-accent-600/10 transition-colors duration-500 font-mono">
-                        {String(item.no).padStart(2, "0")}
-                      </div>
-
-                      <div className="relative z-10">
-                        <div className="w-12 h-12 rounded-2xl bg-white dark:bg-neutral-800 shadow-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                          <div className="w-2 h-2 rounded-full bg-accent-600 animate-pulse" />
-                        </div>
-
-                        <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4 group-hover:text-accent-600 transition-colors duration-300">
-                          {item.title}
-                        </h3>
-
-                        <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
-                          {item.description}
-                        </p>
-                      </div>
-
-                      <div className="absolute bottom-0 left-10 right-10 h-1 bg-accent-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left rounded-full" />
-                    </div>
-                  ))}
-                </div>
-              </Container>
-            </Section>
-          </ScrollReveal>
+          <OverviewSection 
+            title={country.sections.overview.title}
+            items={country.sections.overview.items}
+            countryName={country.name}
+            theme="light"
+          />
         )}
 
         {/* Final CTA Section */}
         <ScrollReveal direction="up" delay={0.2}>
-          <Section className="relative overflow-hidden py-32">
-            <div className="absolute inset-0 bg-primary-900" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,var(--color-accent-600),transparent_50%)] opacity-30" />
-            <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" />
+          <Section className="relative overflow-hidden py-32 bg-white">
+            <div className="absolute inset-0 bg-white" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,var(--color-accent-500),transparent_50%)] opacity-5" />
 
             <Container className="relative z-10">
-              <div className="max-w-4xl mx-auto text-center space-y-10">
-                <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter">
-                  Ready to become a <br />
-                  <span className="text-accent-400">Global Citizen?</span>
-                </h2>
-                <p className="text-xl text-neutral-200 font-light max-w-2xl mx-auto leading-relaxed">
-                  Our experts are ready to guide you through every step of the{" "}
-                  {country.name} Residence by Investment process. Schedule your
-                  private consultation today.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
-                  <Button size="lg" variant="primary" asChild>
-                    <Link href="/contact">Book a Consultation</Link>
-                  </Button>
-                  <Button size="lg" variant="secondary" asChild>
-                    <Link href="/citizenship">Explore Programs</Link>
-                  </Button>
+              <div className="max-w-5xl mx-auto rounded-[4rem] bg-gradient-to-br from-primary-800 to-primary-900 p-12 md:p-24 text-center border border-primary-700 shadow-2xl relative overflow-hidden group">
+                <div className="absolute inset-0 bg-accent-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="relative z-10 space-y-10">
+                  <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter">
+                    Ready to become a <br />
+                    <span className="text-accent-400">Global Citizen?</span>
+                  </h2>
+                  <p className="text-xl text-primary-100 font-light max-w-2xl mx-auto leading-relaxed">
+                    Our experts are ready to guide you through every step of the{" "}
+                    {country.name} Residence by Investment process. Schedule
+                    your private consultation today.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
+                    <Button size="xl" variant="accent" className="px-12 py-6 text-lg" asChild>
+                      <Link href="/contact">Book a Consultation</Link>
+                    </Button>
+                    <Button size="xl" variant="outline" className="px-12 py-6 text-lg border-white/30 text-white hover:bg-white/10" asChild>
+                      <Link href="/residence">Explore Programs</Link>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </Container>
