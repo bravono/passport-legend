@@ -17,6 +17,9 @@ export interface BlogPost {
 }
 
 export function getPostSlugs() {
+  if (!fs.existsSync(postsDirectory)) {
+    return [];
+  }
   return fs.readdirSync(postsDirectory);
 }
 

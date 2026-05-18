@@ -18,7 +18,7 @@
 /out/
 
 # production
-/content/blog/*.md
+# /content/blog/*.md (Commented out to ensure blog posts are committed to git and available at build time on Vercel)
 /build
 
 # misc
