@@ -259,7 +259,7 @@ export default function Citizenship() {
                     <h3 className="font-semibold text-primary-500 mb-2">
                       {benefit.title}
                     </h3>
-                    <p className="text-sm text-neutral-600">
+                    <p className="text-sm text-primary-500">
                       {benefit.description}
                     </p>
                   </Card>
@@ -291,7 +291,7 @@ export default function Citizenship() {
                 <h2 className="text-3xl font-bold text-primary-500 mb-4">
                   Available Programs ({countries.length})
                 </h2>
-                <p className="text-neutral-600">
+                <p className="text-primary-500">
                   Explore citizenship opportunities across diverse regions
                 </p>
                 <div className="h-1 w-24 bg-accent-500 mx-auto rounded-full mt-4" />

@@ -56,7 +56,7 @@ export function OverviewSection({
             </div>
           </ScrollReveal>
           <div
-            className={`${isDark ? "text-primary-500" : "text-neutral-500"} font-mono text-sm hidden md:block uppercase tracking-widest`}
+            className={`${isDark ? "text-primary-500" : "text-primary-400"} font-mono text-sm hidden md:block uppercase tracking-widest`}
           >
             PROGRAM SUMMARY / {countryName}
           </div>
@@ -85,7 +85,7 @@ export function OverviewSection({
                       ? "text-accent-500"
                       : isDark
                         ? "text-white/20"
-                        : "text-neutral-200"
+                        : "text-primary-100"
                   }`}
                 >
                   {String(item.no).padStart(2, "0")}
@@ -98,7 +98,7 @@ export function OverviewSection({
                         : "text-primary-500"
                       : isDark
                         ? "text-primary-500"
-                        : "text-neutral-400"
+                        : "text-primary-300"
                   }`}
                 >
                   {item.title}
@@ -124,7 +124,7 @@ export function OverviewSection({
               >
                 <div
                   className={`absolute top-10 right-16 text-[12rem] font-bold select-none pointer-events-none transition-colors duration-700 font-mono ${
-                    isDark ? "text-white/5" : "text-neutral-50"
+                    isDark ? "text-white/5" : "text-primary-50"
                   }`}
                 >
                   {String(items[activeIndex].no).padStart(2, "0")}
@@ -142,7 +142,7 @@ export function OverviewSection({
                   </h3>
 
                   <p
-                    className={`text-xl md:text-2xl leading-relaxed font-light ${isDark ? "text-primary-100" : "text-neutral-600"}`}
+                    className={`text-xl md:text-2xl leading-relaxed font-light ${isDark ? "text-primary-100" : "text-primary-500"}`}
                   >
                     {items[activeIndex].description}
                   </p>

@@ -46,7 +46,7 @@ export function CountrySection({ countries }: CountrySectionProps) {
                     className={`group cursor-pointer p-4 rounded-xl transition-all duration-300 border flex items-center justify-between ${
                       c.id === selected.id
                         ? "bg-primary-500 border-primary-900 text-white shadow-lg translate-x-2"
-                        : "bg-neutral-50 border-neutral-100 text-neutral-600 hover:bg-white hover:border-primary-200 hover:shadow-md"
+                        : "bg-neutral-50 border-neutral-100 text-primary-500 hover:bg-white hover:border-primary-200 hover:shadow-md"
                     }`}
                     onClick={() => setSelected(c)}
                   >
@@ -76,11 +76,11 @@ export function CountrySection({ countries }: CountrySectionProps) {
                       {selected.name}
                     </h3>
                     <div className="h-0.5 w-12 bg-accent-500 mb-6" />
-                    <p className="text-neutral-600 leading-relaxed mb-6 italic">
+                    <p className="text-primary-500 leading-relaxed mb-6 italic">
                       {selected.shortDescription}
                     </p>
                     {selected.sections?.about && (
-                      <div className="text-sm text-neutral-500 line-clamp-6 leading-relaxed">
+                      <div className="text-sm text-primary-400 line-clamp-6 leading-relaxed">
                         {selected.sections.about}
                       </div>
                     )}
@@ -109,12 +109,11 @@ export function CountrySection({ countries }: CountrySectionProps) {
                   {/* Decorative background grid/elements */}
                   <div className="absolute inset-0 opacity-10 bg-[radial-gradient(rgba(212,175,55,0.25)_1px,transparent_1px)] [background-size:16px_16px]" />
                   <div className="absolute top-10 right-10 w-32 h-32 bg-accent-500/10 rounded-full blur-2xl" />
-                  
+
                   {/* Layered Image Container */}
                   <div className="relative w-full h-full min-h-[250px] group/img max-w-[320px] md:max-w-none">
                     {/* Golden accent background card */}
                     <div className="absolute inset-0 bg-accent-500/20 rounded-2xl transform translate-x-2 translate-y-2 rotate-2 transition-transform duration-500 group-hover/img:translate-x-1 group-hover/img:translate-y-1 group-hover/img:rotate-1" />
-                    
                     {/* Main Image Frame */}z
                     <div className="absolute inset-0 rounded-2xl overflow-hidden border border-primary-800 shadow-xl bg-primary-900 transition-all duration-500 group-hover/img:-translate-x-1 group-hover/img:-translate-y-1 group-hover/img:-rotate-1">
                       <Image

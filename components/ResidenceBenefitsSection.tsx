@@ -82,7 +82,7 @@ export function ResidenceBenefitsSection() {
                     <span className="text-accent-500">Residence</span> by
                     Investment
                   </h2>
-                  <p className="text-neutral-600 text-lg leading-relaxed">
+                  <p className="text-primary-500 text-lg leading-relaxed">
                     Investing in a second residency can offer various benefits,
                     including better global mobility, access to Education and
                     Healthcare, Retirement Planning, a pathway to citizenship
@@ -97,7 +97,7 @@ export function ResidenceBenefitsSection() {
                         <p className="text-sm font-bold text-primary-500">
                           Value Proposition
                         </p>
-                        <p className="text-xs text-neutral-500">
+                        <p className="text-xs text-primary-400">
                           6 Strategic Benefits
                         </p>
                       </div>
@@ -116,7 +116,7 @@ export function ResidenceBenefitsSection() {
                   <div className="flex flex-col md:flex-row md:items-center gap-8">
                     {/* ID & Icon */}
                     <div className="flex items-center gap-6">
-                      <span className="text-4xl font-black text-neutral-100 group-hover:text-primary-100 transition-colors duration-500">
+                      <span className="text-4xl font-black text-primary-50 group-hover:text-primary-100 transition-colors duration-500">
                         {item.id}
                       </span>
                       <div className="w-16 h-16 rounded-2xl bg-primary-500-50 flex items-center justify-center text-primary-600 group-hover:bg-primary-500 group-hover:text-white transition-all duration-500">
@@ -134,7 +134,7 @@ export function ResidenceBenefitsSection() {
                       <h3 className="text-2xl font-bold text-primary-500">
                         {item.title}
                       </h3>
-                      <p className="text-neutral-500 text-sm leading-relaxed max-w-xl">
+                      <p className="text-primary-400 text-sm leading-relaxed max-w-xl">
                         {item.description}
                       </p>
                     </div>

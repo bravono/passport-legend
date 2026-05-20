@@ -44,7 +44,7 @@ export default function About() {
                   <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6">
                     Our Story
                   </h2>
-                  <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+                  <p className="text-primary-500 dark:text-neutral-400 mb-4">
                     Passport Legend is a globally trusted firm specializing in
                     residence and citizenship by investment, known for
                     delivering tailored, high-value immigration solutions.
@@ -52,14 +52,14 @@ export default function About() {
                     for thousands of international investors who rely on our
                     expertise and personalised approach.
                   </p>
-                  <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+                  <p className="text-primary-500 dark:text-neutral-400 mb-4">
                     A UK-owned and managed advisory operating through multiple
                     global offices, we collaborate closely with governments
                     worldwide to provide seamless access to leading residence
                     and citizenship by investment programmes that deliver
                     life-changing opportunities.
                   </p>
-                  <p className="text-neutral-600 dark:text-neutral-400">
+                  <p className="text-primary-500 dark:text-neutral-400">
                     As an established, government-authorised advisory, our
                     multidisciplinary international team of immigration
                     investment experts supports clients at every stage of the
@@ -127,7 +127,7 @@ export default function About() {
                 <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-4">
                   Partnerships & Collaborations
                 </h2>
-                <p className="text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+                <p className="text-primary-500 dark:text-neutral-300 max-w-2xl mx-auto">
                   We work with law firms, immigration consultants, and financial
                   advisors worldwide to provide comprehensive solutions.
                 </p>
@@ -138,7 +138,7 @@ export default function About() {
                   <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-4">
                     For Law Firms
                   </h3>
-                  <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+                  <p className="text-primary-500 dark:text-neutral-400 mb-4">
                     We offer comprehensive referral programs and professional
                     collaboration opportunities. Our certified advisors can
                     support your immigration practice with expert guidance on
@@ -152,7 +152,7 @@ export default function About() {
                   <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-4">
                     For Agents & Consultants
                   </h3>
-                  <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+                  <p className="text-primary-500 dark:text-neutral-400 mb-4">
                     Join our network of qualified agents and earn attractive
                     commissions. We provide training, marketing materials, and
                     full operational support.
@@ -243,7 +243,7 @@ export default function About() {
                   <p className="text-4xl font-bold text-primary-600 dark:text-primary-500">
                     50+
                   </p>
-                  <p className="text-neutral-600 dark:text-neutral-400">
+                  <p className="text-primary-500 dark:text-neutral-400">
                     Certified Advisors
                   </p>
                 </div>
@@ -251,7 +251,7 @@ export default function About() {
                   <p className="text-4xl font-bold text-primary-600 dark:text-primary-500">
                     15+
                   </p>
-                  <p className="text-neutral-600 dark:text-neutral-400">
+                  <p className="text-primary-500 dark:text-neutral-400">
                     Years Experience
                   </p>
                 </div>
@@ -259,7 +259,7 @@ export default function About() {
                   <p className="text-4xl font-bold text-primary-600 dark:text-primary-500">
                     5000+
                   </p>
-                  <p className="text-neutral-600 dark:text-neutral-400">
+                  <p className="text-primary-500 dark:text-neutral-400">
                     Clients Served
                   </p>
                 </div>
@@ -267,7 +267,7 @@ export default function About() {
                   <p className="text-4xl font-bold text-primary-600 dark:text-primary-500">
                     6
                   </p>
-                  <p className="text-neutral-600 dark:text-neutral-400">
+                  <p className="text-primary-500 dark:text-neutral-400">
                     Continents
                   </p>
                 </div>

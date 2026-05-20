@@ -19,7 +19,7 @@ export default function NotFound() {
               <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white">
                 Page Not Found
               </h1>
-              <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+              <p className="text-xl text-primary-500 dark:text-neutral-300 max-w-2xl mx-auto">
                 Sorry, the page you're looking for doesn't exist. It might have
                 been moved or deleted.
               </p>

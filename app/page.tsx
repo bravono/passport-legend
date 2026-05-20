@@ -60,7 +60,7 @@ export default function Home() {
                     Gateway to Global Freedom
                   </span>
                 </h1>
-                <p className="text-lg md:text-xl text-neutral-600 max-w-xl leading-relaxed">
+                <p className="text-lg md:text-xl text-primary-500 max-w-xl leading-relaxed">
                   Through Residence & Citizenship by Investment.
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row">
@@ -171,7 +171,7 @@ export default function Home() {
                 Residence{" "}
                 <span className="italic text-accent-600">Opportunities</span>
               </h2>
-              <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+              <p className="text-xl text-primary-500 max-w-2xl mx-auto">
                 Secure your right to live, work, and study in the world's most
                 desirable jurisdictions.
               </p>
@@ -201,7 +201,7 @@ export default function Home() {
                         {country.facts.map((fact, j) => (
                           <li
                             key={j}
-                            className="flex items-center gap-3 text-neutral-600"
+                            className="flex items-center gap-3 text-primary-500"
                           >
                             <CheckCircle
                               size={18}
@@ -299,7 +299,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-bold text-primary-500">
                 Our Process
               </h2>
-              <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+              <p className="text-xl text-primary-500 max-w-2xl mx-auto">
                 We streamline the residency and citizenship investment process
                 by offering a systematic approach with round-the-clock support.
               </p>
@@ -436,7 +436,7 @@ export default function Home() {
                       <ChevronRight size={20} className="rotate-90" />
                     </div>
                   </summary>
-                  <div className="px-8 pb-8 text-neutral-600 leading-relaxed text-sm">
+                  <div className="px-8 pb-8 text-primary-500 leading-relaxed text-sm">
                     {faq.a}
                   </div>
                 </details>

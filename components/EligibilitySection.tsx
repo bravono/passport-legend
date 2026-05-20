@@ -81,7 +81,7 @@ export function EligibilitySection() {
                     Document <br />
                     <span className="text-accent-500">Readiness</span> Checklist
                   </h2>
-                  <p className="text-neutral-600 text-lg leading-relaxed">
+                  <p className="text-primary-500 text-lg leading-relaxed">
                     Preparing your application requires precise documentation.
                     We guide you through every step of collecting these
                     essential personal documents to ensure a seamless process.
@@ -95,7 +95,7 @@ export function EligibilitySection() {
                         <p className="text-sm font-bold text-primary-500">
                           Total Required
                         </p>
-                        <p className="text-xs text-neutral-500">
+                        <p className="text-xs text-primary-400">
                           6 Core Document Sets
                         </p>
                       </div>
@@ -114,7 +114,7 @@ export function EligibilitySection() {
                   <div className="flex flex-col md:flex-row md:items-center gap-8">
                     {/* ID & Icon */}
                     <div className="flex items-center gap-6">
-                      <span className="text-4xl font-black text-neutral-100 group-hover:text-primary-100 transition-colors duration-500">
+                      <span className="text-4xl font-black text-primary-50 group-hover:text-primary-100 transition-colors duration-500">
                         {item.id}
                       </span>
                       <div className="w-16 h-16 rounded-2xl bg-primary-500-50 flex items-center justify-center text-primary-600 group-hover:bg-primary-500 group-hover:text-white transition-all duration-500">
@@ -132,7 +132,7 @@ export function EligibilitySection() {
                       <h3 className="text-2xl font-bold text-primary-500">
                         {item.item}
                       </h3>
-                      <p className="text-neutral-500 text-sm leading-relaxed max-w-xl">
+                      <p className="text-primary-400 text-sm leading-relaxed max-w-xl">
                         {item.description}
                       </p>
                     </div>

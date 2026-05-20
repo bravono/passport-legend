@@ -95,7 +95,7 @@ export default function TermsOfServicePage() {
             <h1 className="text-4xl md:text-6xl font-serif text-neutral-900 dark:text-white mb-6 leading-tight animate-fade-in-up">
               Terms of <span className="text-primary-600 italic">Service</span>
             </h1>
-            <div className="flex items-center justify-center gap-4 text-sm text-neutral-500 dark:text-neutral-400 animate-fade-in delay-200">
+            <div className="flex items-center justify-center gap-4 text-sm text-primary-400 dark:text-neutral-400 animate-fade-in delay-200">
               <span className="flex items-center gap-1.5">
                 <Clock className="w-4 h-4" />
                 Last updated: {lastUpdated}
@@ -108,7 +108,7 @@ export default function TermsOfServicePage() {
           <div className="max-w-4xl mx-auto">
             {/* Intro Card */}
             <div className="glass p-8 md:p-10 rounded-3xl mb-16 border-accent-100/20 animate-fade-in-up">
-              <p className="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed italic">
+              <p className="text-lg text-primary-500/80 dark:text-neutral-300 leading-relaxed italic">
                 "Welcome to Passport Legend. These terms govern your
                 relationship with our platform. By using our services, you
                 entrust us with your global journey, and we commit to providing
@@ -137,7 +137,7 @@ export default function TermsOfServicePage() {
                       <h2 className="text-2xl font-serif text-neutral-900 dark:text-white mb-3 group-hover:text-primary-600 transition-colors">
                         {section.title}
                       </h2>
-                      <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                      <p className="text-primary-500 dark:text-neutral-400 leading-relaxed">
                         {section.content}
                       </p>
                     </div>

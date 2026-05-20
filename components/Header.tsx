@@ -70,7 +70,7 @@ export function Header() {
           <nav className="hidden gap-8 md:flex items-center">
             <Link
               href="/"
-              className="text-sm font-medium text-neutral-600 transition-colors hover:text-primary-600"
+              className="text-sm font-medium text-primary-500 transition-colors hover:text-primary-600"
             >
               Home
             </Link>
@@ -84,7 +84,7 @@ export function Header() {
             >
               <Link
                 href="/citizenship"
-                className="text-sm font-medium text-neutral-600 transition-all duration-300 hover:text-primary-600 flex items-center gap-1 group"
+                className="text-sm font-medium text-primary-500 transition-all duration-300 hover:text-primary-600 flex items-center gap-1 group"
               >
                 Citizenship
                 <ChevronDown
@@ -128,7 +128,7 @@ export function Header() {
             >
               <Link
                 href="/residence"
-                className="text-sm font-medium text-neutral-600 transition-all duration-300 hover:text-primary-600 flex items-center gap-1 group"
+                className="text-sm font-medium text-primary-500 transition-all duration-300 hover:text-primary-600 flex items-center gap-1 group"
               >
                 Residence
                 <ChevronDown
@@ -165,19 +165,19 @@ export function Header() {
 
             <Link
               href="/blog"
-              className="text-sm font-medium text-neutral-600 transition-colors hover:text-primary-600"
+              className="text-sm font-medium text-primary-500 transition-colors hover:text-primary-600"
             >
               News
             </Link>
             <Link
               href="/about"
-              className="text-sm font-medium text-neutral-600 transition-colors hover:text-primary-600"
+              className="text-sm font-medium text-primary-500 transition-colors hover:text-primary-600"
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="text-sm font-medium text-neutral-600 transition-colors hover:text-primary-600"
+              className="text-sm font-medium text-primary-500 transition-colors hover:text-primary-600"
             >
               Contact
             </Link>
@@ -186,7 +186,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="rounded-lg p-2 text-neutral-600 hover:bg-primary-500-50 transition-all duration-300 md:hidden"
+            className="rounded-lg p-2 text-primary-500 hover:bg-primary-500-50 transition-all duration-300 md:hidden"
             aria-label="Toggle menu"
           >
             {mobileOpen ? (
@@ -202,13 +202,13 @@ export function Header() {
           <nav className="space-y-1 border-t border-neutral-200 py-4 md:hidden">
             <Link
               href="/"
-              className="block px-4 py-2 text-sm font-medium text-neutral-600 transition-colors hover:bg-neutral-100 hover:text-primary-600"
+              className="block px-4 py-2 text-sm font-medium text-primary-500 transition-colors hover:bg-neutral-100 hover:text-primary-600"
               onClick={() => setMobileOpen(false)}
             >
               Home
             </Link>
             <details className="group px-4">
-              <summary className="py-2 text-sm font-medium text-neutral-600 cursor-pointer transition-colors hover:bg-neutral-100 hover:text-primary-600">
+              <summary className="py-2 text-sm font-medium text-primary-500 cursor-pointer transition-colors hover:bg-neutral-100 hover:text-primary-600">
                 Citizenship
               </summary>
               <div className="mt-2 grid grid-cols-2 gap-2 ml-2">
@@ -235,7 +235,7 @@ export function Header() {
               </div>
             </details>
             <details className="group px-4">
-              <summary className="py-2 text-sm font-medium text-neutral-600 cursor-pointer transition-colors hover:bg-neutral-100 hover:text-primary-600">
+              <summary className="py-2 text-sm font-medium text-primary-500 cursor-pointer transition-colors hover:bg-neutral-100 hover:text-primary-600">
                 Residence
               </summary>
               <div className="mt-2 grid grid-cols-2 gap-2 ml-2">
@@ -263,21 +263,21 @@ export function Header() {
             </details>
             <Link
               href="/blog"
-              className="block px-4 py-2 text-sm font-medium text-neutral-600 transition-colors hover:bg-neutral-100 hover:text-primary-600"
+              className="block px-4 py-2 text-sm font-medium text-primary-500 transition-colors hover:bg-neutral-100 hover:text-primary-600"
               onClick={() => setMobileOpen(false)}
             >
               News
             </Link>
             <Link
               href="/about"
-              className="block px-4 py-2 text-sm font-medium text-neutral-600 transition-colors hover:bg-neutral-100 hover:text-primary-600"
+              className="block px-4 py-2 text-sm font-medium text-primary-500 transition-colors hover:bg-neutral-100 hover:text-primary-600"
               onClick={() => setMobileOpen(false)}
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="block px-4 py-2 text-sm font-medium text-neutral-600 transition-colors hover:bg-neutral-100 hover:text-primary-600"
+              className="block px-4 py-2 text-sm font-medium text-primary-500 transition-colors hover:bg-neutral-100 hover:text-primary-600"
               onClick={() => setMobileOpen(false)}
             >
               Contact

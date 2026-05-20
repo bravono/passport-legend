@@ -191,7 +191,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                 <a
                   key={section.id}
                   href={`#${section.id}`}
-                  className="py-5 text-sm font-semibold text-neutral-500 hover:text-accent-600 dark:text-neutral-400 dark:hover:text-accent-400 transition-colors relative group"
+                  className="py-5 text-sm font-semibold text-primary-400 hover:text-accent-600 dark:text-neutral-400 dark:hover:text-accent-400 transition-colors relative group"
                 >
                   {section.label}
                   <span className="absolute bottom-0 left-0 w-full h-[2px] bg-accent-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
@@ -218,7 +218,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                       About{" "}
                       <span className="text-accent-600">{country.name}</span>
                     </h2>
-                    <div className="prose prose-lg dark:prose-invert max-w-none text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
+                    <div className="prose prose-lg dark:prose-invert max-w-none text-primary-500 dark:text-neutral-400 leading-relaxed font-light">
                       <p>{country.sections.about}</p>
                     </div>
                   </div>
@@ -278,7 +278,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                 <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-6 tracking-tight">
                   Benefits of {country.name} Citizenship
                 </h2>
-                <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light">
+                <p className="text-lg text-primary-500 dark:text-neutral-400 font-light">
                   Secure your future with one of the most powerful and respected
                   passports in the world.
                 </p>
@@ -302,7 +302,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                         {benefit.title}
                       </h3>
                       {benefit.subTitle && (
-                        <p className="text-neutral-600 dark:text-neutral-400 font-light mb-4 relative z-10">
+                        <p className="text-primary-500 dark:text-neutral-400 font-light mb-4 relative z-10">
                           {benefit.subTitle}
                         </p>
                       )}
@@ -311,7 +311,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                           {benefit.items.map((item, idx) => (
                             <li
                               key={idx}
-                              className="flex items-start gap-2 text-sm text-neutral-600 dark:text-neutral-400"
+                              className="flex items-start gap-2 text-sm text-primary-500 dark:text-neutral-400"
                             >
                               <Check
                                 size={14}
@@ -425,7 +425,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                           {country.sections.requirements.investmentRequirements
                             ?.title || "Program Requirements"}
                         </h2>
-                        <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+                        <p className="text-lg text-primary-500 dark:text-neutral-400 font-light leading-relaxed">
                           {
                             country.sections.requirements.investmentRequirements
                               ?.description
@@ -443,7 +443,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                               <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400 flex items-center justify-center group-hover:bg-accent-600 group-hover:text-white transition-colors mt-0.5">
                                 <Check size={14} strokeWidth={3} />
                               </div>
-                              <p className="text-neutral-700 dark:text-neutral-300 font-medium leading-snug">
+                              <p className="text-primary-600 dark:text-neutral-300 font-medium leading-snug">
                                 {item}
                               </p>
                             </div>
@@ -454,7 +454,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                       {country.sections.requirements.investmentRequirements
                         ?.note && (
                         <div className="p-6 bg-accent-50/50 dark:bg-accent-900/10 rounded-2xl border border-accent-100/50 dark:border-accent-900/20">
-                          <p className="text-sm text-neutral-600 dark:text-neutral-400 italic leading-relaxed">
+                          <p className="text-sm text-primary-500 dark:text-neutral-400 italic leading-relaxed">
                             <span className="font-bold text-accent-700 dark:text-accent-400 not-italic mr-1">
                               Note:
                             </span>
@@ -482,7 +482,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                                 .title
                             }
                           </h2>
-                          <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+                          <p className="text-lg text-primary-500 dark:text-neutral-400 font-light leading-relaxed">
                             {
                               country.sections.requirements.investmentOptions
                                 .description
@@ -504,7 +504,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                                   {option.list.map((listItem, i) => (
                                     <li
                                       key={i}
-                                      className="flex gap-3 text-neutral-600 dark:text-neutral-400 font-light"
+                                      className="flex gap-3 text-primary-500 dark:text-neutral-400 font-light"
                                     >
                                       <div className="w-1.5 h-1.5 rounded-full bg-accent-500 mt-2 flex-shrink-0" />
                                       <span>{listItem}</span>
@@ -518,7 +518,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
 
                         {country.sections.requirements.investmentOptions
                           .note && (
-                          <p className="text-sm text-neutral-500 italic">
+                          <p className="text-sm text-primary-400 italic">
                             {
                               country.sections.requirements.investmentOptions
                                 .note
@@ -547,7 +547,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                             <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent-100 dark:bg-accent-900/30 text-accent-600 dark:text-accent-400 flex items-center justify-center group-hover:bg-accent-600 group-hover:text-white transition-colors mt-0.5">
                               <Check size={14} strokeWidth={3} />
                             </div>
-                            <p className="text-neutral-700 dark:text-neutral-300 font-medium leading-snug">
+                            <p className="text-primary-600 dark:text-neutral-300 font-medium leading-snug">
                               {item}
                             </p>
                           </div>
@@ -647,7 +647,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                       </summary>
                       <div className="px-8 pb-8">
                         <div className="h-[1px] w-full bg-neutral-100 dark:bg-neutral-700 mb-6" />
-                        <p className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed font-light">
+                        <p className="text-primary-500 dark:text-neutral-400 text-lg leading-relaxed font-light">
                           {faq.a}
                         </p>
                       </div>

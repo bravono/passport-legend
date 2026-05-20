@@ -69,8 +69,8 @@ export function FaqSection({
                         openIndex === index
                           ? "bg-accent-500 text-white"
                           : isDark
-                            ? "bg-primary-500-800 text-primary-500"
-                            : "bg-neutral-100 text-neutral-400"
+                            ? "bg-primary-800 text-primary-500"
+                            : "bg-neutral-100 text-primary-400"
                       }`}
                     >
                       <HelpCircle size={20} />
@@ -83,7 +83,7 @@ export function FaqSection({
                             : "text-primary-500"
                           : isDark
                             ? "text-primary-200"
-                            : "text-neutral-700"
+                            : "text-primary-500"
                       }`}
                     >
                       {faq.q}
@@ -95,7 +95,7 @@ export function FaqSection({
                     {openIndex === index ? (
                       <Minus size={24} className="text-accent-500" />
                     ) : (
-                      <Plus size={24} className="text-neutral-400" />
+                      <Plus size={24} className="text-primary-400" />
                     )}
                   </div>
                 </button>
@@ -109,7 +109,7 @@ export function FaqSection({
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                       <div
-                        className={`px-24 pb-8 text-lg leading-relaxed ${isDark ? "text-primary-100" : "text-neutral-600"}`}
+                        className={`px-24 pb-8 text-lg leading-relaxed ${isDark ? "text-primary-100" : "text-primary-500"}`}
                       >
                         <div className="pt-2 border-t border-accent-500/10">
                           {faq.a}

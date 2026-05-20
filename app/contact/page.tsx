@@ -192,7 +192,7 @@ export default function Contact() {
 
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
-                      <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                      <label className="block text-sm font-medium text-primary-500/80 dark:text-neutral-300 mb-1">
                         Full Name *
                       </label>
                       <input
@@ -206,7 +206,7 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                      <label className="block text-sm font-medium text-primary-500/80 dark:text-neutral-300 mb-1">
                         Email *
                       </label>
                       <input
@@ -220,7 +220,7 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                      <label className="block text-sm font-medium text-primary-500/80 dark:text-neutral-300 mb-1">
                         Phone *
                       </label>
                       <input
@@ -234,7 +234,7 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                      <label className="block text-sm font-medium text-primary-500/80 dark:text-neutral-300 mb-1">
                         Country of Interest
                       </label>
                       <select
@@ -253,7 +253,7 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                      <label className="block text-sm font-medium text-primary-500/80 dark:text-neutral-300 mb-1">
                         Message *
                       </label>
                       <textarea
@@ -295,7 +295,7 @@ export default function Contact() {
                       >
                         khadijat.abdul@passport-legend.com
                       </a>
-                      <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
+                      <p className="text-sm text-primary-400 dark:text-neutral-400 mt-2">
                         We respond to all inquiries within 24 hours
                       </p>
                     </Card>
@@ -310,7 +310,7 @@ export default function Contact() {
                       >
                         +234 708 143 2919
                       </a>
-                      <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
+                      <p className="text-sm text-primary-400 dark:text-neutral-400 mt-2">
                         Available Mon-Fri, 9 AM - 6 PM GMT
                       </p>
                     </Card>
@@ -319,7 +319,7 @@ export default function Contact() {
                       <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-3">
                         Office Addresses
                       </h3>
-                      <div className="space-y-3 text-sm text-neutral-600 dark:text-neutral-400">
+                      <div className="space-y-3 text-sm text-primary-500 dark:text-neutral-400">
                         <div>
                           <p className="font-semibold text-neutral-900 dark:text-white">
                             1st floor,
@@ -376,7 +376,7 @@ export default function Contact() {
                     <h3 className="font-semibold text-neutral-900 dark:text-white mb-2">
                       {faq.q}
                     </h3>
-                    <p className="text-neutral-600 dark:text-neutral-400">
+                    <p className="text-primary-500 dark:text-neutral-400">
                       {faq.a}
                     </p>
                   </Card>

@@ -113,7 +113,7 @@ export default function CountryPage({ params }: Props) {
                 {country.sections.overview.items.map((item, index) => (
                   <p
                     key={index}
-                    className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed"
+                    className="text-primary-500 dark:text-neutral-400 text-lg leading-relaxed"
                   >
                     {item.title && item.title !== "Summary" && (
                       <strong>{item.title}: </strong>
@@ -170,7 +170,7 @@ export default function CountryPage({ params }: Props) {
                         <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-2">
                           {option.title}
                         </h3>
-                        <ul className="text-neutral-600 dark:text-neutral-400 space-y-2 mt-4">
+                        <ul className="text-primary-500 dark:text-neutral-400 space-y-2 mt-4">
                           {option.list.map((listItem, i) => (
                             <li key={i} className="flex gap-2">
                               <span className="text-primary-500">•</span>
@@ -208,7 +208,7 @@ export default function CountryPage({ params }: Props) {
                     <span className="text-primary-600 dark:text-primary-500 font-bold text-lg flex-shrink-0">
                       •
                     </span>
-                    <p className="text-neutral-600 dark:text-neutral-400">
+                    <p className="text-primary-500 dark:text-neutral-400">
                       {requirement}
                     </p>
                   </div>
@@ -263,7 +263,7 @@ export default function CountryPage({ params }: Props) {
                         <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-2">
                           {relatedCountry.name}
                         </h3>
-                        <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
+                        <p className="text-sm text-primary-500 dark:text-neutral-400 mb-4">
                           {relatedCountry.shortDescription}
                         </p>
                         <div className="text-sm font-semibold text-primary-600 dark:text-primary-500">

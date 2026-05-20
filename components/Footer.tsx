@@ -15,7 +15,7 @@ export function Footer() {
                 className="h-30 w-auto"
               />
             </div>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+            <p className="text-sm text-primary-500 dark:text-neutral-400">
               Your gateway to global citizenship and residence opportunities.
             </p>
           </div>
@@ -29,7 +29,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
+                  className="text-primary-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Home
                 </Link>
@@ -37,7 +37,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/citizenship"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
+                  className="text-primary-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Citizenship
                 </Link>
@@ -45,7 +45,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/residence"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
+                  className="text-primary-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Residence
                 </Link>
@@ -53,7 +53,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
+                  className="text-primary-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   About
                 </Link>
@@ -61,7 +61,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/blog"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
+                  className="text-primary-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Blog
                 </Link>
@@ -78,7 +78,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
+                  className="text-primary-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Contact Us
                 </Link>
@@ -86,7 +86,7 @@ export function Footer() {
               <li>
                 <a
                   href="mailto:khadijat.abdul@passport-legend.com"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
+                  className="text-primary-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Email Us
                 </a>
@@ -94,7 +94,7 @@ export function Footer() {
               <li>
                 <a
                   href="tel:+234 708 143 2919"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
+                  className="text-primary-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Call Us
                 </a>
@@ -107,7 +107,7 @@ export function Footer() {
             <h3 className="font-semibold text-neutral-900 dark:text-white mb-4">
               Contact
             </h3>
-            <address className="not-italic text-sm space-y-2 text-neutral-600 dark:text-neutral-400">
+            <address className="not-italic text-sm space-y-2 text-primary-500 dark:text-neutral-400">
               <p>1st floor,</p>
               <p>North westgate house, Harlow, Essex</p>
               <p>United Kingdom</p>
@@ -119,7 +119,7 @@ export function Footer() {
         <div className="my-8 border-t border-neutral-200 dark:border-neutral-700" />
 
         {/* Bottom */}
-        <div className="flex flex-col items-center justify-between gap-4 text-sm text-neutral-600 dark:text-neutral-400 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 text-sm text-primary-500 dark:text-neutral-400 md:flex-row">
           <p>
             &copy; {new Date().getFullYear()} Passport Legend. All rights
             reserved.

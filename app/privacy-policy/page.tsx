@@ -43,7 +43,7 @@ export default function PrivacyPolicyPage() {
             <h1 className="text-4xl md:text-6xl font-serif text-neutral-900 dark:text-white mb-6 leading-tight animate-fade-in-up">
               Privacy <span className="text-accent-600 italic">Policy</span>
             </h1>
-            <div className="flex items-center justify-center gap-4 text-sm text-neutral-500 dark:text-neutral-400 animate-fade-in delay-200">
+            <div className="flex items-center justify-center gap-4 text-sm text-primary-400 dark:text-neutral-400 animate-fade-in delay-200">
               <span className="flex items-center gap-1.5">
                 <Clock className="w-4 h-4" />
                 Last updated: {lastUpdated}
@@ -56,7 +56,7 @@ export default function PrivacyPolicyPage() {
           <div className="max-w-4xl mx-auto">
             {/* Introduction */}
             <div className="glass p-8 md:p-10 rounded-3xl mb-16 border-primary-100/20 animate-fade-in-up">
-              <p className="text-lg md:text-xl text-neutral-700 dark:text-neutral-300 leading-relaxed italic">
+              <p className="text-lg md:text-xl text-primary-500/80 dark:text-neutral-300 leading-relaxed italic">
                 "At Passport Legend, we believe that your privacy is not just a
                 policy—it is a fundamental right. We are committed to
                 safeguarding your personal data with the same dedication we
@@ -76,7 +76,7 @@ export default function PrivacyPolicyPage() {
                     <h2 className="text-2xl md:text-3xl font-serif text-neutral-900 dark:text-white mb-4">
                       1. Owner and Data Controller
                     </h2>
-                    <div className="text-neutral-600 dark:text-neutral-400 space-y-3">
+                    <div className="text-primary-500 dark:text-neutral-400 space-y-3">
                       <p>
                         Passport Legend is the primary data controller
                         responsible for your personal information. We operate
@@ -116,7 +116,7 @@ export default function PrivacyPolicyPage() {
                     <h2 className="text-2xl md:text-3xl font-serif text-neutral-900 dark:text-white mb-4">
                       2. Information We Collect
                     </h2>
-                    <div className="text-neutral-600 dark:text-neutral-400 space-y-4">
+                    <div className="text-primary-500 dark:text-neutral-400 space-y-4">
                       <p>
                         We collect information to provide better services to all
                         our users. This collection happens in two ways:
@@ -160,7 +160,7 @@ export default function PrivacyPolicyPage() {
                     <h2 className="text-2xl md:text-3xl font-serif text-neutral-900 dark:text-white mb-4">
                       3. Why We Process Your Data
                     </h2>
-                    <div className="text-neutral-600 dark:text-neutral-400 space-y-4">
+                    <div className="text-primary-500 dark:text-neutral-400 space-y-4">
                       <p>
                         We only process your personal data when we have a legal
                         basis to do so. These include:

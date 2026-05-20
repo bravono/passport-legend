@@ -186,7 +186,7 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                 <a
                   key={section.id}
                   href={`#${section.id}`}
-                  className="py-5 text-sm font-semibold text-neutral-500 hover:text-accent-600 dark:text-neutral-400 dark:hover:text-accent-400 transition-colors relative group"
+                  className="py-5 text-sm font-semibold text-primary-400 hover:text-accent-600 dark:text-neutral-400 dark:hover:text-accent-400 transition-colors relative group"
                 >
                   {section.label}
                   <span className="absolute bottom-0 left-0 w-full h-[2px] bg-accent-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
@@ -213,7 +213,7 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                       About{" "}
                       <span className="text-accent-600">{country.name}</span>
                     </h2>
-                    <div className="prose prose-lg dark:prose-invert max-w-none text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
+                    <div className="prose prose-lg dark:prose-invert max-w-none text-primary-500 dark:text-neutral-400 leading-relaxed font-light">
                       <p>{country.sections.about}</p>
                     </div>
                   </div>
@@ -293,7 +293,7 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                         {benefit.title}
                       </h3>
                       {benefit.subTitle && (
-                        <p className="text-neutral-600 dark:text-neutral-400 font-light mb-4 relative z-10">
+                        <p className="text-primary-500 dark:text-neutral-400 font-light mb-4 relative z-10">
                           {benefit.subTitle}
                         </p>
                       )}
@@ -302,7 +302,7 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                           {benefit.items.map((item, idx) => (
                             <li
                               key={idx}
-                              className="flex items-start gap-2 text-sm text-neutral-600 dark:text-neutral-400"
+                              className="flex items-start gap-2 text-sm text-primary-500 dark:text-neutral-400"
                             >
                               <Check
                                 size={14}
@@ -490,7 +490,7 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                   <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-6 tracking-tight">
                     {country.sections.appProcess?.title || "The Process"}
                   </h2>
-                  <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light">
+                  <p className="text-lg text-primary-500 dark:text-neutral-400 font-light">
                     {country.sections.appProcess?.description ||
                       `A transparent and streamlined journey toward your permanent residency.`}
                   </p>
@@ -523,7 +523,7 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                             <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3">
                               {step.title || step.item}
                             </h3>
-                            <div className="text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+                            <div className="text-primary-500 dark:text-neutral-400 font-light leading-relaxed">
                               {step.description || (
                                 <ul className="space-y-2">
                                   {step.list?.map((li: string, i: number) => (

@@ -50,7 +50,7 @@ export function ProcessSection({
             </h2>
             <div className="h-1 w-24 bg-accent-500 mx-auto rounded-full mt-4" />
             <p
-              className={`text-xl max-w-3xl mx-auto font-light mt-6 ${isDark ? "text-primary-100" : "text-neutral-600"}`}
+              className={`text-xl max-w-3xl mx-auto font-light mt-6 ${isDark ? "text-primary-100" : "text-primary-500"}`}
             >
               {subtitle}
             </p>
@@ -76,7 +76,7 @@ export function ProcessSection({
                     className={`text-3xl font-black transition-colors duration-500 ${
                       activeStep === index
                         ? "text-accent-500"
-                        : "text-neutral-200"
+                        : "text-primary-100"
                     }`}
                   >
                     0{index + 1}
@@ -88,7 +88,7 @@ export function ProcessSection({
                           ? isDark
                             ? "text-white"
                             : "text-primary-500"
-                          : "text-neutral-400"
+                          : "text-primary-300"
                       }`}
                     >
                       {step.title}
