@@ -102,13 +102,431 @@ export interface Country {
 
 export const countries: Country[] = [
   {
+    id: "malta-residence",
+    slug: "malta-residence",
+    name: "Malta",
+    type: "residence",
+    shortDescription: "EU citizenship through exceptional investment",
+    heroImage:
+      "https://images.unsplash.com/photo-1555992336-fb0d29498b13?w=1200&h=600&fit=crop",
+    sections: {
+      overview: {
+        title: "Overview",
+        items: [
+          {
+            no: 1,
+            title: "Malta is a charismatic southern European island nation",
+            description: `Malta is a charismatic southern European island nation situated in the heart of the Mediterranean Sea. Known for its rich history, stunning landscapes, and delightful climate, Malta is an attractive destination for tourists and investors alike. The country comprises three main islands – Malta, Gozo, and Comino – covering a total area of 316 square kilometres.`,
+          },
+          {
+            no: 2,
+            title: "The capital city of Malta is Valletta",
+            description: `The capital city of Malta is Valletta, a UNESCO World Heritage Site characterised by its baroque architecture, impressive fortifications, and vibrant cultural life. Valletta is known for its fascinating museums, historical landmarks, and bustling waterfront. The Maltese islands are famous for their crystal-clear waters, golden beaches, and ancient temples, which attract millions of visitors each year.`,
+          },
+          {
+            no: 3,
+            title:
+              "Maltese and English are the official languages of the country",
+            description: `Maltese and English are the official languages of the country, reflecting its history as a former British colony. Malta gained independence in 1964 and became a republic in 1974. The nation’s population of approximately 546,000 people is a diverse mix of Maltese, British, Italian, and other Mediterranean influences, resulting in a unique cultural fusion.`,
+          },
+          {
+            no: 4,
+            title: "Tourism role in Malta's economy",
+            description: `Tourism plays a significant role in Malta’s economy, contributing considerably to the country’s GDP. The nation’s natural beauty, combined with its rich historical sites and diverse recreational activities, makes it an attractive destination for travellers. Other key sectors driving the economy include financial services, online gaming, and maritime services. The official currency is the Euro (EUR).`,
+          },
+          {
+            no: 5,
+            title: "International Organisations",
+            description: `As a member of various international organisations, including the United Nations, the European Union, and the British Commonwealth, Malta actively participates in regional and global affairs. The country is committed to sustainable development and has made substantial progress in areas such as renewable energy, environmental conservation, and climate change adaptation, ensuring the preservation of its natural resources for future generations.`,
+          },
+        ],
+      },
+      benefits: [
+        {
+          title: "Visa-Free Travel",
+          subTitle: "Visa free access to the entire Schengen Area.",
+          icon: "ShieldCheck",
+        },
+        {
+          title: "Family Eligibility",
+          subTitle:
+            "Applicants can include their spouse, unmarried and financially dependent children under 29, financially dependent parents and parents-in law, with no age limits.",
+          icon: "Globe",
+        },
+        {
+          title: "Renewable Long-Term Residency",
+          subTitle:
+            "The residence card’s validity is five years and will be renewed automatically every 5 years.",
+          icon: "Coins",
+        },
+        {
+          title: "STABLE ECONOMY",
+          subTitle:
+            "Malta is economically stable, with an A+ credit rating and one of the highest economic growth rates among all EU countries.",
+          icon: "TrendingUp",
+        },
+        {
+          title: "Language-Friendly Environment",
+          subTitle:
+            "There are no language requirements for applicants, and English is one of Malta’s official languages, making integration easier for international residents.",
+          icon: "TrendingUp",
+        },
+      ],
+      importantDetails: [
+        {
+          title: "EUR 110,000",
+          description: "Minimum Investment",
+          icon: "Coins",
+        },
+        {
+          title: "6 Months",
+          description: "Time to Residency",
+          icon: "Clock",
+        },
+        {
+          title: "Malta",
+          description: "Schengen Area",
+          icon: "Check",
+        },
+      ],
+      requirements: {
+        investmentRequirements: {
+          title: "Malta Residence by Investment Requirements",
+          description: "",
+          items: [
+            "Applicant must pass due diligence in order to apply for the programme.",
+            "Applicant must not have a criminal record.",
+            "Applicant must be in good health.",
+            "Applicant must have a confirmed source of funds.",
+          ],
+          note: "",
+        },
+        investmentOptions: {
+          title: "Malta Residence by Investment",
+          description:
+            "The Malta Permanent Residence Programme (MPRP) allows non-EU nationals to gain permanent residency in Malta through a structured investment process. Managed by the Residency Malta Agency, this program offers long-term security, visa-free access to the Schengen Area, and a high standard of living in a stable EU country.To qualify, applicants must meet the following requirements:",
+          items: [
+            {
+              title: "1. Government Contribution Programme",
+              list: [
+                `Applicants need to make a non-refundable contribution to the Residency Malta Agency: 
+
+USD 37,000 government contribution
+EUR 2,000 donation to a registered Maltese NGO that supports culture, sports, science, animal welfare, or the arts`,
+                `These contributions must be made within eight months of receiving the Letter of Approval in Principle.`,
+              ],
+            },
+            {
+              title: "2. Real Estate Development Programme ",
+              list: [
+                `Applicants must invest in qualifying real estate for at least five years. There are two options: 
+
+Buy a residential property in Malta or Gozo valued at EUR 375,000 or more
+Rent a residential property in Malta or Gozo with a minimum annual rent of EUR 14,000`,
+                `The property must be the applicant’s official residence in Malta for the entire five-year period.`,
+              ],
+            },
+            {
+              title: "3. Financial Requirements",
+              list: [
+                `Applicants must also show: 
+
+A minimum net worth of EUR 500,000, which includes
+At least EUR 150,000 in liquid financial assets`,
+              ],
+            },
+          ],
+          note: "This ensures that the applicant can support themselves and their dependents without depending on Malta’s public assistance system. The MPRP does not require language skills, educational qualifications, or physical presence in Malta. It provides a flexible and efficient route to European residency for individuals and families from around the world.",
+        },
+      },
+      appProcess: {
+        title: "Malta Residence by Investment Application Process",
+        description:
+          "The application process for the Malta Residence by Investment is straightforward, and applications are currently being processed in 6 months. The application process can be divided into the following stages:",
+        process: [
+          {
+            no: 1,
+            item: "Assessment & Onboarding",
+            list: [
+              "Consult with Passport Legend’s client advisors.",
+              "Passport Legend’s due diligence check is conducted.",
+              "Client is onboarded and retainer fees are paid.",
+            ],
+          },
+          {
+            no: 2,
+            item: "Application Submission",
+            list: [
+              "Legal process commences, and bank account is opened.",
+              "Investment requirements are fulfilled.",
+              "Documents are prepared and application for Malta’s Golden Residence Permit is submitted.",
+            ],
+          },
+          {
+            no: 3,
+            item: "Application Processing",
+            list: ["Application is processed.", "Application is approved."],
+          },
+          {
+            no: 4,
+            item: "Approval & Final Handover",
+            list: [
+              "Final Payments are completed within 8 months.",
+              "Applicants have to travel to Malta to submit biometrics.",
+              "Maltese Permanent Residence Cards are issued.",
+              "Our team continues to support until the permit is stamped.",
+            ],
+          },
+        ],
+      },
+
+      faqs: {
+        title: "Frequently Asked Questions",
+        qAndA: [
+          {
+            q: "HOW MANY COUNTRIES DOES MALTA HAVE ACCESS TO VISA-FREE?",
+            a: "Malta residents have visa-free access throughout the Schengen Area.",
+          },
+          {
+            q: "WHAT TYPE OF INVESTMENT WILL I BE MAKING IN MALTA?",
+            a: `
+            The Malta Permanent Residence Programme (MPRP) allows non-EU nationals to gain permanent residency in Malta through a structured investment process. Managed by the Residency Malta Agency, this program offers long-term security, visa-free access to the Schengen Area, and a high standard of living in a stable EU country.
+
+To qualify, applicants must meet the following requirements:
+
+1. Government Contribution Programme
+
+Applicants need to make a non-refundable contribution to the Residency Malta Agency: 
+
+USD 37,000 government contribution
+EUR 2,000 donation to a registered Maltese NGO that supports culture, sports, science, animal welfare, or the arts
+These contributions must be made within eight months of receiving the Letter of Approval in Principle.
+
+2. Real Estate Development Programme 
+
+Applicants must invest in qualifying real estate for at least five years. There are two options: 
+
+Buy a residential property in Malta or Gozo valued at EUR 375,000 or more
+Rent a residential property in Malta or Gozo with a minimum annual rent of EUR 14,000
+The property must be the applicant’s official residence in Malta for the entire five-year period.
+
+3. Financial Requirements
+
+Applicants must also show: 
+
+A minimum net worth of EUR 500,000, which includes
+At least EUR 150,000 in liquid financial assets
+This ensures that the applicant can support themselves and their dependents without depending on Malta’s public assistance system.
+
+The MPRP does not require language skills, educational qualifications, or physical presence in Malta. It provides a flexible and efficient route to European residency for individuals and families from around the world.
+            `,
+          },
+          {
+            q: "HOW LONG DOES IT TAKE TO ACQUIRE A MALTA RESIDENCE PERMIT?",
+            a: "Applications for the Malta Residence by Investment Programme are currently being processed in just 6 months.",
+          },
+          {
+            q: "WHAT IS THE NEXT STEP ONCE THE APPLICATION HAS BEEN APPROVED?",
+            a: "Once the application is approved, the next steps include making the final payments within eight months. Applicants must travel to Malta to submit their biometric data in person. After that, the Maltese Permanent Residence Cards are officially issued. Our team offers ongoing support throughout this process to make sure all formalities are completed smoothly, including help until the residence permit is successfully stamped.",
+          },
+        ],
+      },
+      about: `Malta is a sovereign island nation in the Mediterranean, located between Southern Europe and North Africa. It includes three islands: Malta, Gozo, and the smaller Comino. Malta is known for its historic charm, scenic coastlines, and high quality of life.
+
+With a history that goes back to 5900 BC, Malta has a rich cultural heritage shaped by the Phoenicians, Romans, Byzantines, Arabs, and Normans. Its capital, Valletta, is a UNESCO World Heritage Site and was a former European Capital of Culture. The city offers a unique mix of historical depth and modern style.
+
+Since it joined the European Union in 2004 and the Schengen Area soon after, Malta has become a center for international residents seeking safety, stability, and easy access to Europe. The Malta Permanent Residence Programme (MPRP) allows non-EU nationals to gain permanent residency in Malta. This grants visa-free access to the Schengen Zone and the advantages of living in a respected, well-connected European nation. The MPRP has no language or physical stay requirements, making it a flexible and efficient path to long-term residency in the EU.
+
+The capital of the country is Valletta
+The currency is Euro
+Current population as of 2025: 546,673`,
+      legalBasis: {
+        title: "Legal Basis of the Programme",
+        description:
+          "The Malta Permanent Residence Programme (MPRP) is governed by Legal Notice 121 of 2021, under the Immigration Act (Cap. 217) of the Laws of Malta. The programme is managed by the Residency Malta Agency, a government body responsible for handling the issuance of residence permits under this framework. The MPRP lets non-EU nationals and their eligible family members gain permanent residency in Malta. In return, they must make a contribution to national development and meet a qualifying real estate commitment, all while adhering to strict due diligence and compliance standards.",
+        items: [],
+        note: "",
+      },
+    },
+  },
+  {
+    id: "saudi arabia-residence",
+    slug: "saudi arabia-residence",
+    name: "Saudi Arabia",
+    type: "residence",
+    shortDescription: "Premium residence by investment program in Saudi Arabia",
+    heroImage:
+      "https://live.staticflickr.com/65535/55278428844_4d0972370c_b.jpg",
+    sections: {
+      overview: {
+        title: "Overview of Saudi Arabia",
+        items: [
+          {
+            no: 1,
+            title: "",
+            description: ``,
+          },
+          {
+            no: 2,
+            title: "",
+            description: ``,
+          },
+          {
+            no: 3,
+            title: "",
+            description: ``,
+          },
+          {
+            no: 4,
+            title: "",
+            description: ``,
+          },
+          {
+            no: 5,
+            title: "",
+            description: ``,
+          },
+        ],
+      },
+      benefits: [
+        {
+          title: "Strategic Location",
+          subTitle: "Gateways to Middle Eastern and global markets.",
+          icon: "MapPin",
+        },
+        {
+          title: "Modern Infrastructure",
+          subTitle: "Rapidly developing cities and services.",
+          icon: "TrendingUp",
+        },
+        {
+          title: "High Safety Standards",
+          subTitle: "One of the safest environments for families.",
+          icon: "ShieldCheck",
+        },
+        {
+          title: "Economic Vision 2030",
+          subTitle: "Vast growth and investment opportunities.",
+          icon: "Zap",
+        },
+      ],
+      importantDetails: [
+        {
+          title: "",
+          description: "",
+          icon: "Check",
+        },
+        {
+          title: "",
+          description: "",
+          icon: "Check",
+        },
+        {
+          title: "",
+          description: "",
+          icon: "Check",
+        },
+      ],
+      requirements: {
+        investmentRequirements: {
+          title: "Program Requirements",
+          description: "To qualify, applicants must:",
+          items: ["Clean criminal record", "Proof of funds"],
+          note: "All applications must be submitted through an authorized agent.",
+        },
+        investmentOptions: {
+          title: "Investment Options",
+          description: "Applicants may choose from several investment paths.",
+          items: [],
+          note: "Contact us for the latest investment details.",
+        },
+      },
+      appProcess: {
+        title: "Application Process for Hungary Residency",
+        description:
+          "Obtaining residency in Hungary through approved investment channels.",
+        process: [
+          {
+            no: 1,
+            item: "Assessment & Onboarding",
+            list: [
+              "Consult with Passport Legend’s client advisors.",
+              "Passport Legend’s due diligence check is conducted.",
+            ],
+          },
+          {
+            no: 2,
+            item: "Application Submission",
+            list: [
+              "Client is onboarded and retainer fees are paid.",
+              "Documents are prepared and application for Saudi Arabia Golden Residence Permit is submitted.",
+            ],
+          },
+          {
+            no: 3,
+            item: "Application Processing",
+            list: [
+              "Application is processed.",
+              "Government of Hungary pre-approval is received.",
+              "Investment requirements are fulfilled",
+            ],
+          },
+          {
+            no: 4,
+            item: "Background Checks",
+            list: [
+              "Hungarian authorities will conduct due diligence and verify the legitimacy of the application and investment funds",
+            ],
+          },
+          {
+            no: 5,
+            item: "Passport Handover",
+            list: [
+              "Application is approved.",
+              "Passport of Hungary is issued within 4 months.",
+              "Passport is handed over to client by Passport Legacy’s advisors.",
+            ],
+          },
+        ],
+      },
+      faqs: {
+        title: "Saudi Arabia Residency Through Investment FAQ's",
+        qAndA: [
+          {
+            q: "",
+            a: "",
+          },
+
+          {
+            q: "",
+            a: "",
+          },
+
+          {
+            q: "",
+            a: "",
+          },
+        ],
+      },
+      about:
+        "Saudi Arabia's residency program offers a gateway to one of the world's fastest-growing economies. Residents benefit from a safe environment, high-quality modern infrastructure, and a strategic location. The Kingdom is rapidly expanding its entertainment and tourism sectors, making it an exciting place for international professionals.",
+      legalBasis: {
+        title: "Legal Basis of the Programme",
+        description:
+          "Saudi Arabia's Premium Residency by Investment Programme is governed by the Executive Regulations of the Foreign Investment Law and is managed by the Ministry of Investment (MISA).",
+        items: [],
+        note: "",
+      },
+    },
+  },
+  {
     id: "canada-residence",
     slug: "canada-residence",
     name: "Canada",
     type: "residence",
     shortDescription: "High quality of life, stable economy",
     heroImage:
-      "https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1200&h=600&fit=crop",
+      "https://live.staticflickr.com/65535/55278333588_72ea2ba28c_b.jpg",
     sections: {
       overview: {
         title: "Overview",
@@ -450,7 +868,7 @@ The current population as of 2025: 1,367,468`,
     type: "residence",
     shortDescription: "Mediterranean paradise with affordable entry",
     heroImage:
-      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&h=600&fit=crop",
+      "https://live.staticflickr.com/65535/55278428964_f984196dbb_b.jpg",
     sections: {
       overview: {
         title: "Overview",
@@ -669,7 +1087,7 @@ The current population as of 2025: 9,967,275`,
     type: "residence",
     shortDescription: "Premium residence by investment program in Hungary",
     heroImage:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop",
+      "https://live.staticflickr.com/65535/55278204476_ca204a31ca_b.jpg",
     sections: {
       overview: {
         title: "Overview of Hungary",
@@ -877,7 +1295,7 @@ Current population as of 2025: 9,643,770`,
     type: "residence",
     shortDescription: "Premium residence by investment program in Latvia",
     heroImage:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=600&fit=crop",
+      "https://live.staticflickr.com/65535/55277283212_4c74b40f43_b.jpg",
     sections: {
       overview: {
         title: "Overview of Latvia",
@@ -1111,261 +1529,13 @@ The current population as of 2025 : 1,858,298`,
     },
   },
   {
-    id: "malta-residence",
-    slug: "malta-residence",
-    name: "Malta",
-    type: "residence",
-    shortDescription: "EU citizenship through exceptional investment",
-    heroImage:
-      "https://images.unsplash.com/photo-1555992336-fb0d29498b13?w=1200&h=600&fit=crop",
-    sections: {
-      overview: {
-        title: "Overview",
-        items: [
-          {
-            no: 1,
-            title: "Malta is a charismatic southern European island nation",
-            description: `Malta is a charismatic southern European island nation situated in the heart of the Mediterranean Sea. Known for its rich history, stunning landscapes, and delightful climate, Malta is an attractive destination for tourists and investors alike. The country comprises three main islands – Malta, Gozo, and Comino – covering a total area of 316 square kilometres.`,
-          },
-          {
-            no: 2,
-            title: "The capital city of Malta is Valletta",
-            description: `The capital city of Malta is Valletta, a UNESCO World Heritage Site characterised by its baroque architecture, impressive fortifications, and vibrant cultural life. Valletta is known for its fascinating museums, historical landmarks, and bustling waterfront. The Maltese islands are famous for their crystal-clear waters, golden beaches, and ancient temples, which attract millions of visitors each year.`,
-          },
-          {
-            no: 3,
-            title:
-              "Maltese and English are the official languages of the country",
-            description: `Maltese and English are the official languages of the country, reflecting its history as a former British colony. Malta gained independence in 1964 and became a republic in 1974. The nation’s population of approximately 546,000 people is a diverse mix of Maltese, British, Italian, and other Mediterranean influences, resulting in a unique cultural fusion.`,
-          },
-          {
-            no: 4,
-            title: "Tourism role in Malta's economy",
-            description: `Tourism plays a significant role in Malta’s economy, contributing considerably to the country’s GDP. The nation’s natural beauty, combined with its rich historical sites and diverse recreational activities, makes it an attractive destination for travellers. Other key sectors driving the economy include financial services, online gaming, and maritime services. The official currency is the Euro (EUR).`,
-          },
-          {
-            no: 5,
-            title: "International Organisations",
-            description: `As a member of various international organisations, including the United Nations, the European Union, and the British Commonwealth, Malta actively participates in regional and global affairs. The country is committed to sustainable development and has made substantial progress in areas such as renewable energy, environmental conservation, and climate change adaptation, ensuring the preservation of its natural resources for future generations.`,
-          },
-        ],
-      },
-      benefits: [
-        {
-          title: "Visa-Free Travel",
-          subTitle: "Visa free access to the entire Schengen Area.",
-          icon: "ShieldCheck",
-        },
-        {
-          title: "Family Eligibility",
-          subTitle:
-            "Applicants can include their spouse, unmarried and financially dependent children under 29, financially dependent parents and parents-in law, with no age limits.",
-          icon: "Globe",
-        },
-        {
-          title: "Renewable Long-Term Residency",
-          subTitle:
-            "The residence card’s validity is five years and will be renewed automatically every 5 years.",
-          icon: "Coins",
-        },
-        {
-          title: "STABLE ECONOMY",
-          subTitle:
-            "Malta is economically stable, with an A+ credit rating and one of the highest economic growth rates among all EU countries.",
-          icon: "TrendingUp",
-        },
-        {
-          title: "Language-Friendly Environment",
-          subTitle:
-            "There are no language requirements for applicants, and English is one of Malta’s official languages, making integration easier for international residents.",
-          icon: "TrendingUp",
-        },
-      ],
-      importantDetails: [
-        {
-          title: "EUR 110,000",
-          description: "Minimum Investment",
-          icon: "Coins",
-        },
-        {
-          title: "6 Months",
-          description: "Time to Residency",
-          icon: "Clock",
-        },
-        {
-          title: "Malta",
-          description: "Schengen Area",
-          icon: "Check",
-        },
-      ],
-      requirements: {
-        investmentRequirements: {
-          title: "Malta Residence by Investment Requirements",
-          description: "",
-          items: [
-            "Applicant must pass due diligence in order to apply for the programme.",
-            "Applicant must not have a criminal record.",
-            "Applicant must be in good health.",
-            "Applicant must have a confirmed source of funds.",
-          ],
-          note: "",
-        },
-        investmentOptions: {
-          title: "Malta Residence by Investment",
-          description:
-            "The Malta Permanent Residence Programme (MPRP) allows non-EU nationals to gain permanent residency in Malta through a structured investment process. Managed by the Residency Malta Agency, this program offers long-term security, visa-free access to the Schengen Area, and a high standard of living in a stable EU country.To qualify, applicants must meet the following requirements:",
-          items: [
-            {
-              title: "1. Government Contribution Programme",
-              list: [
-                `Applicants need to make a non-refundable contribution to the Residency Malta Agency: 
-
-USD 37,000 government contribution
-EUR 2,000 donation to a registered Maltese NGO that supports culture, sports, science, animal welfare, or the arts`,
-                `These contributions must be made within eight months of receiving the Letter of Approval in Principle.`,
-              ],
-            },
-            {
-              title: "2. Real Estate Development Programme ",
-              list: [
-                `Applicants must invest in qualifying real estate for at least five years. There are two options: 
-
-Buy a residential property in Malta or Gozo valued at EUR 375,000 or more
-Rent a residential property in Malta or Gozo with a minimum annual rent of EUR 14,000`,
-                `The property must be the applicant’s official residence in Malta for the entire five-year period.`,
-              ],
-            },
-            {
-              title: "3. Financial Requirements",
-              list: [
-                `Applicants must also show: 
-
-A minimum net worth of EUR 500,000, which includes
-At least EUR 150,000 in liquid financial assets`,
-              ],
-            },
-          ],
-          note: "This ensures that the applicant can support themselves and their dependents without depending on Malta’s public assistance system. The MPRP does not require language skills, educational qualifications, or physical presence in Malta. It provides a flexible and efficient route to European residency for individuals and families from around the world.",
-        },
-      },
-      appProcess: {
-        title: "Malta Residence by Investment Application Process",
-        description:
-          "The application process for the Malta Residence by Investment is straightforward, and applications are currently being processed in 6 months. The application process can be divided into the following stages:",
-        process: [
-          {
-            no: 1,
-            item: "Assessment & Onboarding",
-            list: [
-              "Consult with Passport Legend’s client advisors.",
-              "Passport Legend’s due diligence check is conducted.",
-              "Client is onboarded and retainer fees are paid.",
-            ],
-          },
-          {
-            no: 2,
-            item: "Application Submission",
-            list: [
-              "Legal process commences, and bank account is opened.",
-              "Investment requirements are fulfilled.",
-              "Documents are prepared and application for Malta’s Golden Residence Permit is submitted.",
-            ],
-          },
-          {
-            no: 3,
-            item: "Application Processing",
-            list: ["Application is processed.", "Application is approved."],
-          },
-          {
-            no: 4,
-            item: "Approval & Final Handover",
-            list: [
-              "Final Payments are completed within 8 months.",
-              "Applicants have to travel to Malta to submit biometrics.",
-              "Maltese Permanent Residence Cards are issued.",
-              "Our team continues to support until the permit is stamped.",
-            ],
-          },
-        ],
-      },
-
-      faqs: {
-        title: "Frequently Asked Questions",
-        qAndA: [
-          {
-            q: "HOW MANY COUNTRIES DOES MALTA HAVE ACCESS TO VISA-FREE?",
-            a: "Malta residents have visa-free access throughout the Schengen Area.",
-          },
-          {
-            q: "WHAT TYPE OF INVESTMENT WILL I BE MAKING IN MALTA?",
-            a: `
-            The Malta Permanent Residence Programme (MPRP) allows non-EU nationals to gain permanent residency in Malta through a structured investment process. Managed by the Residency Malta Agency, this program offers long-term security, visa-free access to the Schengen Area, and a high standard of living in a stable EU country.
-
-To qualify, applicants must meet the following requirements:
-
-1. Government Contribution Programme
-
-Applicants need to make a non-refundable contribution to the Residency Malta Agency: 
-
-USD 37,000 government contribution
-EUR 2,000 donation to a registered Maltese NGO that supports culture, sports, science, animal welfare, or the arts
-These contributions must be made within eight months of receiving the Letter of Approval in Principle.
-
-2. Real Estate Development Programme 
-
-Applicants must invest in qualifying real estate for at least five years. There are two options: 
-
-Buy a residential property in Malta or Gozo valued at EUR 375,000 or more
-Rent a residential property in Malta or Gozo with a minimum annual rent of EUR 14,000
-The property must be the applicant’s official residence in Malta for the entire five-year period.
-
-3. Financial Requirements
-
-Applicants must also show: 
-
-A minimum net worth of EUR 500,000, which includes
-At least EUR 150,000 in liquid financial assets
-This ensures that the applicant can support themselves and their dependents without depending on Malta’s public assistance system.
-
-The MPRP does not require language skills, educational qualifications, or physical presence in Malta. It provides a flexible and efficient route to European residency for individuals and families from around the world.
-            `,
-          },
-          {
-            q: "HOW LONG DOES IT TAKE TO ACQUIRE A MALTA RESIDENCE PERMIT?",
-            a: "Applications for the Malta Residence by Investment Programme are currently being processed in just 6 months.",
-          },
-          {
-            q: "WHAT IS THE NEXT STEP ONCE THE APPLICATION HAS BEEN APPROVED?",
-            a: "Once the application is approved, the next steps include making the final payments within eight months. Applicants must travel to Malta to submit their biometric data in person. After that, the Maltese Permanent Residence Cards are officially issued. Our team offers ongoing support throughout this process to make sure all formalities are completed smoothly, including help until the residence permit is successfully stamped.",
-          },
-        ],
-      },
-      about: `Malta is a sovereign island nation in the Mediterranean, located between Southern Europe and North Africa. It includes three islands: Malta, Gozo, and the smaller Comino. Malta is known for its historic charm, scenic coastlines, and high quality of life.
-
-With a history that goes back to 5900 BC, Malta has a rich cultural heritage shaped by the Phoenicians, Romans, Byzantines, Arabs, and Normans. Its capital, Valletta, is a UNESCO World Heritage Site and was a former European Capital of Culture. The city offers a unique mix of historical depth and modern style.
-
-Since it joined the European Union in 2004 and the Schengen Area soon after, Malta has become a center for international residents seeking safety, stability, and easy access to Europe. The Malta Permanent Residence Programme (MPRP) allows non-EU nationals to gain permanent residency in Malta. This grants visa-free access to the Schengen Zone and the advantages of living in a respected, well-connected European nation. The MPRP has no language or physical stay requirements, making it a flexible and efficient path to long-term residency in the EU.
-
-The capital of the country is Valletta
-The currency is Euro
-Current population as of 2025: 546,673`,
-      legalBasis: {
-        title: "Legal Basis of the Programme",
-        description:
-          "The Malta Permanent Residence Programme (MPRP) is governed by Legal Notice 121 of 2021, under the Immigration Act (Cap. 217) of the Laws of Malta. The programme is managed by the Residency Malta Agency, a government body responsible for handling the issuance of residence permits under this framework. The MPRP lets non-EU nationals and their eligible family members gain permanent residency in Malta. In return, they must make a contribution to national development and meet a qualifying real estate commitment, all while adhering to strict due diligence and compliance standards.",
-        items: [],
-        note: "",
-      },
-    },
-  },
-  {
     id: "panama-residence",
     slug: "panama-residence",
     name: "Panama",
     type: "residence",
     shortDescription: "Premium residence by investment program in Panama",
     heroImage:
-      "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1200&h=600&fit=crop",
+      "https://live.staticflickr.com/65535/55278429359_93f88f0262_b.jpg",
     sections: {
       overview: {
         title: "Overview",
@@ -1790,7 +1960,7 @@ The current population as of 2025 : 10,415,328`,
     type: "residence",
     shortDescription: "Premium residence by investment program in Switzerland",
     heroImage:
-      "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&h=600&fit=crop",
+      "https://live.staticflickr.com/65535/55278204606_6b47fbdefa_b.jpg",
     sections: {
       overview: {
         title: "Overview",
@@ -1957,7 +2127,7 @@ The current population as of  2025 : 8,955,693`,
     type: "residence",
     shortDescription: "Southeast Asian destination with low cost of living",
     heroImage:
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&h=600&fit=crop",
+      "https://live.staticflickr.com/65535/55277283387_ce3981ab40_b.jpg",
     sections: {
       overview: {
         title: "Overview",
@@ -2134,7 +2304,7 @@ The current population as of 2025 : 71,632,347`,
       legalBasis: {
         title: "Legal Basis of the Programme",
         description:
-          "Vanuatu’s Citizenship by Investment Programme is governed by the: Citizenship Act [CAP 112] and executed by the Vanuatu Citizenship Commission under the Development Support Program.",
+          "Thailand’s Residency by Investment Programme is governed by the: Citizenship Act [CAP 112] and executed by the Ministry of Interior.",
         items: [],
         note: "",
       },
@@ -2147,7 +2317,7 @@ The current population as of 2025 : 71,632,347`,
     type: "residence",
     shortDescription: "Premium residence by investment program in UAE",
     heroImage:
-      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=600&fit=crop",
+      "https://live.staticflickr.com/65535/55278597380_6c1d6ea821_b.jpg",
     sections: {
       overview: {
         title: "Overview of UAE",
@@ -2360,7 +2530,7 @@ The current population as of 2025 : 11,263,050`,
     shortDescription:
       "Premium residence by investment program in United Kingdom",
     heroImage:
-      "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&h=600&fit=crop",
+      "https://live.staticflickr.com/65535/55278597575_7923e9f075_b.jpg",
     sections: {
       overview: {
         title: "Overview of United Kingdom",
@@ -2511,7 +2681,7 @@ The population as of 2025 : 69,442,865`,
     type: "residence",
     shortDescription: "Premium residence by investment program in USA",
     heroImage:
-      "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=1200&h=600&fit=crop",
+      "https://live.staticflickr.com/65535/55277284262_906316fccf_b.jpg",
     sections: {
       overview: {
         title: "Overview of USA",
@@ -2673,176 +2843,6 @@ Due to this varied culture and the vast opportunities available to its residents
 The capital of the country is Washington D. C.
 The currency is American Dollar (USD)
 The current population as of 2025 : 346,794,259`,
-    },
-  },
-  {
-    id: "saudi arabia-residence",
-    slug: "saudi arabia-residence",
-    name: "Saudi Arabia",
-    type: "residence",
-    shortDescription: "Premium residence by investment program in Saudi Arabia",
-    heroImage:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=600&fit=crop",
-    sections: {
-      overview: {
-        title: "Overview of Saudi Arabia",
-        items: [
-          {
-            no: 1,
-            title: "",
-            description: ``,
-          },
-          {
-            no: 2,
-            title: "",
-            description: ``,
-          },
-          {
-            no: 3,
-            title: "",
-            description: ``,
-          },
-          {
-            no: 4,
-            title: "",
-            description: ``,
-          },
-          {
-            no: 5,
-            title: "",
-            description: ``,
-          },
-        ],
-      },
-      benefits: [
-        {
-          title: "Strategic Location",
-          subTitle: "Gateways to Middle Eastern and global markets.",
-          icon: "MapPin",
-        },
-        {
-          title: "Modern Infrastructure",
-          subTitle: "Rapidly developing cities and services.",
-          icon: "TrendingUp",
-        },
-        {
-          title: "High Safety Standards",
-          subTitle: "One of the safest environments for families.",
-          icon: "ShieldCheck",
-        },
-        {
-          title: "Economic Vision 2030",
-          subTitle: "Vast growth and investment opportunities.",
-          icon: "Zap",
-        },
-      ],
-      importantDetails: [
-        {
-          title: "",
-          description: "",
-          icon: "Check",
-        },
-        {
-          title: "",
-          description: "",
-          icon: "Check",
-        },
-        {
-          title: "",
-          description: "",
-          icon: "Check",
-        },
-      ],
-      requirements: {
-        investmentRequirements: {
-          title: "Program Requirements",
-          description: "To qualify, applicants must:",
-          items: ["Clean criminal record", "Proof of funds"],
-          note: "All applications must be submitted through an authorized agent.",
-        },
-        investmentOptions: {
-          title: "Investment Options",
-          description: "Applicants may choose from several investment paths.",
-          items: [],
-          note: "Contact us for the latest investment details.",
-        },
-      },
-      appProcess: {
-        title: "Application Process for Hungary Residency",
-        description:
-          "Obtaining residency in Hungary through approved investment channels.",
-        process: [
-          {
-            no: 1,
-            item: "Assessment & Onboarding",
-            list: [
-              "Consult with Passport Legend’s client advisors.",
-              "Passport Legend’s due diligence check is conducted.",
-            ],
-          },
-          {
-            no: 2,
-            item: "Application Submission",
-            list: [
-              "Client is onboarded and retainer fees are paid.",
-              "Documents are prepared and application for Greece’s Golden Residence Permit is submitted.",
-            ],
-          },
-          {
-            no: 3,
-            item: "Application Processing",
-            list: [
-              "Application is processed.",
-              "Government of Hungary pre-approval is received.",
-              "Investment requirements are fulfilled",
-            ],
-          },
-          {
-            no: 4,
-            item: "Background Checks",
-            list: [
-              "Hungarian authorities will conduct due diligence and verify the legitimacy of the application and investment funds",
-            ],
-          },
-          {
-            no: 5,
-            item: "Passport Handover",
-            list: [
-              "Application is approved.",
-              "Passport of Hungary is issued within 4 months.",
-              "Passport is handed over to client by Passport Legacy’s advisors.",
-            ],
-          },
-        ],
-      },
-      faqs: {
-        title: "Cyprus Residency Through Investment FAQ's",
-        qAndA: [
-          {
-            q: "",
-            a: "",
-          },
-
-          {
-            q: "",
-            a: "",
-          },
-
-          {
-            q: "",
-            a: "",
-          },
-        ],
-      },
-      about:
-        "Saudi Arabia's residency program offers a gateway to one of the world's fastest-growing economies. Residents benefit from a safe environment, high-quality modern infrastructure, and a strategic location. The Kingdom is rapidly expanding its entertainment and tourism sectors, making it an exciting place for international professionals.",
-      legalBasis: {
-        title: "Legal Basis of the Programme",
-        description:
-          "Vanuatu’s Citizenship by Investment Programme is governed by the: Citizenship Act [CAP 112] and executed by the Vanuatu Citizenship Commission under the Development Support Program.",
-        items: [],
-        note: "",
-      },
     },
   },
 ];
