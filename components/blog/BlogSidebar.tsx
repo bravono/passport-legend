@@ -36,7 +36,8 @@ export default function BlogSidebar() {
     }))
     .filter(
       (cat) =>
-        cat.count > 0 || ["Citizenship", "Residency", "Investment"].includes(cat.name),
+        cat.count > 0 ||
+        ["Citizenship", "Residency", "Investment"].includes(cat.name),
     ); // Keep main categories even if empty
   return (
     <aside className="space-y-12">
@@ -44,7 +45,7 @@ export default function BlogSidebar() {
         <input
           type="text"
           placeholder="Search Insights..."
-          className="w-full pl-12 pr-4 py-4 bg-primary-50/50 border border-primary-100 rounded-2xl focus:ring-2 focus:ring-primary-900 focus:bg-white outline-none transition-all duration-300 shadow-sm group-hover:shadow-md"
+          className="w-full pl-12 pr-4 py-4 bg-primary-500-50/50 border border-primary-100 rounded-2xl focus:ring-2 focus:ring-primary-900 focus:bg-white outline-none transition-all duration-300 shadow-sm group-hover:shadow-md"
         />
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-primary-400 group-hover:text-primary-900 transition-colors" />
       </div>
@@ -61,14 +62,14 @@ export default function BlogSidebar() {
             <Link
               key={cat.name}
               href={`/blog/category/${cat.name.toLowerCase()}`}
-              className="group flex items-center justify-between p-3 rounded-xl border border-transparent hover:border-primary-100 hover:bg-primary-50/50 transition-all duration-300"
+              className="group flex items-center justify-between p-3 rounded-xl border border-transparent hover:border-primary-100 hover:bg-primary-500-50/50 transition-all duration-300"
             >
               <span
                 className={`font-bold group-hover:text-primary-900 transition-colors ${cat.color}`}
               >
                 {cat.name}
               </span>
-              <span className="bg-primary-900 text-white text-[10px] py-1 px-2.5 rounded-lg font-black">
+              <span className="bg-primary-500 text-white text-[10px] py-1 px-2.5 rounded-lg font-black">
                 {cat.count}
               </span>
             </Link>
@@ -88,15 +89,13 @@ export default function BlogSidebar() {
             <Link
               key={tag}
               href={`/blog/tag/${tag.toLowerCase()}`}
-              className="px-4 py-2 bg-gray-50 hover:bg-primary-500 hover:text-white text-gray-600 text-sm font-semibold rounded-2xl transition-all duration-300"
+              className="px-4 py-2 bg-gray-50 hover:bg-primary-500-500 hover:text-white text-gray-600 text-sm font-semibold rounded-2xl transition-all duration-300"
             >
               #{tag}
             </Link>
           ))}
         </div>
       </div>
-
-
     </aside>
   );
 }

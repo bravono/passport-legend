@@ -108,8 +108,14 @@ export default function Contact() {
       <Header />
       <main>
         {/* Hero Section */}
-        <Section className="relative min-h-[40vh] flex items-center overflow-hidden bg-primary-900 text-white">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2074&auto=format&fit=crop')] bg-cover bg-center opacity-30" />
+        <Section className="relative min-h-[40vh] flex items-center overflow-hidden bg-primary-500 text-white">
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-30"
+            style={{
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2074&auto=format&fit=crop')",
+            }}
+          />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-accent-600),transparent_50%)] opacity-20" />
           <div className="absolute inset-0 bg-neutral-900/60" />
           <Container className="relative z-10 text-center space-y-6 animate-fade-in-up">

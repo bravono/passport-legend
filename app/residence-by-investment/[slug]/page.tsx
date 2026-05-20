@@ -234,7 +234,7 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
         {/* Important Details Section */}
         {country.sections.importantDetails && (
           <ScrollReveal direction="up" delay={0.2}>
-            <div className="bg-primary-900 dark:bg-primary-950 py-16">
+            <div className="bg-primary-500 dark:bg-primary-500-950 py-16">
               <Container>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                   {country.sections.importantDetails.map((detail, index) => {
@@ -331,7 +331,7 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
           <ScrollReveal direction="up" delay={0.2}>
             <Section
               id="requirements"
-              className="bg-primary-900 text-white py-24 md:py-32 scroll-mt-24"
+              className="bg-primary-500 text-white py-24 md:py-32 scroll-mt-24"
             >
               <Container>
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
@@ -373,7 +373,7 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
 
                       {country.sections.requirements.investmentRequirements
                         ?.note && (
-                        <div className="p-6 bg-primary-800/50 rounded-2xl border border-white/10">
+                        <div className="p-6 bg-primary-500-800/50 rounded-2xl border border-white/10">
                           <p className="text-sm text-primary-200 italic leading-relaxed">
                             <span className="font-bold text-accent-400 not-italic mr-1">
                               Note:
@@ -557,7 +557,7 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
           <ScrollReveal direction="up" delay={0.2}>
             <Section
               id="faq"
-              className="bg-primary-900 text-white py-24 md:py-32 scroll-mt-24"
+              className="bg-primary-500 text-white py-24 md:py-32 scroll-mt-24"
             >
               <Container>
                 <div className="text-center max-w-3xl mx-auto mb-20">
@@ -602,7 +602,7 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
 
         {/* Overview Section */}
         {country.sections.overview && (
-          <OverviewSection 
+          <OverviewSection
             title={country.sections.overview.title}
             items={country.sections.overview.items}
             countryName={country.name}
@@ -630,10 +630,20 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                     your private consultation today.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
-                    <Button size="xl" variant="accent" className="px-12 py-6 text-lg" asChild>
+                    <Button
+                      size="xl"
+                      variant="accent"
+                      className="px-12 py-6 text-lg"
+                      asChild
+                    >
                       <Link href="/contact">Book a Consultation</Link>
                     </Button>
-                    <Button size="xl" variant="outline" className="px-12 py-6 text-lg border-white/30 text-white hover:bg-white/10" asChild>
+                    <Button
+                      size="xl"
+                      variant="outline"
+                      className="px-12 py-6 text-lg border-white/30 text-white hover:bg-white/10"
+                      asChild
+                    >
                       <Link href="/residence">Explore Programs</Link>
                     </Button>
                   </div>

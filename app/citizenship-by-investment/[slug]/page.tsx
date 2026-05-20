@@ -239,7 +239,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
         {/* Important Details Section */}
         {country.sections.importantDetails && (
           <ScrollReveal direction="up" delay={0.2}>
-            <div className="bg-primary-900 dark:bg-primary-950 py-16">
+            <div className="bg-primary-500 dark:bg-primary-500-950 py-16">
               <Container>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                   {country.sections.importantDetails.map((detail, index) => {
@@ -340,7 +340,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
           <ScrollReveal direction="up" delay={0.2}>
             <Section
               id="process"
-              className="bg-primary-900 text-white py-24 md:py-32 scroll-mt-24"
+              className="bg-primary-500 text-white py-24 md:py-32 scroll-mt-24"
             >
               <Container>
                 <div className="text-center max-w-3xl mx-auto mb-20">
@@ -370,7 +370,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                       >
                         <div className="hidden md:block w-1/2" />
 
-                        <div className="absolute left-[31px] md:left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-primary-800 border-4 border-primary-700 flex items-center justify-center z-10 shadow-xl">
+                        <div className="absolute left-[31px] md:left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-primary-500-800 border-4 border-primary-700 flex items-center justify-center z-10 shadow-xl">
                           <span className="text-xl font-bold text-accent-400">
                             {index + 1}
                           </span>
@@ -385,7 +385,9 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                             </h3>
                             <div className="text-primary-100 font-light leading-relaxed">
                               {step.description || (
-                                <ul className={`space-y-2 flex flex-col ${index % 2 === 0 ? "md:items-start" : "md:items-end"}`}>
+                                <ul
+                                  className={`space-y-2 flex flex-col ${index % 2 === 0 ? "md:items-start" : "md:items-end"}`}
+                                >
                                   {step.list?.map((li: string, i: number) => (
                                     <li key={i} className="flex gap-2">
                                       <span className="text-accent-500 mt-1.5">
@@ -569,7 +571,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
           <ScrollReveal direction="up" delay={0.2}>
             <Section
               id="legal-basis"
-              className="bg-primary-900 text-white py-24 md:py-32 scroll-mt-24"
+              className="bg-primary-500 text-white py-24 md:py-32 scroll-mt-24"
             >
               <Container>
                 <div className="max-w-4xl mx-auto">
@@ -602,7 +604,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                       </div>
 
                       {country.sections.legalBasis.note && (
-                        <div className="mt-8 p-6 bg-primary-800/50 rounded-2xl border border-white/10 italic text-sm text-primary-200">
+                        <div className="mt-8 p-6 bg-primary-500-800/50 rounded-2xl border border-white/10 italic text-sm text-primary-200">
                           Note: {country.sections.legalBasis.note}
                         </div>
                       )}
@@ -663,7 +665,7 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
         )}
         {/* Overview Section */}
         {country.sections.overview && (
-          <OverviewSection 
+          <OverviewSection
             title={country.sections.overview.title}
             items={country.sections.overview.items}
             countryName={country.name}
@@ -691,10 +693,20 @@ export default async function CitizenshipByInvestmentPage({ params }: Props) {
                     your private consultation today.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
-                    <Button size="xl" variant="accent" className="px-12 py-6 text-lg" asChild>
+                    <Button
+                      size="xl"
+                      variant="accent"
+                      className="px-12 py-6 text-lg"
+                      asChild
+                    >
                       <Link href="/contact">Book a Consultation</Link>
                     </Button>
-                    <Button size="xl" variant="outline" className="px-12 py-6 text-lg border-white/30 text-white hover:bg-white/10" asChild>
+                    <Button
+                      size="xl"
+                      variant="outline"
+                      className="px-12 py-6 text-lg border-white/30 text-white hover:bg-white/10"
+                      asChild
+                    >
                       <Link href="/citizenship">Explore Programs</Link>
                     </Button>
                   </div>

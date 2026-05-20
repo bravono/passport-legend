@@ -80,7 +80,7 @@ export default async function PostDetail({ params }: PostProps) {
         />
 
         {/* Immersive Post Header */}
-        <header className="bg-primary-900 pt-40 pb-20 relative overflow-hidden">
+        <header className="bg-primary-500 pt-40 pb-20 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/4 h-full bg-accent-500/5 blur-3xl rounded-full" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <Link
@@ -93,14 +93,16 @@ export default async function PostDetail({ params }: PostProps) {
 
             <div className="max-w-4xl">
               <div className="flex items-center gap-4 mb-8">
-                <CategoryBadge 
-                  category={post.category || "General"} 
+                <CategoryBadge
+                  category={post.category || "General"}
                   className="!bg-accent-500 !text-white border-none shadow-lg"
                 />
-                <div className="h-px w-12 bg-primary-700" />
+                <div className="h-px w-12 bg-primary-500-700" />
                 <div className="flex items-center gap-2 text-primary-300 text-xs uppercase tracking-widest font-black">
                   <Calendar className="w-4 h-4 text-accent-500" />
-                  {post.date ? format(new Date(post.date), "MMMM dd, yyyy") : "Recently Published"}
+                  {post.date
+                    ? format(new Date(post.date), "MMMM dd, yyyy")
+                    : "Recently Published"}
                 </div>
               </div>
 
@@ -112,7 +114,7 @@ export default async function PostDetail({ params }: PostProps) {
 
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-4 group">
-                  <div className="w-14 h-14 rounded-full bg-primary-800 border border-primary-700 flex items-center justify-center text-accent-500 font-bold text-xl uppercase shadow-inner">
+                  <div className="w-14 h-14 rounded-full bg-primary-500-800 border border-primary-700 flex items-center justify-center text-accent-500 font-bold text-xl uppercase shadow-inner">
                     {post.author?.charAt(0) || "P"}
                   </div>
                   <div>
@@ -121,7 +123,7 @@ export default async function PostDetail({ params }: PostProps) {
                     </p>
                   </div>
                 </div>
-                <div className="h-10 w-px bg-primary-800 mx-4" />
+                <div className="h-10 w-px bg-primary-500-800 mx-4" />
                 <PostShareActions
                   title={post.title || ""}
                   excerpt={post.excerpt || ""}
@@ -157,7 +159,9 @@ export default async function PostDetail({ params }: PostProps) {
                           className="rounded-[2rem] shadow-premium w-full object-cover border border-primary-50"
                         />
                         {props.alt && (
-                          <p className="text-center text-sm text-gray-400 mt-4 italic">{props.alt}</p>
+                          <p className="text-center text-sm text-gray-400 mt-4 italic">
+                            {props.alt}
+                          </p>
                         )}
                       </div>
                     ),
@@ -177,11 +181,17 @@ export default async function PostDetail({ params }: PostProps) {
                       />
                     ),
                     ul: ({ node, ...props }) => (
-                      <ul {...props} className="space-y-4 mb-12 list-none p-0" />
+                      <ul
+                        {...props}
+                        className="space-y-4 mb-12 list-none p-0"
+                      />
                     ),
                     li: ({ node, ...props }) => (
-                      <li {...props} className="flex gap-4 text-gray-700 text-lg">
-                        <div className="mt-2 w-2 h-2 rounded-full bg-primary-900 shrink-0" />
+                      <li
+                        {...props}
+                        className="flex gap-4 text-gray-700 text-lg"
+                      >
+                        <div className="mt-2 w-2 h-2 rounded-full bg-primary-500 shrink-0" />
                         {props.children}
                       </li>
                     ),
@@ -199,7 +209,7 @@ export default async function PostDetail({ params }: PostProps) {
                     <Link
                       key={tag}
                       href={`/blog/tag/${tag.toLowerCase()}`}
-                      className="px-6 py-2.5 bg-primary-50 hover:bg-primary-900 text-primary-900 hover:text-white rounded-full text-xs font-black uppercase tracking-widest transition-all duration-300"
+                      className="px-6 py-2.5 bg-primary-500-50 hover:bg-primary-500 text-primary-900 hover:text-white rounded-full text-xs font-black uppercase tracking-widest transition-all duration-300"
                     >
                       #{tag}
                     </Link>

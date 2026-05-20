@@ -21,22 +21,25 @@ export default function PostCard({ post }: PostCardProps) {
           alt={title || "Blog Post"}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-primary-900/10 group-hover:bg-primary-900/20 transition-colors duration-300" />
+        <div className="absolute inset-0 bg-primary-500/10 group-hover:bg-primary-500/20 transition-colors duration-300" />
         <div className="absolute top-6 left-6 z-10">
-          <CategoryBadge category={category || "General"} className="!bg-primary-900 !text-white border-none shadow-lg" />
+          <CategoryBadge
+            category={category || "General"}
+            className="!bg-primary-500 !text-white border-none shadow-lg"
+          />
         </div>
       </div>
 
       <div className="p-8 flex flex-col flex-grow relative">
         {/* Navy accent line */}
-        <div className="absolute top-0 left-8 right-8 h-1 bg-primary-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+        <div className="absolute top-0 left-8 right-8 h-1 bg-primary-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
         <div className="flex items-center gap-4 text-[10px] uppercase tracking-widest font-black text-primary-400 mb-4">
           <div className="flex items-center gap-1.5">
             <Calendar className="w-3 h-3 text-accent-500" />
             {date ? format(new Date(date), "MMM dd, yyyy") : "No Date"}
           </div>
-          <div className="w-1 h-1 rounded-full bg-primary-200" />
+          <div className="w-1 h-1 rounded-full bg-primary-500-200" />
           <div className="flex items-center gap-1.5">
             <User className="w-3 h-3 text-accent-500" />
             {author || "Passport Legend Team"}
@@ -47,7 +50,9 @@ export default function PostCard({ post }: PostCardProps) {
           <Link href={`/blog/${slug}`}>{title}</Link>
         </h3>
 
-        <p className="text-gray-500 text-sm mb-8 line-clamp-3 leading-relaxed">{excerpt}</p>
+        <p className="text-gray-500 text-sm mb-8 line-clamp-3 leading-relaxed">
+          {excerpt}
+        </p>
 
         <div className="mt-auto">
           <Link
@@ -55,7 +60,7 @@ export default function PostCard({ post }: PostCardProps) {
             className="inline-flex items-center text-xs font-black uppercase tracking-widest text-primary-900 group/link"
           >
             Explore Article
-            <div className="ml-3 w-8 h-8 rounded-full border border-primary-100 flex items-center justify-center group-hover/link:bg-primary-900 group-hover/link:border-primary-900 transition-all">
+            <div className="ml-3 w-8 h-8 rounded-full border border-primary-100 flex items-center justify-center group-hover/link:bg-primary-500 group-hover/link:border-primary-900 transition-all">
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:text-white" />
             </div>
           </Link>

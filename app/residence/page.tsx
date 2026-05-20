@@ -50,10 +50,7 @@ export default function Residence() {
       title: "Document & Application Processing",
       description:
         "Your application is submitted to the national residency bureau. We monitor progress and handle any queries from authorities.",
-      details: [
-       "Application is processed.",
-       "Application is approved.",
-      ],
+      details: ["Application is processed.", "Application is approved."],
       image:
         "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop",
     },
@@ -73,36 +70,36 @@ export default function Residence() {
   const residenceFaqs = [
     {
       q: "Which countries give permanent residency by investment?",
-      a: "Several countries offer permanent residency through investment, including Cyprus (Permanent Residence Program), Greece (Golden Visa), and various programs in Europe and North America that lead to permanent status after a qualifying period."
+      a: "Several countries offer permanent residency through investment, including Cyprus (Permanent Residence Program), Greece (Golden Visa), and various programs in Europe and North America that lead to permanent status after a qualifying period.",
     },
     {
       q: "What is residency by investment?",
-      a: "Residency by investment (RBI) is a process where individuals can obtain a residency permit in a foreign country by making a significant financial investment, such as purchasing real estate or investing in a local business."
+      a: "Residency by investment (RBI) is a process where individuals can obtain a residency permit in a foreign country by making a significant financial investment, such as purchasing real estate or investing in a local business.",
     },
     {
       q: "How can I get permanent residency by investing?",
-      a: "You can obtain permanent residency by choosing a program that offers an immediate permanent permit (like Cyprus) or one that provides a pathway to permanent residency after a few years of holding a temporary residence permit (like Greece or Portugal)."
+      a: "You can obtain permanent residency by choosing a program that offers an immediate permanent permit (like Cyprus) or one that provides a pathway to permanent residency after a few years of holding a temporary residence permit (like Greece or Portugal).",
     },
     {
       q: "What are the benefits of residency by investment?",
-      a: "Key benefits include the right to live and work in the host country, access to world-class healthcare and education, visa-free travel within the Schengen Area (for EU programs), and a potential pathway to citizenship."
+      a: "Key benefits include the right to live and work in the host country, access to world-class healthcare and education, visa-free travel within the Schengen Area (for EU programs), and a potential pathway to citizenship.",
     },
     {
       q: "Are family members included in the residency application?",
-      a: "Yes, most residency by investment programs allow the main investor to include their spouse and dependent children in the same application, ensuring the whole family benefits from the new status."
+      a: "Yes, most residency by investment programs allow the main investor to include their spouse and dependent children in the same application, ensuring the whole family benefits from the new status.",
     },
     {
       q: "Which are the leading residences by investment programmes?",
-      a: "Top-tier programs include the Greek Golden Visa, the Cyprus Permanent Residence Program, the UAE Golden Visa, and various European programs known for their efficiency and high quality of life."
+      a: "Top-tier programs include the Greek Golden Visa, the Cyprus Permanent Residence Program, the UAE Golden Visa, and various European programs known for their efficiency and high quality of life.",
     },
     {
       q: "How should I choose a residence programme?",
-      a: "Choosing the right program depends on your specific goals, such as ease of travel, tax optimization, education for your children, or relocation plans. Our advisors at Passport Legend provide personalized guidance to help you make the best choice."
+      a: "Choosing the right program depends on your specific goals, such as ease of travel, tax optimization, education for your children, or relocation plans. Our advisors at Passport Legend provide personalized guidance to help you make the best choice.",
     },
     {
       q: "What Citizenship by Investment programmes does Passport Legend offer?",
-      a: "Passport Legend offers comprehensive citizenship programs in the Caribbean (St. Kitts, Grenada, St. Lucia, Antigua) and other regions like Türkiye, providing a direct route to a second passport."
-    }
+      a: "Passport Legend offers comprehensive citizenship programs in the Caribbean (St. Kitts, Grenada, St. Lucia, Antigua) and other regions like Türkiye, providing a direct route to a second passport.",
+    },
   ];
 
   return (
@@ -110,8 +107,14 @@ export default function Residence() {
       <Header />
       <main>
         {/* Section 1: Hero (Navy Blue) */}
-        <Section className="relative min-h-[50vh] flex items-center overflow-hidden bg-primary-900 text-white">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=2020&auto=format&fit=crop')] bg-cover bg-center opacity-30" />
+        <Section className="relative min-h-[50vh] flex items-center overflow-hidden bg-primary-500 text-white">
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-30"
+            style={{
+              backgroundImage:
+                "url('https://live.staticflickr.com/65535/55277284017_2d3fc6d818_b.jpg')",
+            }}
+          />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-accent-600),transparent_50%)] opacity-20" />
           <div className="absolute inset-0 bg-neutral-900/60" />
           <Container className="relative z-10">
@@ -137,7 +140,7 @@ export default function Residence() {
 
         {/* Section 2: Intro (Navy Blue) */}
         <ScrollReveal direction="up" delay={0.2}>
-          <Section className="bg-primary-900 text-white">
+          <Section className="bg-primary-500 text-white">
             <Container>
               <div className="max-w-3xl mx-auto space-y-6">
                 <h2 className="text-3xl font-bold text-white">
@@ -218,7 +221,7 @@ export default function Residence() {
 
         {/* Section 6: Countries Grid (Navy Blue) */}
         <ScrollReveal direction="up" delay={0.2}>
-          <Section className="bg-primary-900 text-white">
+          <Section className="bg-primary-500 text-white">
             <Container>
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-white mb-4">
@@ -236,14 +239,11 @@ export default function Residence() {
         </ScrollReveal>
 
         {/* Section 7: FAQ (White) */}
-        <FaqSection 
-          faqs={residenceFaqs}
-          theme="light"
-        />
+        <FaqSection faqs={residenceFaqs} theme="light" />
 
         {/* Section 8: CTA (Navy Blue) */}
         <ScrollReveal direction="up" delay={0.2}>
-          <Section className="relative bg-primary-900 text-white overflow-hidden">
+          <Section className="relative bg-primary-500 text-white overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.05),transparent_70%)]" />
             <Container className="relative z-10">
               <div className="max-w-4xl mx-auto rounded-[3rem] bg-gradient-to-br from-primary-800 to-primary-900 p-12 md:p-20 text-center border border-primary-700 shadow-2xl">

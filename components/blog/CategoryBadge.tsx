@@ -7,7 +7,7 @@ interface CategoryBadgeProps {
 }
 
 const categoryStyles: Record<string, string> = {
-  Citizenship: "bg-primary-50 text-primary-700",
+  Citizenship: "bg-primary-500-50 text-primary-700",
   Residency: "bg-accent-50 text-accent-700",
   Investment: "bg-emerald-50 text-emerald-700",
   Lifestyle: "bg-amber-50 text-amber-700",

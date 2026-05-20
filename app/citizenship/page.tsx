@@ -77,20 +77,20 @@ export default function Citizenship() {
   const citizenshipFaqs = [
     {
       q: "What is Citizenship by Investment?",
-      a: "Citizenship by Investment (CBI) is a process where individuals can acquire a second citizenship and passport by making a significant financial contribution or investment in a host country, typically in real estate, government bonds, or a national development fund."
+      a: "Citizenship by Investment (CBI) is a process where individuals can acquire a second citizenship and passport by making a significant financial contribution or investment in a host country, typically in real estate, government bonds, or a national development fund.",
     },
     {
       q: "How to Get Citizenship by Investment?",
-      a: "The process involves choosing a program, passing a rigorous due diligence check, making the required investment, and submitting an application through an authorized agent like Passport Legend. Once approved, you receive a certificate of naturalization and your new passport."
+      a: "The process involves choosing a program, passing a rigorous due diligence check, making the required investment, and submitting an application through an authorized agent like Passport Legend. Once approved, you receive a certificate of naturalization and your new passport.",
     },
     {
       q: "Which Countries Allow Citizenship by Investment?",
-      a: "Several countries offer official CBI programs, including Caribbean nations like St. Kitts & Nevis, Grenada, Antigua & Barbuda, and St. Lucia, as well as European and Asian options like Türkiye and São Tomé & Príncipe."
+      a: "Several countries offer official CBI programs, including Caribbean nations like St. Kitts & Nevis, Grenada, Antigua & Barbuda, and St. Lucia, as well as European and Asian options like Türkiye and São Tomé & Príncipe.",
     },
     {
       q: "What Residence by Investment programmes does Passport Legend offer?",
-      a: "Passport Legend offers a wide range of residency programs including the Greek Golden Visa, Cyprus Permanent Residence, Canada Start-up Visa, and various European programs that provide a pathway to residency through investment."
-    }
+      a: "Passport Legend offers a wide range of residency programs including the Greek Golden Visa, Cyprus Permanent Residence, Canada Start-up Visa, and various European programs that provide a pathway to residency through investment.",
+    },
   ];
 
   return (
@@ -98,8 +98,14 @@ export default function Citizenship() {
       <Header />
       <main>
         {/* Section 1: Hero (Navy Blue) */}
-        <Section className="relative min-h-[50vh] flex items-center overflow-hidden bg-primary-900 text-white">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544253942-0fbc35daff1f?q=80&w=2069&auto=format&fit=crop')] bg-cover bg-center opacity-30" />
+        <Section className="relative min-h-[50vh] flex items-center overflow-hidden bg-primary-500 text-white">
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-30"
+             style={{
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=2020&auto=format&fit=crop')",
+            }}
+          />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-accent-600),transparent_50%)] opacity-20" />
           <div className="absolute inset-0 bg-neutral-900/60" />
           <Container className="relative z-10">
@@ -124,7 +130,7 @@ export default function Citizenship() {
         <CountrySection countries={countries} />
         {/* Section 2: Intro (Navy Blue) */}
         <ScrollReveal direction="up" delay={0.2}>
-          <Section className="bg-primary-900 text-white">
+          <Section className="bg-primary-500 text-white">
             <Container>
               <div className="max-w-3xl mx-auto space-y-6">
                 <h2 className="text-3xl font-bold text-white">
@@ -297,10 +303,7 @@ export default function Citizenship() {
         </ScrollReveal>
 
         {/* Section 8: FAQ (Navy Blue) */}
-        <FaqSection 
-          faqs={citizenshipFaqs}
-          theme="dark"
-        />
+        <FaqSection faqs={citizenshipFaqs} theme="dark" />
 
         {/* Section 9: CTA (White) */}
         <ScrollReveal direction="up" delay={0.2}>

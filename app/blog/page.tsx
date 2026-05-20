@@ -32,11 +32,11 @@ export default function BlogHub() {
       <Header />
       <main className="bg-white min-h-screen">
         {/* Immersive Navy Hero Section */}
-        <section className="bg-primary-900 pt-40 pb-32 relative overflow-hidden">
+        <section className="bg-primary-500 pt-40 pb-32 relative overflow-hidden">
           {/* Decorative background elements */}
           <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary-800/50 to-transparent" />
           <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl" />
-          
+
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl">
               <p className="text-accent-500 font-bold uppercase tracking-[0.3em] text-sm mb-6 animate-fade-in">
@@ -45,10 +45,11 @@ export default function BlogHub() {
               <h1
                 className={`${outfit.className} text-5xl md:text-7xl font-black text-white mb-8 leading-tight tracking-tight animate-fade-in-up`}
               >
-                Curated Insights for the <span className="text-accent-500">Global Elite</span>
+                Curated Insights for the{" "}
+                <span className="text-accent-500">Global Elite</span>
               </h1>
               <p className="text-xl text-primary-100/80 mb-0 leading-relaxed max-w-2xl animate-fade-in-up delay-100">
-                Expert perspectives on global mobility, strategic residency, and 
+                Expert perspectives on global mobility, strategic residency, and
                 the future of citizenship by investment.
               </p>
             </div>
@@ -77,7 +78,10 @@ export default function BlogHub() {
                         <h2
                           className={`${outfit.className} text-3xl md:text-5xl font-bold text-white mb-4 leading-tight`}
                         >
-                          <a href={`/blog/${featuredPost.slug}`} className="hover:text-accent-400 transition-colors">
+                          <a
+                            href={`/blog/${featuredPost.slug}`}
+                            className="hover:text-accent-400 transition-colors"
+                          >
                             {featuredPost.title}
                           </a>
                         </h2>
@@ -89,18 +93,32 @@ export default function BlogHub() {
                       </p>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center text-white font-bold text-sm">
+                          <div className="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center text-white font-bold text-sm">
                             {featuredPost.author?.charAt(0)}
                           </div>
-                          <span className="text-sm font-bold text-primary-900">{featuredPost.author}</span>
+                          <span className="text-sm font-bold text-primary-900">
+                            {featuredPost.author}
+                          </span>
                         </div>
                         <a
                           href={`/blog/${featuredPost.slug}`}
                           className="group/btn inline-flex items-center gap-2 text-primary-500 font-bold hover:text-accent-600 transition-colors"
                         >
                           Continue Reading
-                          <div className="w-8 h-8 rounded-full border border-primary-100 flex items-center justify-center group-hover/btn:bg-primary-900 group-hover/btn:border-primary-900 transition-all">
-                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover/btn:text-white transition-colors"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                          <div className="w-8 h-8 rounded-full border border-primary-100 flex items-center justify-center group-hover/btn:bg-primary-500 group-hover/btn:border-primary-900 transition-all">
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="group-hover/btn:text-white transition-colors"
+                            >
+                              <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
                           </div>
                         </a>
                       </div>
@@ -114,12 +132,15 @@ export default function BlogHub() {
                   <h2
                     className={`${outfit.className} text-3xl font-black text-primary-900`}
                   >
-                    Latest <span className="text-accent-500 underline decoration-primary-900/10 underline-offset-8">Journal Entries</span>
+                    Latest{" "}
+                    <span className="text-accent-500 underline decoration-primary-900/10 underline-offset-8">
+                      Journal Entries
+                    </span>
                   </h2>
                   <div className="hidden md:flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-primary-900" />
+                    <div className="w-3 h-3 rounded-full bg-primary-500" />
                     <div className="w-3 h-3 rounded-full bg-accent-500" />
-                    <div className="w-3 h-3 rounded-full bg-primary-100" />
+                    <div className="w-3 h-3 rounded-full bg-primary-500-100" />
                   </div>
                 </div>
                 <PostGrid posts={remainingPosts} />

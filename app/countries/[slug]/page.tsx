@@ -71,7 +71,7 @@ export default function CountryPage({ params }: Props) {
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/60 to-transparent" />
-          <div className="absolute inset-0 bg-primary-900/20 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-primary-500/20 mix-blend-multiply" />
 
           <Container className="relative z-10">
             <div className="max-w-3xl animate-fade-in-up">
@@ -140,7 +140,7 @@ export default function CountryPage({ params }: Props) {
                     className="flex flex-row items-center gap-4 p-4 md:p-6 bg-white dark:bg-neutral-800"
                   >
                     <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-400">
+                      <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-primary-500-100 dark:bg-primary-500/40 text-primary-600 dark:text-primary-400">
                         <Check size={20} strokeWidth={2.5} />
                       </div>
                     </div>

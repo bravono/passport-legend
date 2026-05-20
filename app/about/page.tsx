@@ -13,8 +13,14 @@ export default function About() {
       <Header />
       <main>
         {/* Hero Section */}
-        <Section className="relative min-h-[40vh] flex items-center overflow-hidden bg-primary-900 text-white">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-30" />
+        <Section className="relative min-h-[40vh] flex items-center overflow-hidden bg-primary-500 text-white">
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-30"
+            style={{
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop')",
+            }}
+          />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-accent-600),transparent_50%)] opacity-20" />
           <div className="absolute inset-0 bg-neutral-900/60" />
           <Container className="relative z-10 text-center space-y-6 animate-fade-in-up">
@@ -40,24 +46,24 @@ export default function About() {
                   </h2>
                   <p className="text-neutral-600 dark:text-neutral-400 mb-4">
                     Passport Legend is a globally trusted firm specializing in
-                    residence and citizenship by investment, known for delivering
-                    tailored, high-value immigration solutions. Founded in 2019,
-                    Passport Legend is the preferred partner for thousands of
-                    international investors who rely on our expertise and
-                    personalised approach.
+                    residence and citizenship by investment, known for
+                    delivering tailored, high-value immigration solutions.
+                    Founded in 2019, Passport Legend is the preferred partner
+                    for thousands of international investors who rely on our
+                    expertise and personalised approach.
                   </p>
                   <p className="text-neutral-600 dark:text-neutral-400 mb-4">
                     A UK-owned and managed advisory operating through multiple
                     global offices, we collaborate closely with governments
-                    worldwide to provide seamless access to leading residence and
-                    citizenship by investment programmes that deliver
+                    worldwide to provide seamless access to leading residence
+                    and citizenship by investment programmes that deliver
                     life-changing opportunities.
                   </p>
                   <p className="text-neutral-600 dark:text-neutral-400">
                     As an established, government-authorised advisory, our
-                    multidisciplinary international team of immigration investment
-                    experts supports clients at every stage of the process,
-                    ensuring exceptional outcomes.
+                    multidisciplinary international team of immigration
+                    investment experts supports clients at every stage of the
+                    process, ensuring exceptional outcomes.
                   </p>
                 </div>
                 <div className="bg-gradient-to-br from-primary-200 to-accent-200 dark:from-primary-900 dark:to-accent-900 rounded-2xl h-96 flex items-center justify-center">
@@ -230,7 +236,7 @@ export default function About() {
 
         {/* Team Stats */}
         <ScrollReveal direction="up" delay={0.2}>
-          <Section className="bg-primary-50 dark:bg-primary-900/20">
+          <Section className="bg-primary-500-50 dark:bg-primary-500/20">
             <Container>
               <div className="grid gap-8 text-center md:grid-cols-4">
                 <div>
