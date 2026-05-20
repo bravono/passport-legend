@@ -108,7 +108,7 @@ export const countries: Country[] = [
     type: "residence",
     shortDescription: "EU citizenship through exceptional investment",
     heroImage:
-      "https://images.unsplash.com/photo-1555992336-fb0d29498b13?w=1200&h=600&fit=crop",
+      "https://live.staticflickr.com/65535/55278596880_592bf863cf_b.jpg",
     sections: {
       overview: {
         title: "Overview",

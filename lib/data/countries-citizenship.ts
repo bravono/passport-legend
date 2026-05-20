@@ -108,7 +108,7 @@ export const countries: Country[] = [
     type: "citizenship",
     shortDescription: "EU citizenship through exceptional investment",
     heroImage:
-      "https://images.unsplash.com/photo-1555992336-fb0d29498b13?w=1200&h=600&fit=crop",
+      "https://live.staticflickr.com/65535/55278204941_027844ca26_b.jpg",
     brochureUrl:
       "https://drive.google.com/uc?export=download&id=1nThJ1h58EtFl9kQrDA2X7fe-IqqQjHfG",
     sections: {
