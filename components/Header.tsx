@@ -93,8 +93,8 @@ export function Header() {
               </Link>
 
               {openDropdown === "citizenship" && (
-                <div className="absolute right-0 mt-2 w-max bg-white rounded-lg shadow-xl border border-neutral-200 p-4 z-50">
-                  <div className="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
+                <div className="absolute right-0 mt-4 w-max bg-white rounded-xl shadow-2xl border border-neutral-100 p-6 z-50">
+                  <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                     {citizenshipCountries.map((country) => (
                       <Link
                         key={country.id}
@@ -104,11 +104,14 @@ export function Header() {
                         <img
                           src={country.heroImage}
                           alt={country.name}
-                          className="h-16 w-24 object-cover transition-transform duration-300 group-hover:scale-110"
+                          className="h-24 w-40 object-cover transition-transform duration-300 group-hover:scale-110"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                        <div className="absolute bottom-1 left-1 right-1">
-                          <h4 className="text-xs font-bold text-white truncate">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                        <div className="absolute bottom-2 left-2 right-2">
+                          <p className="text-[10px] font-black uppercase tracking-wider text-accent-500 mb-0.5">
+                            {country.continent}
+                          </p>
+                          <h4 className="text-sm font-bold text-white truncate">
                             {country.name}
                           </h4>
                         </div>
@@ -137,8 +140,8 @@ export function Header() {
               </Link>
 
               {openDropdown === "residence" && (
-                <div className="absolute right-0 mt-2 w-max bg-white rounded-lg shadow-xl border border-neutral-200 p-4 z-50">
-                  <div className="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
+                <div className="absolute right-0 mt-4 w-max bg-white rounded-xl shadow-2xl border border-neutral-100 p-6 z-50">
+                  <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                     {residenceCountries.map((country) => (
                       <Link
                         key={country.id}
@@ -148,11 +151,14 @@ export function Header() {
                         <img
                           src={country.heroImage}
                           alt={country.name}
-                          className="h-16 w-24 object-cover transition-transform duration-300 group-hover:scale-110"
+                          className="h-24 w-40 object-cover transition-transform duration-300 group-hover:scale-110"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                        <div className="absolute bottom-1 left-1 right-1">
-                          <h4 className="text-xs font-bold text-white truncate">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                        <div className="absolute bottom-2 left-2 right-2">
+                          <p className="text-[10px] font-black uppercase tracking-wider text-accent-500 mb-0.5">
+                            {country.continent}
+                          </p>
+                          <h4 className="text-sm font-bold text-white truncate">
                             {country.name}
                           </h4>
                         </div>

@@ -55,10 +55,7 @@ export default function Home() {
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] text-primary-500">
                   Your Trusted <br />
-                  <span className="text-gradient">
-                    {" "}
-                    Gateway to Global Freedom
-                  </span>
+                  Gateway to Global Freedom
                 </h1>
                 <p className="text-lg md:text-xl text-primary-500 max-w-xl leading-relaxed">
                   Through Residence & Citizenship by Investment.
@@ -72,7 +69,7 @@ export default function Home() {
                   </Button>
                 </div>
               </div>
-              <div className="relative hidden lg:block">
+              <div className="relative block">
                 <div className="absolute inset-0 bg-accent-500/10 blur-3xl rounded-full animate-pulse" />
                 <img
                   src="https://live.staticflickr.com/65535/55277283787_b9ff8cb76f_b.jpg"
