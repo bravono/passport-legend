@@ -93,6 +93,7 @@ export interface Country {
   id: string;
   slug: string;
   name: string;
+  continent: string;
   type: CountryType;
   shortDescription: string;
   heroImage: string;
@@ -105,6 +106,7 @@ export const countries: Country[] = [
     id: "malta-residence",
     slug: "malta-residence",
     name: "Malta",
+    continent: "Europe",
     type: "residence",
     shortDescription: "EU citizenship through exceptional investment",
     heroImage:
@@ -353,6 +355,7 @@ Current population as of 2025: 546,673`,
     id: "saudi arabia-residence",
     slug: "saudi arabia-residence",
     name: "Saudi Arabia",
+    continent: "Asia",
     type: "residence",
     shortDescription: "Premium residence by investment program in Saudi Arabia",
     heroImage:
@@ -523,6 +526,7 @@ Current population as of 2025: 546,673`,
     id: "canada-residence",
     slug: "canada-residence",
     name: "Canada",
+    continent: "North America",
     type: "residence",
     shortDescription: "High quality of life, stable economy",
     heroImage:
@@ -681,6 +685,7 @@ The current population as of 2025 : 40,026,470,`,
     id: "cyprus-residence",
     slug: "cyprus-residence",
     name: "Cyprus",
+    continent: "Europe",
     type: "residence",
     shortDescription:
       "EU citizenship through real estate and business investment",
@@ -865,6 +870,7 @@ The current population as of 2025: 1,367,468`,
     id: "greece-residence",
     slug: "greece-residence",
     name: "Greece",
+    continent: "Europe",
     type: "residence",
     shortDescription: "Mediterranean paradise with affordable entry",
     heroImage:
@@ -1084,6 +1090,7 @@ The current population as of 2025: 9,967,275`,
     id: "hungary-residence",
     slug: "hungary-residence",
     name: "Hungary",
+    continent: "Europe",
     type: "residence",
     shortDescription: "Premium residence by investment program in Hungary",
     heroImage:
@@ -1292,6 +1299,7 @@ Current population as of 2025: 9,643,770`,
     id: "latvia-residence",
     slug: "latvia-residence",
     name: "Latvia",
+    continent: "Europe",
     type: "residence",
     shortDescription: "Premium residence by investment program in Latvia",
     heroImage:
@@ -1532,6 +1540,7 @@ The current population as of 2025 : 1,858,298`,
     id: "panama-residence",
     slug: "panama-residence",
     name: "Panama",
+    continent: "North America",
     type: "residence",
     shortDescription: "Premium residence by investment program in Panama",
     heroImage:
@@ -1730,6 +1739,7 @@ Its economy is primarily service based, driven by sectors such as logistics, fin
     id: "portugal-residence",
     slug: "portugal-residence",
     name: "Portugal",
+    continent: "Europe",
     type: "residence",
     shortDescription:
       "EU citizenship through property investment or capital transfer",
@@ -1957,6 +1967,7 @@ The current population as of 2025 : 10,415,328`,
     id: "switzerland-residence",
     slug: "switzerland-residence",
     name: "Switzerland",
+    continent: "Europe",
     type: "residence",
     shortDescription: "Premium residence by investment program in Switzerland",
     heroImage:
@@ -2124,6 +2135,7 @@ The current population as of  2025 : 8,955,693`,
     id: "thailand-residence",
     slug: "thailand-residence",
     name: "Thailand",
+    continent: "Asia",
     type: "residence",
     shortDescription: "Southeast Asian destination with low cost of living",
     heroImage:
@@ -2314,6 +2326,7 @@ The current population as of 2025 : 71,632,347`,
     id: "uae-residence",
     slug: "uae-residence",
     name: "UAE",
+    continent: "Asia",
     type: "residence",
     shortDescription: "Premium residence by investment program in UAE",
     heroImage:
@@ -2526,6 +2539,7 @@ The current population as of 2025 : 11,263,050`,
     id: "united kingdom-residence",
     slug: "united kingdom-residence",
     name: "United Kingdom",
+    continent: "Europe",
     type: "residence",
     shortDescription:
       "Premium residence by investment program in United Kingdom",
@@ -2678,6 +2692,7 @@ The population as of 2025 : 69,442,865`,
     id: "usa-residence",
     slug: "usa-residence",
     name: "USA",
+    continent: "North America",
     type: "residence",
     shortDescription: "Premium residence by investment program in USA",
     heroImage:

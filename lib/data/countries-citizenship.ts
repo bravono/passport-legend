@@ -93,6 +93,7 @@ export interface Country {
   id: string;
   slug: string;
   name: string;
+  continent: string;
   type: CountryType;
   shortDescription: string;
   heroImage: string;
@@ -105,6 +106,7 @@ export const countries: Country[] = [
     id: "malta-citizenship",
     slug: "malta-citizenship",
     name: "Malta",
+    continent: "Europe",
     type: "citizenship",
     shortDescription: "EU citizenship through exceptional investment",
     heroImage:
@@ -355,6 +357,7 @@ Current population as of 2025: 546,673`,
     id: "saudi arabia-citizenship",
     slug: "saudi arabia-citizenship",
     name: "Saudi Arabia",
+    continent: "Asia",
     type: "citizenship",
     shortDescription:
       "Premium citizenship by investment program in Saudi Arabia",
@@ -428,6 +431,7 @@ Current population as of 2025: 546,673`,
     id: "st kitts and nevis-citizenship",
     slug: "st kitts and nevis-citizenship",
     name: "St Kitts & Nevis",
+    continent: "Caribbean",
     type: "citizenship",
     shortDescription: `Explore the St. Kitts and Nevis Citizenship by Investment Program. Obtain a passport quickly by investing $250,000+ and secure citizenship for you and your family within 6 months.`,
     heroImage:
@@ -699,6 +703,7 @@ St. Kitts & Nevis is a British Commonwealth country with a strong rule of law, s
     id: "grenada-citizenship",
     slug: "grenada-citizenship",
     name: "Grenada",
+    continent: "Caribbean",
     type: "citizenship",
     shortDescription: `Planning to apply for Grenada Citizenship and Passport by Investment? Explore the requirements, including eligibility, investment options, costs, benefits and processing time.`,
     heroImage:
@@ -947,6 +952,7 @@ Current population as of 2025: 117,276`,
     id: "antigua and barbuda-citizenship",
     slug: "antigua and barbuda-citizenship",
     name: "Antigua & Barbuda",
+    continent: "Caribbean",
     type: "citizenship",
     shortDescription: `Planning to apply for Antigua and Barbuda Citizenship and Passport by Investment? Explore the requirements, including eligibility, investment options, costs, benefits, and processing time.`,
     heroImage: `https://live.staticflickr.com/65535/55278203706_8a9625cd58_b.jpg`,
@@ -1153,6 +1159,7 @@ Current population as of 2025: 94,094`,
     id: "nauru-citizenship",
     slug: "nauru-citizenship",
     name: "Nauru",
+    continent: "Oceania",
     type: "citizenship",
     shortDescription: `Planning to apply for Nauru Citizenship and Passport by Investment? Explore the requirements, including eligibility, investment options, costs, benefits, and processing timelines.`,
     heroImage:
@@ -1348,6 +1355,7 @@ The Current population as of 2025 , circa 12,009`,
     id: "sao tome and principe-citizenship",
     slug: "sao tome and principe-citizenship",
     name: "São Tomé & Príncipe",
+    continent: "Africa",
     type: "citizenship",
     shortDescription: `The São Tomé & Príncipe citizenship by investment programme was established in 2025 and carries a minimum investment of $90,000, making it the most`,
     heroImage:
@@ -1576,6 +1584,7 @@ There are also no minimum stay requirements, which means investors won’t need 
     id: "st lucia-citizenship",
     slug: "st lucia-citizenship",
     name: "St Lucia",
+    continent: "Caribbean",
     type: "citizenship",
     shortDescription: `Secure St Lucia citizenship by investment. Learn about St Lucia passport benefits, visa-free travel options, and the Saint Lucia citizenship program.`,
     heroImage:
@@ -1789,6 +1798,7 @@ The current population as of 2025 : 180,043`,
     id: "turkiye-citizenship",
     slug: "turkiye-citizenship",
     name: "Türkiye",
+    continent: "Europe",
     type: "citizenship",
     shortDescription: `Get Turkey passport by investment with Passport Legend. Invest USD 500,000+ to get citizenship by investment in Turkey within 6 months. Contact us today!`,
     heroImage:
@@ -1986,6 +1996,7 @@ The current population as of 2025 : 87,629,938`,
     id: "vanuatu-citizenship",
     slug: "vanuatu-citizenship",
     name: "Vanuatu",
+    continent: "Oceania",
     type: "citizenship",
     shortDescription: `Explore the Vanuatu Citizenship by Investment Program. Obtain a passport quickly by investing $130,000 and secure citizenship for you and your family within 3–5 months, with visa-free access to 112 countries.`,
     heroImage:
