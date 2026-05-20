@@ -101,7 +101,7 @@ export default function Citizenship() {
         <Section className="relative min-h-[50vh] flex items-center overflow-hidden bg-primary-500 text-white">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-30"
-             style={{
+            style={{
               backgroundImage:
                 "url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=2020&auto=format&fit=crop')",
             }}
@@ -200,7 +200,7 @@ export default function Citizenship() {
           <Section className="bg-white">
             <Container>
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-primary-900 mb-4">
+                <h2 className="text-3xl font-bold text-primary-500 mb-4">
                   Benefits of Citizenship
                 </h2>
                 <div className="h-1 w-24 bg-accent-500 mx-auto rounded-full" />
@@ -256,7 +256,7 @@ export default function Citizenship() {
                     <div className="text-primary-600 flex justify-center mb-4">
                       <benefit.icon size={40} />
                     </div>
-                    <h3 className="font-semibold text-primary-900 mb-2">
+                    <h3 className="font-semibold text-primary-500 mb-2">
                       {benefit.title}
                     </h3>
                     <p className="text-sm text-neutral-600">
@@ -288,7 +288,7 @@ export default function Citizenship() {
           <Section className="bg-white">
             <Container>
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-primary-900 mb-4">
+                <h2 className="text-3xl font-bold text-primary-500 mb-4">
                   Available Programs ({countries.length})
                 </h2>
                 <p className="text-neutral-600">

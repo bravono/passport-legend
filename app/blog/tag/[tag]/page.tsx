@@ -44,7 +44,7 @@ export default async function TagArchive({ params }: TagProps) {
               Insight Tag
             </p>
             <h1
-              className={`${outfit.className} text-5xl font-black text-primary-900 tracking-tight`}
+              className={`${outfit.className} text-5xl font-black text-primary-500 tracking-tight`}
             >
               Insights Tagged: <span className="text-accent-500">#{tag}</span>
             </h1>

@@ -252,7 +252,7 @@ export default function Contact() {
                       </h3>
                       <a
                         href="mailto:hello@passportlegend.com"
-                        className="text-primary-600 dark:text-primary-400 hover:underline"
+                        className="text-primary-600 dark:text-primary-500 hover:underline"
                       >
                         hello@passportlegend.com
                       </a>
@@ -267,7 +267,7 @@ export default function Contact() {
                       </h3>
                       <a
                         href="tel:+2347081432919"
-                        className="text-primary-600 dark:text-primary-400 hover:underline"
+                        className="text-primary-600 dark:text-primary-500 hover:underline"
                       >
                         +234 708 143 2919
                       </a>

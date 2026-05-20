@@ -6,7 +6,6 @@ import { getPostsByCategory } from "@/lib/utils/blog";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-
 const outfit = Outfit({ subsets: ["latin"], weight: ["400", "700", "900"] });
 
 interface CategoryProps {
@@ -49,7 +48,7 @@ export default async function CategoryArchive({ params }: CategoryProps) {
               Insight Category
             </p>
             <h1
-              className={`${outfit.className} text-5xl font-black text-primary-900 tracking-tight`}
+              className={`${outfit.className} text-5xl font-black text-primary-500 tracking-tight`}
             >
               Browsing: <span className="text-accent-500">{category}</span>
             </h1>

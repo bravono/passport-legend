@@ -30,7 +30,7 @@ export function CountrySection({ countries }: CountrySectionProps) {
           {/* Left column: list of countries */}
           <div className="lg:col-span-4 space-y-4">
             <div className="mb-8">
-              <h2 className="text-3xl font-bold text-primary-900 mb-2">
+              <h2 className="text-3xl font-bold text-primary-500 mb-2">
                 Explore Destinations
               </h2>
               <div className="h-1 w-16 bg-accent-500 rounded-full" />
@@ -69,7 +69,7 @@ export function CountrySection({ countries }: CountrySectionProps) {
                 {/* Text side */}
                 <div className="flex-1 p-8 md:p-12 flex flex-col justify-center space-y-6 bg-gradient-to-br from-white to-neutral-50">
                   <div>
-                    <h3 className="text-3xl font-bold text-primary-900 mb-4 leading-tight">
+                    <h3 className="text-3xl font-bold text-primary-500 mb-4 leading-tight">
                       {selected.name}
                     </h3>
                     <div className="h-0.5 w-12 bg-accent-500 mb-6" />
@@ -84,7 +84,7 @@ export function CountrySection({ countries }: CountrySectionProps) {
                   </div>
 
                   <div className="pt-4">
-                    <button className="inline-flex items-center text-primary-900 font-bold hover:text-accent-600 transition-colors group">
+                    <button className="inline-flex items-center text-primary-500 font-bold hover:text-accent-600 transition-colors group">
                       Learn More About {selected.name}
                       <ChevronRight
                         size={20}

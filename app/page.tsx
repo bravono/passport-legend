@@ -53,7 +53,7 @@ export default function Home() {
                 <div className="inline-block px-4 py-1.5 rounded-full bg-primary-50 border border-primary-200 text-sm font-semibold text-primary-700">
                   Global Citizenship & Residence Advisors
                 </div>
-                <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] text-primary-900">
+                <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] text-primary-500">
                   Your Trusted <br />
                   <span className="text-gradient">
                     {" "}
@@ -167,7 +167,7 @@ export default function Home() {
         <Section className="bg-white">
           <Container>
             <div className="text-center mb-16 space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold text-primary-900">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary-500">
                 Residence{" "}
                 <span className="italic text-accent-600">Opportunities</span>
               </h2>
@@ -296,7 +296,7 @@ export default function Home() {
         <Section className="bg-white">
           <Container>
             <div className="text-center mb-20 space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold text-primary-900">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary-500">
                 Our Process
               </h2>
               <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
@@ -416,7 +416,7 @@ export default function Home() {
         <Section className="bg-white">
           <Container>
             <div className="text-center mb-16 space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold text-primary-900">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary-500">
                 Frequently Asked Questions
               </h2>
               <div className="h-1 w-24 bg-accent-500 mx-auto rounded-full" />
@@ -429,7 +429,7 @@ export default function Home() {
                   className="group border border-neutral-100 rounded-3xl overflow-hidden bg-neutral-50/50"
                 >
                   <summary className="flex items-center justify-between p-8 cursor-pointer list-none">
-                    <h3 className="text-lg font-bold text-primary-900 group-hover:text-primary-700 pr-4">
+                    <h3 className="text-lg font-bold text-primary-500 group-hover:text-primary-700 pr-4">
                       {faq.q}
                     </h3>
                     <div className="h-8 w-8 rounded-full bg-white shadow-sm flex items-center justify-center text-primary-600 transition-transform group-open:rotate-180">

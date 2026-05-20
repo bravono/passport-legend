@@ -67,7 +67,7 @@ export default function About() {
                   </p>
                 </div>
                 <div className="bg-gradient-to-br from-primary-200 to-accent-200 dark:from-primary-900 dark:to-accent-900 rounded-2xl h-96 flex items-center justify-center">
-                  <div className="text-primary-600 dark:text-primary-400">
+                  <div className="text-primary-600 dark:text-primary-500">
                     <Globe size={120} strokeWidth={1} />
                   </div>
                 </div>
@@ -144,7 +144,7 @@ export default function About() {
                     support your immigration practice with expert guidance on
                     investment-based residency and citizenship programs.
                   </p>
-                  <p className="text-sm text-primary-600 dark:text-primary-400 font-semibold">
+                  <p className="text-sm text-primary-600 dark:text-primary-500 font-semibold">
                     Contact: partners@passportlegend.com
                   </p>
                 </Card>
@@ -157,7 +157,7 @@ export default function About() {
                     commissions. We provide training, marketing materials, and
                     full operational support.
                   </p>
-                  <p className="text-sm text-primary-600 dark:text-primary-400 font-semibold">
+                  <p className="text-sm text-primary-600 dark:text-primary-500 font-semibold">
                     Contact: agents@passportlegend.com
                   </p>
                 </Card>
@@ -240,7 +240,7 @@ export default function About() {
             <Container>
               <div className="grid gap-8 text-center md:grid-cols-4">
                 <div>
-                  <p className="text-4xl font-bold text-primary-600 dark:text-primary-400">
+                  <p className="text-4xl font-bold text-primary-600 dark:text-primary-500">
                     50+
                   </p>
                   <p className="text-neutral-600 dark:text-neutral-300">
@@ -248,7 +248,7 @@ export default function About() {
                   </p>
                 </div>
                 <div>
-                  <p className="text-4xl font-bold text-primary-600 dark:text-primary-400">
+                  <p className="text-4xl font-bold text-primary-600 dark:text-primary-500">
                     15+
                   </p>
                   <p className="text-neutral-600 dark:text-neutral-300">
@@ -256,7 +256,7 @@ export default function About() {
                   </p>
                 </div>
                 <div>
-                  <p className="text-4xl font-bold text-primary-600 dark:text-primary-400">
+                  <p className="text-4xl font-bold text-primary-600 dark:text-primary-500">
                     5000+
                   </p>
                   <p className="text-neutral-600 dark:text-neutral-300">
@@ -264,7 +264,7 @@ export default function About() {
                   </p>
                 </div>
                 <div>
-                  <p className="text-4xl font-bold text-primary-600 dark:text-primary-400">
+                  <p className="text-4xl font-bold text-primary-600 dark:text-primary-500">
                     6
                   </p>
                   <p className="text-neutral-600 dark:text-neutral-300">

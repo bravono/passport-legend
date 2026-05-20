@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
         <Container>
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto mb-16 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500-50 dark:bg-primary-500/30 border border-primary-100 dark:border-primary-800 text-primary-600 dark:text-primary-400 text-xs font-bold uppercase tracking-wider mb-6 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500-50 dark:bg-primary-500/30 border border-primary-100 dark:border-primary-800 text-primary-600 dark:text-primary-500 text-xs font-bold uppercase tracking-wider mb-6 animate-fade-in">
               <Shield className="w-3.5 h-3.5" />
               Privacy & Security
             </div>

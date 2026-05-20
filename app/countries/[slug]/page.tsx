@@ -140,7 +140,7 @@ export default function CountryPage({ params }: Props) {
                     className="flex flex-row items-center gap-4 p-4 md:p-6 bg-white dark:bg-neutral-800"
                   >
                     <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-primary-500-100 dark:bg-primary-500/40 text-primary-600 dark:text-primary-400">
+                      <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-primary-500-100 dark:bg-primary-500/40 text-primary-600 dark:text-primary-500">
                         <Check size={20} strokeWidth={2.5} />
                       </div>
                     </div>
@@ -205,7 +205,7 @@ export default function CountryPage({ params }: Props) {
                       ?.items || []
                 ).map((requirement, index) => (
                   <div key={index} className="flex gap-3">
-                    <span className="text-primary-600 dark:text-primary-400 font-bold text-lg flex-shrink-0">
+                    <span className="text-primary-600 dark:text-primary-500 font-bold text-lg flex-shrink-0">
                       •
                     </span>
                     <p className="text-neutral-600 dark:text-neutral-400">
@@ -266,7 +266,7 @@ export default function CountryPage({ params }: Props) {
                         <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
                           {relatedCountry.shortDescription}
                         </p>
-                        <div className="text-sm font-semibold text-primary-600 dark:text-primary-400">
+                        <div className="text-sm font-semibold text-primary-600 dark:text-primary-500">
                           Learn More →
                         </div>
                       </Card>

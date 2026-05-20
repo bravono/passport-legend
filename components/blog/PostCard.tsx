@@ -34,7 +34,7 @@ export default function PostCard({ post }: PostCardProps) {
         {/* Navy accent line */}
         <div className="absolute top-0 left-8 right-8 h-1 bg-primary-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
-        <div className="flex items-center gap-4 text-[10px] uppercase tracking-widest font-black text-primary-400 mb-4">
+        <div className="flex items-center gap-4 text-[10px] uppercase tracking-widest font-black text-primary-500 mb-4">
           <div className="flex items-center gap-1.5">
             <Calendar className="w-3 h-3 text-accent-500" />
             {date ? format(new Date(date), "MMM dd, yyyy") : "No Date"}
@@ -46,7 +46,7 @@ export default function PostCard({ post }: PostCardProps) {
           </div>
         </div>
 
-        <h3 className="text-2xl font-bold text-primary-900 mb-4 line-clamp-2 group-hover:text-primary-700 transition-colors duration-300 leading-snug">
+        <h3 className="text-2xl font-bold text-primary-500 mb-4 line-clamp-2 group-hover:text-primary-700 transition-colors duration-300 leading-snug">
           <Link href={`/blog/${slug}`}>{title}</Link>
         </h3>
 
@@ -57,7 +57,7 @@ export default function PostCard({ post }: PostCardProps) {
         <div className="mt-auto">
           <Link
             href={`/blog/${slug}`}
-            className="inline-flex items-center text-xs font-black uppercase tracking-widest text-primary-900 group/link"
+            className="inline-flex items-center text-xs font-black uppercase tracking-widest text-primary-500 group/link"
           >
             Explore Article
             <div className="ml-3 w-8 h-8 rounded-full border border-primary-100 flex items-center justify-center group-hover/link:bg-primary-500 group-hover/link:border-primary-900 transition-all">

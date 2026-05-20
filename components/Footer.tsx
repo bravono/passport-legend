@@ -29,7 +29,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400"
+                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Home
                 </Link>
@@ -37,7 +37,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/citizenship"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400"
+                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Citizenship
                 </Link>
@@ -45,7 +45,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/residence"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400"
+                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Residence
                 </Link>
@@ -53,7 +53,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400"
+                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   About
                 </Link>
@@ -61,7 +61,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/blog"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400"
+                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Blog
                 </Link>
@@ -78,7 +78,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400"
+                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Contact Us
                 </Link>
@@ -86,7 +86,7 @@ export function Footer() {
               <li>
                 <a
                   href="mailto:hello@passportlegend.com"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400"
+                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Email Us
                 </a>
@@ -94,7 +94,7 @@ export function Footer() {
               <li>
                 <a
                   href="tel:+234 708 143 2919"
-                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400"
+                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Call Us
                 </a>
@@ -127,13 +127,13 @@ export function Footer() {
           <div className="flex gap-4">
             <a
               href="/privacy-policy"
-              className="hover:text-primary-600 dark:hover:text-primary-400"
+              className="hover:text-primary-600 dark:hover:text-primary-500"
             >
               Privacy Policy
             </a>
             <a
               href="/terms-of-service"
-              className="hover:text-primary-600 dark:hover:text-primary-400"
+              className="hover:text-primary-600 dark:hover:text-primary-500"
             >
               Terms of Service
             </a>

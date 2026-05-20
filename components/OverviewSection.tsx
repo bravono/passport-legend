@@ -32,7 +32,7 @@ export function OverviewSection({
   return (
     <Section
       className={
-        isDark ? "bg-primary-500 text-white" : "bg-white text-primary-900"
+        isDark ? "bg-primary-500 text-white" : "bg-white text-primary-500"
       }
     >
       <Container>
@@ -49,14 +49,14 @@ export function OverviewSection({
                 Quick Look
               </div>
               <h2
-                className={`text-4xl md:text-6xl font-bold tracking-tight ${isDark ? "text-white" : "text-primary-900"}`}
+                className={`text-4xl md:text-6xl font-bold tracking-tight ${isDark ? "text-white" : "text-primary-500"}`}
               >
                 {title}
               </h2>
             </div>
           </ScrollReveal>
           <div
-            className={`${isDark ? "text-primary-400" : "text-neutral-500"} font-mono text-sm hidden md:block uppercase tracking-widest`}
+            className={`${isDark ? "text-primary-500" : "text-neutral-500"} font-mono text-sm hidden md:block uppercase tracking-widest`}
           >
             PROGRAM SUMMARY / {countryName}
           </div>
@@ -95,9 +95,9 @@ export function OverviewSection({
                     activeIndex === index
                       ? isDark
                         ? "text-white"
-                        : "text-primary-900"
+                        : "text-primary-500"
                       : isDark
-                        ? "text-primary-400"
+                        ? "text-primary-500"
                         : "text-neutral-400"
                   }`}
                 >
@@ -136,7 +136,7 @@ export function OverviewSection({
                   </div>
 
                   <h3
-                    className={`text-4xl md:text-5xl font-bold tracking-tight ${isDark ? "text-white" : "text-primary-900"}`}
+                    className={`text-4xl md:text-5xl font-bold tracking-tight ${isDark ? "text-white" : "text-primary-500"}`}
                   >
                     {items[activeIndex].title}
                   </h3>

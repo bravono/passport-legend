@@ -77,7 +77,7 @@ export function EligibilitySection() {
                     <span className="w-8 h-px bg-primary-500-600" />
                     Eligibility Roadmap
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-bold text-primary-900 leading-tight">
+                  <h2 className="text-4xl md:text-5xl font-bold text-primary-500 leading-tight">
                     Document <br />
                     <span className="text-accent-500">Readiness</span> Checklist
                   </h2>
@@ -92,7 +92,7 @@ export function EligibilitySection() {
                         <ClipboardCheck size={24} />
                       </div>
                       <div>
-                        <p className="text-sm font-bold text-primary-900">
+                        <p className="text-sm font-bold text-primary-500">
                           Total Required
                         </p>
                         <p className="text-xs text-neutral-500">
@@ -129,7 +129,7 @@ export function EligibilitySection() {
                           {item.title}
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-primary-900">
+                      <h3 className="text-2xl font-bold text-primary-500">
                         {item.item}
                       </h3>
                       <p className="text-neutral-500 text-sm leading-relaxed max-w-xl">
@@ -139,7 +139,7 @@ export function EligibilitySection() {
 
                     {/* Action Link */}
                     <div className="md:opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <div className="w-12 h-12 rounded-full border border-neutral-200 flex items-center justify-center text-primary-900 hover:bg-primary-500 hover:text-white transition-all cursor-pointer">
+                      <div className="w-12 h-12 rounded-full border border-neutral-200 flex items-center justify-center text-primary-500 hover:bg-primary-500 hover:text-white transition-all cursor-pointer">
                         <ArrowRight size={20} />
                       </div>
                     </div>

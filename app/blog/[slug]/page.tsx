@@ -168,7 +168,7 @@ export default async function PostDetail({ params }: PostProps) {
                     h2: ({ node, ...props }) => (
                       <h2
                         {...props}
-                        className={`${outfit.className} text-3xl md:text-4xl font-bold text-primary-900 mt-20 mb-8 flex items-center gap-4`}
+                        className={`${outfit.className} text-3xl md:text-4xl font-bold text-primary-500 mt-20 mb-8 flex items-center gap-4`}
                       >
                         <span className="w-2 h-8 bg-accent-500 rounded-full" />
                         {props.children}
@@ -209,7 +209,7 @@ export default async function PostDetail({ params }: PostProps) {
                     <Link
                       key={tag}
                       href={`/blog/tag/${tag.toLowerCase()}`}
-                      className="px-6 py-2.5 bg-primary-500-50 hover:bg-primary-500 text-primary-900 hover:text-white rounded-full text-xs font-black uppercase tracking-widest transition-all duration-300"
+                      className="px-6 py-2.5 bg-primary-500-50 hover:bg-primary-500 text-primary-500 hover:text-white rounded-full text-xs font-black uppercase tracking-widest transition-all duration-300"
                     >
                       #{tag}
                     </Link>

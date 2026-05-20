@@ -47,12 +47,12 @@ export default function BlogSidebar() {
           placeholder="Search Insights..."
           className="w-full pl-12 pr-4 py-4 bg-primary-500-50/50 border border-primary-100 rounded-2xl focus:ring-2 focus:ring-primary-900 focus:bg-white outline-none transition-all duration-300 shadow-sm group-hover:shadow-md"
         />
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-primary-400 group-hover:text-primary-900 transition-colors" />
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-primary-500 group-hover:text-primary-500 transition-colors" />
       </div>
 
       <div className="bg-white p-8 rounded-[2rem] shadow-premium border border-primary-50">
         <h3
-          className={`${outfit.className} text-xl font-bold text-primary-900 mb-6 flex items-center gap-2`}
+          className={`${outfit.className} text-xl font-bold text-primary-500 mb-6 flex items-center gap-2`}
         >
           <List className="w-5 h-5 text-accent-500" />
           Categories
@@ -65,7 +65,7 @@ export default function BlogSidebar() {
               className="group flex items-center justify-between p-3 rounded-xl border border-transparent hover:border-primary-100 hover:bg-primary-500-50/50 transition-all duration-300"
             >
               <span
-                className={`font-bold group-hover:text-primary-900 transition-colors ${cat.color}`}
+                className={`font-bold group-hover:text-primary-500 transition-colors ${cat.color}`}
               >
                 {cat.name}
               </span>
@@ -79,7 +79,7 @@ export default function BlogSidebar() {
 
       <div className="bg-white p-8 rounded-[2rem] shadow-premium border border-primary-50">
         <h3
-          className={`${outfit.className} text-xl font-bold text-primary-900 mb-6 flex items-center gap-2`}
+          className={`${outfit.className} text-xl font-bold text-primary-500 mb-6 flex items-center gap-2`}
         >
           <Tag className="w-5 h-5 text-accent-500" />
           Popular Tags

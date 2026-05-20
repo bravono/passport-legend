@@ -96,7 +96,7 @@ export default function BlogHub() {
                           <div className="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center text-white font-bold text-sm">
                             {featuredPost.author?.charAt(0)}
                           </div>
-                          <span className="text-sm font-bold text-primary-900">
+                          <span className="text-sm font-bold text-primary-500">
                             {featuredPost.author}
                           </span>
                         </div>
@@ -130,7 +130,7 @@ export default function BlogHub() {
               <div className="space-y-12">
                 <div className="flex items-center justify-between border-b border-gray-100 pb-6">
                   <h2
-                    className={`${outfit.className} text-3xl font-black text-primary-900`}
+                    className={`${outfit.className} text-3xl font-black text-primary-500`}
                   >
                     Latest{" "}
                     <span className="text-accent-500 underline decoration-primary-900/10 underline-offset-8">

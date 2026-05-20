@@ -35,7 +35,7 @@ export function ProcessSection({
   return (
     <Section
       className={
-        isDark ? "bg-primary-500 text-white" : "bg-white text-primary-900"
+        isDark ? "bg-primary-500 text-white" : "bg-white text-primary-500"
       }
     >
       <Container>
@@ -87,7 +87,7 @@ export function ProcessSection({
                         activeStep === index
                           ? isDark
                             ? "text-white"
-                            : "text-primary-900"
+                            : "text-primary-500"
                           : "text-neutral-400"
                       }`}
                     >

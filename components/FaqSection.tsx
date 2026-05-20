@@ -30,7 +30,7 @@ export function FaqSection({
   return (
     <Section
       className={
-        isDark ? "bg-primary-500 text-white" : "bg-white text-primary-900"
+        isDark ? "bg-primary-500 text-white" : "bg-white text-primary-500"
       }
     >
       <Container>
@@ -69,7 +69,7 @@ export function FaqSection({
                         openIndex === index
                           ? "bg-accent-500 text-white"
                           : isDark
-                            ? "bg-primary-500-800 text-primary-400"
+                            ? "bg-primary-500-800 text-primary-500"
                             : "bg-neutral-100 text-neutral-400"
                       }`}
                     >
@@ -80,7 +80,7 @@ export function FaqSection({
                         openIndex === index
                           ? isDark
                             ? "text-white"
-                            : "text-primary-900"
+                            : "text-primary-500"
                           : isDark
                             ? "text-primary-200"
                             : "text-neutral-700"
