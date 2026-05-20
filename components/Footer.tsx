@@ -85,7 +85,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@passportlegend.com"
+                  href="mailto:khadijat.abdul@passport-legend.com"
                   className="text-neutral-600 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Email Us

@@ -29,6 +29,7 @@ export default function Contact() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const countries = getCountriesByType("both");
 
@@ -70,37 +71,69 @@ export default function Contact() {
     return true;
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!validateForm()) {
       return;
     }
 
-    // Store to localStorage
-    const submissions = JSON.parse(
-      localStorage.getItem("contact_submissions") || "[]",
-    );
-    submissions.push({
-      ...formData,
-      submittedAt: new Date().toISOString(),
-    });
-    localStorage.setItem("contact_submissions", JSON.stringify(submissions));
+    setIsSubmitting(true);
+    setError("");
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      country: "",
-      message: "",
-    });
-    setSubmitted(true);
+    try {
+      const response = await fetch("https://formspree.io/f/mqejpldp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 5000);
+      if (response.ok) {
+        // Store to localStorage
+        const submissions = JSON.parse(
+          localStorage.getItem("contact_submissions") || "[]",
+        );
+        submissions.push({
+          ...formData,
+          submittedAt: new Date().toISOString(),
+        });
+        localStorage.setItem(
+          "contact_submissions",
+          JSON.stringify(submissions),
+        );
+
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          country: "",
+          message: "",
+        });
+        setSubmitted(true);
+
+        // Hide success message after 10 seconds
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 10000);
+      } else {
+        const data = await response.json();
+        if (Object.hasOwn(data, "errors")) {
+          setError(
+            data["errors"].map((error: any) => error["message"]).join(", "),
+          );
+        } else {
+          setError("Oops! There was a problem submitting your form");
+        }
+      }
+    } catch (err) {
+      setError("Oops! There was a problem submitting your form");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -233,8 +266,14 @@ export default function Contact() {
                       />
                     </div>
 
-                    <Button type="submit" size="lg" fullWidth variant="primary">
-                      Send Message
+                    <Button
+                      type="submit"
+                      size="lg"
+                      fullWidth
+                      variant="primary"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
                   </form>
                 </div>
