@@ -1734,7 +1734,7 @@ Its economy is primarily service based, driven by sectors such as logistics, fin
     shortDescription:
       "EU citizenship through property investment or capital transfer",
     heroImage:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&h=600&fit=crop",
+      "https://live.staticflickr.com/65535/55278598250_aed9b55f34_b.jpg",
     sections: {
       overview: {
         title: "Overview",

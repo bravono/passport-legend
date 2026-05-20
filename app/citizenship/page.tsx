@@ -37,7 +37,7 @@ export default function Citizenship() {
         "Passport Legacy's due diligence check is conducted.",
       ],
       image:
-        "https://images.unsplash.com/photo-1573164067005-446df1a01791?q=80&w=2070&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=2070&auto=format&fit=crop",
     },
     {
       title: "Application Preparation",
@@ -70,7 +70,7 @@ export default function Citizenship() {
         "Client advisor meets with the client to handover the certificate and passport.",
       ],
       image:
-        "https://images.unsplash.com/photo-1544253942-0fbc35daff1f?q=80&w=2069&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=2070&auto=format&fit=crop",
     },
   ];
 

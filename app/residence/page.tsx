@@ -29,7 +29,7 @@ export default function Residence() {
         "Client is onboarded and retainer fees are paid.",
       ],
       image:
-        "https://images.unsplash.com/photo-1454165833767-027ffea9e778?q=80&w=2070&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=2070&auto=format&fit=crop",
     },
     {
       title: "Application Submission",
@@ -63,7 +63,7 @@ export default function Residence() {
         "Our team continues to support until the permit is stamped.",
       ],
       image:
-        "https://images.unsplash.com/photo-1549400829-204128f618fc?q=80&w=2070&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=2070&auto=format&fit=crop",
     },
   ];
 
