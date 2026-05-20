@@ -93,8 +93,8 @@ export function Header() {
               </Link>
 
               {openDropdown === "citizenship" && (
-                <div className="absolute left-0 mt-2 w-max bg-white rounded-lg shadow-xl border border-neutral-200 p-4 z-50">
-                  <div className="grid grid-cols-6 gap-3">
+                <div className="absolute right-0 mt-2 w-max bg-white rounded-lg shadow-xl border border-neutral-200 p-4 z-50">
+                  <div className="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
                     {citizenshipCountries.map((country) => (
                       <Link
                         key={country.id}
@@ -137,8 +137,8 @@ export function Header() {
               </Link>
 
               {openDropdown === "residence" && (
-                <div className="absolute left-0 mt-2 w-max bg-white rounded-lg shadow-xl border border-neutral-200 p-4 z-50">
-                  <div className="grid grid-cols-6 gap-3">
+                <div className="absolute right-0 mt-2 w-max bg-white rounded-lg shadow-xl border border-neutral-200 p-4 z-50">
+                  <div className="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
                     {residenceCountries.map((country) => (
                       <Link
                         key={country.id}
@@ -186,7 +186,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="rounded-lg p-2 text-neutral-600 hover:bg-primary-50 transition-all duration-300 md:hidden"
+            className="rounded-lg p-2 text-neutral-600 hover:bg-primary-500-50 transition-all duration-300 md:hidden"
             aria-label="Toggle menu"
           >
             {mobileOpen ? (
