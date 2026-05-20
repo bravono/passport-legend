@@ -18,7 +18,7 @@ export default function About() {
             className="absolute inset-0 bg-cover bg-center opacity-30"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop')",
+                "url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2070&auto=format&fit=crop')",
             }}
           />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--color-accent-600),transparent_50%)] opacity-20" />
@@ -78,38 +78,38 @@ export default function About() {
 
         {/* Mission & Values */}
         <ScrollReveal direction="up" delay={0.2}>
-          <Section className="bg-neutral-50 dark:bg-neutral-900">
+          <Section className="bg-primary-500 text-white">
             <Container>
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-4">
+                <h2 className="text-3xl font-bold text-white mb-4">
                   Our Mission & Values
                 </h2>
               </div>
 
               <div className="grid gap-6 md:grid-cols-3">
-                <Card>
-                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3">
+                <Card className="bg-primary-600/30 border-primary-400/20 text-white">
+                  <h3 className="text-xl font-bold text-white mb-3">
                     Integrity
                   </h3>
-                  <p className="text-neutral-600 dark:text-neutral-400">
+                  <p className="text-primary-100">
                     Complete transparency and honesty in all our dealings. We
                     build lasting relationships on trust and ethical practices.
                   </p>
                 </Card>
-                <Card>
-                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3">
+                <Card className="bg-primary-600/30 border-primary-400/20 text-white">
+                  <h3 className="text-xl font-bold text-white mb-3">
                     Excellence
                   </h3>
-                  <p className="text-neutral-600 dark:text-neutral-400">
+                  <p className="text-primary-100">
                     Committed to delivering the highest standard of service. We
                     continuously improve our processes and expertise.
                   </p>
                 </Card>
-                <Card>
-                  <h3 className="text-xl font-bold text-neutral-900 dark:text-white mb-3">
+                <Card className="bg-primary-600/30 border-primary-400/20 text-white">
+                  <h3 className="text-xl font-bold text-white mb-3">
                     Global Perspective
                   </h3>
-                  <p className="text-neutral-600 dark:text-neutral-400">
+                  <p className="text-primary-100">
                     Deep understanding of international regulations and diverse
                     client needs across cultures and jurisdictions.
                   </p>
@@ -168,25 +168,25 @@ export default function About() {
 
         {/* Office Locations */}
         <ScrollReveal direction="up" delay={0.2}>
-          <Section className="bg-neutral-50 dark:bg-neutral-900">
+          <Section className="bg-primary-500 text-white">
             <Container>
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-4">
+                <h2 className="text-3xl font-bold text-white mb-4">
                   Global Offices
                 </h2>
-                <p className="text-neutral-600 dark:text-neutral-300">
+                <p className="text-primary-100">
                   Visit us at any of our international locations
                 </p>
               </div>
 
               <div className="grid gap-6 md:grid-cols-2">
-                <Card>
-                  <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-4">
+                <Card className="bg-primary-600/30 border-primary-400/20 text-white">
+                  <h3 className="text-lg font-bold text-white mb-4">
                     UK, Harlow
                   </h3>
-                  <div className="space-y-3 text-neutral-600 dark:text-neutral-400">
+                  <div className="space-y-3 text-primary-100">
                     <p>
-                      <strong>Address:</strong>
+                      <strong className="text-white">Address:</strong>
                       <br />
                       1st floor
                       <br />
@@ -194,36 +194,36 @@ export default function About() {
                     </p>
 
                     <p>
-                      <strong>Phone:</strong>
+                      <strong className="text-white">Phone:</strong>
                       <br />
                       +234 708 143 2919
                     </p>
                     <p>
-                      <strong>Hours:</strong>
+                      <strong className="text-white">Hours:</strong>
                       <br />
                       Mon-Fri: 9 AM - 6 PM WAT
                     </p>
                   </div>
                 </Card>
-                <Card>
-                  <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-4">
+                <Card className="bg-primary-600/30 border-primary-400/20 text-white">
+                  <h3 className="text-lg font-bold text-white mb-4">
                     Abuja, Nigeria
                   </h3>
-                  <div className="space-y-3 text-neutral-600 dark:text-neutral-400">
+                  <div className="space-y-3 text-primary-100">
                     <p>
-                      <strong>Address:</strong>
+                      <strong className="text-white">Address:</strong>
                       <br />
                       7th floor
                       <br />
                       Churchgate tower, Central Business District,
                     </p>
                     <p>
-                      <strong>Phone:</strong>
+                      <strong className="text-white">Phone:</strong>
                       <br />
                       +234 708 143 2919
                     </p>
                     <p>
-                      <strong>Hours:</strong>
+                      <strong className="text-white">Hours:</strong>
                       <br />
                       Mon-Fri: 9 AM - 6 PM WAT
                     </p>
@@ -236,14 +236,14 @@ export default function About() {
 
         {/* Team Stats */}
         <ScrollReveal direction="up" delay={0.2}>
-          <Section className="bg-primary-500-50 dark:bg-primary-500/20">
+          <Section className="bg-white dark:bg-neutral-800">
             <Container>
               <div className="grid gap-8 text-center md:grid-cols-4">
                 <div>
                   <p className="text-4xl font-bold text-primary-600 dark:text-primary-500">
                     50+
                   </p>
-                  <p className="text-neutral-600 dark:text-neutral-300">
+                  <p className="text-neutral-600 dark:text-neutral-400">
                     Certified Advisors
                   </p>
                 </div>
@@ -251,7 +251,7 @@ export default function About() {
                   <p className="text-4xl font-bold text-primary-600 dark:text-primary-500">
                     15+
                   </p>
-                  <p className="text-neutral-600 dark:text-neutral-300">
+                  <p className="text-neutral-600 dark:text-neutral-400">
                     Years Experience
                   </p>
                 </div>
@@ -259,7 +259,7 @@ export default function About() {
                   <p className="text-4xl font-bold text-primary-600 dark:text-primary-500">
                     5000+
                   </p>
-                  <p className="text-neutral-600 dark:text-neutral-300">
+                  <p className="text-neutral-600 dark:text-neutral-400">
                     Clients Served
                   </p>
                 </div>
@@ -267,7 +267,7 @@ export default function About() {
                   <p className="text-4xl font-bold text-primary-600 dark:text-primary-500">
                     6
                   </p>
-                  <p className="text-neutral-600 dark:text-neutral-300">
+                  <p className="text-neutral-600 dark:text-neutral-400">
                     Continents
                   </p>
                 </div>
