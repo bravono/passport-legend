@@ -25,6 +25,7 @@ import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
 import { OverviewSection } from "@/components/OverviewSection";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { CountryImage } from "@/components/CountryImage";
 import { getCountryBySlug, countries } from "@/lib/data/countries-residence";
 
 interface Props {
@@ -217,13 +218,7 @@ export default async function ResidenceByInvestmentPage({ params }: Props) {
                     </div>
                   </div>
                   <div className="relative">
-                    <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl shadow-neutral-500/10">
-                      <img
-                        src={country.heroImage}
-                        alt={country.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+                    <CountryImage src={country.heroImage} alt={country.name} />
                   </div>
                 </div>
               </Container>

@@ -251,10 +251,10 @@ export default function Contact() {
                         Email
                       </h3>
                       <a
-                        href="mailto:hello@passportlegend.com"
+                        href="mailto:khadijat.abdul@passport-legend.com"
                         className="text-primary-600 dark:text-primary-500 hover:underline"
                       >
-                        hello@passportlegend.com
+                        khadijat.abdul@passport-legend.com
                       </a>
                       <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
                         We respond to all inquiries within 24 hours

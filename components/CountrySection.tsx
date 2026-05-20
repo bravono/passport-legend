@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/Container";
 import { Card } from "@/components/Card";
 import { ChevronRight } from "lucide-react";
@@ -9,6 +10,8 @@ import { ChevronRight } from "lucide-react";
 interface Country {
   id: string;
   name: string;
+  slug: string;
+  type: string;
   shortDescription: string;
   heroImage: string;
   sections?: {
@@ -84,30 +87,50 @@ export function CountrySection({ countries }: CountrySectionProps) {
                   </div>
 
                   <div className="pt-4">
-                    <button className="inline-flex items-center text-primary-500 font-bold hover:text-accent-600 transition-colors group">
+                    <Link
+                      href={
+                        selected.type === "citizenship"
+                          ? `/citizenship-by-investment/${selected.slug}`
+                          : `/residence-by-investment/${selected.slug}`
+                      }
+                      className="inline-flex items-center text-primary-500 font-bold hover:text-accent-600 transition-colors group"
+                    >
                       Learn More About {selected.name}
                       <ChevronRight
                         size={20}
                         className="ml-1 group-hover:translate-x-1 transition-transform"
                       />
-                    </button>
+                    </Link>
                   </div>
                 </div>
 
                 {/* Image side */}
-                <div className="flex-1 relative h-64 md:h-auto min-h-[300px] overflow-hidden">
-                  <Image
-                    src={selected.heroImage}
-                    alt={selected.name}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-l from-primary-900/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-8 text-white bg-gradient-to-t from-primary-900/80 to-transparent">
-                    <p className="text-sm font-light tracking-widest uppercase">
-                      Premium Destination
-                    </p>
-                    <p className="text-xl font-bold">{selected.name}</p>
+                <div className="flex-1 relative h-72 md:h-auto min-h-[350px] bg-primary-950 p-8 flex items-center justify-center">
+                  {/* Decorative background grid/elements */}
+                  <div className="absolute inset-0 opacity-10 bg-[radial-gradient(rgba(212,175,55,0.25)_1px,transparent_1px)] [background-size:16px_16px]" />
+                  <div className="absolute top-10 right-10 w-32 h-32 bg-accent-500/10 rounded-full blur-2xl" />
+                  
+                  {/* Layered Image Container */}
+                  <div className="relative w-full h-full min-h-[250px] group/img max-w-[320px] md:max-w-none">
+                    {/* Golden accent background card */}
+                    <div className="absolute inset-0 bg-accent-500/20 rounded-2xl transform translate-x-2 translate-y-2 rotate-2 transition-transform duration-500 group-hover/img:translate-x-1 group-hover/img:translate-y-1 group-hover/img:rotate-1" />
+                    
+                    {/* Main Image Frame */}z
+                    <div className="absolute inset-0 rounded-2xl overflow-hidden border border-primary-800 shadow-xl bg-primary-900 transition-all duration-500 group-hover/img:-translate-x-1 group-hover/img:-translate-y-1 group-hover/img:-rotate-1">
+                      <Image
+                        src={selected.heroImage}
+                        alt={selected.name}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover/img:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary-950/80 via-transparent to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <p className="text-[10px] font-light tracking-widest text-accent-400 uppercase mb-1">
+                          Premium Destination
+                        </p>
+                        <p className="text-lg font-bold">{selected.name}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Card>
