@@ -3,10 +3,10 @@
 :root {
   /* Main Theme - Bright & Premium */
   --background: #ffffff;
-  --foreground: #1b365d; /* Navy Blue */
+  --foreground: #0c2043; /* Navy Blue */
   --border: #e5e7eb;
-  --primary: #1b365d;
-  --accent: #ddad11;
+  --primary: #0c2043;
+  --accent: #e3ab50;
 }
 
 @theme inline {
@@ -17,35 +17,35 @@
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-serif);
 
-  --color-primary-50: #f0f4f8;
-  --color-primary-100: #d9e2ec;
-  --color-primary-200: #bcccdc;
-  --color-primary-300: #9fb3c8;
-  --color-primary-400: #829ab1;
-  --color-primary-500: #1b365d;
-  --color-primary-600: #183154;
-  --color-primary-700: #152946;
-  --color-primary-800: #112139;
-  --color-primary-900: #0e1a2b;
+  --color-primary-50: #f0f3f6;
+  --color-primary-100: #d9e0e9;
+  --color-primary-200: #b9c6d6;
+  --color-primary-300: #8ea5bf;
+  --color-primary-400: #5d7ca4;
+  --color-primary-500: #0c2043;
+  --color-primary-600: #0a1b39;
+  --color-primary-700: #08162e;
+  --color-primary-800: #061022;
+  --color-primary-900: #040916;
 
-  --color-accent-50: #fcf9f2;
-  --color-accent-100: #faf3e5;
-  --color-accent-200: #f5e7cc;
-  --color-accent-300: #f0dbb3;
-  --color-accent-400: #e6c180;
-  --color-accent-500: #d4af37;
-  --color-accent-600: #bf9d32;
-  --color-accent-700: #a98b2c;
-  --color-accent-800: #947a27;
-  --color-accent-900: #7f6821;
+  --color-accent-50: #fff9ed;
+  --color-accent-100: #fef1db;
+  --color-accent-200: #fde2b6;
+  --color-accent-300: #fbcf8a;
+  --color-accent-400: #f8b85b;
+  --color-accent-500: #e3ab50;
+  --color-accent-600: #cc9a48;
+  --color-accent-700: #aa803c;
+  --color-accent-800: #896730;
+  --color-accent-900: #705427;
 
   --shadow-premium:
-    0 10px 30px -5px rgba(27, 54, 93, 0.1),
-    0 4px 10px -2px rgba(212, 175, 55, 0.05);
+    0 10px 30px -5px rgba(12, 32, 67, 0.1),
+    0 4px 10px -2px rgba(227, 171, 80, 0.05);
   --shadow-premium-hover:
-    0 20px 40px -5px rgba(27, 54, 93, 0.2),
-    0 10px 20px -2px rgba(212, 175, 55, 0.1);
-  --shadow-glass: 0 8px 32px 0 rgba(27, 54, 93, 0.1);
+    0 20px 40px -5px rgba(12, 32, 67, 0.2),
+    0 10px 20px -2px rgba(227, 171, 80, 0.1);
+  --shadow-glass: 0 8px 32px 0 rgba(12, 32, 67, 0.1);
 
   --transition-timing-function-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --animate-shimmer: shimmer 2.5s infinite linear;

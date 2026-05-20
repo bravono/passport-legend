@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="theme-color" content="#1b365d" />
+        <meta name="theme-color" content="#0c2043" />
       </head>
       <body
         className={`${roboto.variable} min-h-screen bg-white text-primary-500 antialiased`}

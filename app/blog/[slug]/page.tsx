@@ -159,7 +159,7 @@ export default async function PostDetail({ params }: PostProps) {
                           className="rounded-[2rem] shadow-premium w-full object-cover border border-primary-50"
                         />
                         {props.alt && (
-                          <p className="text-center text-sm text-gray-400 mt-4 italic">
+                          <p className="text-center text-sm text-primary-400 mt-4 italic">
                             {props.alt}
                           </p>
                         )}
@@ -177,7 +177,7 @@ export default async function PostDetail({ params }: PostProps) {
                     p: ({ node, ...props }) => (
                       <p
                         {...props}
-                        className="text-gray-700 leading-relaxed text-xl mb-8"
+                        className="text-primary-500/80 leading-relaxed text-xl mb-8"
                       />
                     ),
                     ul: ({ node, ...props }) => (
@@ -189,7 +189,7 @@ export default async function PostDetail({ params }: PostProps) {
                     li: ({ node, ...props }) => (
                       <li
                         {...props}
-                        className="flex gap-4 text-gray-700 text-lg"
+                        className="flex gap-4 text-primary-500/80 text-lg"
                       >
                         <div className="mt-2 w-2 h-2 rounded-full bg-primary-500 shrink-0" />
                         {props.children}

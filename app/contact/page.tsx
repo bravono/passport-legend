@@ -169,7 +169,7 @@ export default function Contact() {
               <div className="grid gap-12 md:grid-cols-2">
                 {/* Form */}
                 <div>
-                  <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6">
+                  <h2 className="text-2xl font-bold text-primary-500 mb-6">
                     Contact Form
                   </h2>
 
@@ -201,7 +201,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="John Doe"
-                        className="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-700 text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        className="w-full px-4 py-2 border border-neutral-300 rounded-lg bg-white text-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
                       />
                     </div>
 
@@ -215,7 +215,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="john@example.com"
-                        className="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-700 text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        className="w-full px-4 py-2 border border-neutral-300 rounded-lg bg-white text-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
                       />
                     </div>
 
@@ -229,7 +229,7 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="+1 (555) 123-4567"
-                        className="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-700 text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        className="w-full px-4 py-2 border border-neutral-300 rounded-lg bg-white text-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
                       />
                     </div>
 
@@ -241,7 +241,7 @@ export default function Contact() {
                         name="country"
                         value={formData.country}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-700 text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        className="w-full px-4 py-2 border border-neutral-300 rounded-lg bg-white text-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
                       >
                         <option value="">-- Select a country --</option>
                         {countries.map((country) => (
@@ -262,7 +262,7 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder="Tell us about your citizenship or residency goals..."
                         rows={5}
-                        className="w-full px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-700 text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        className="w-full px-4 py-2 border border-neutral-300 rounded-lg bg-white text-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
                       />
                     </div>
 
@@ -280,13 +280,13 @@ export default function Contact() {
 
                 {/* Contact Info */}
                 <div>
-                  <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6">
+                  <h2 className="text-2xl font-bold text-primary-500 mb-6">
                     Contact Information
                   </h2>
 
                   <div className="space-y-6">
                     <Card>
-                      <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-2">
+                      <h3 className="text-lg font-semibold text-primary-500 mb-2">
                         Email
                       </h3>
                       <a
@@ -301,7 +301,7 @@ export default function Contact() {
                     </Card>
 
                     <Card>
-                      <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-2">
+                      <h3 className="text-lg font-semibold text-primary-500 mb-2">
                         Phone
                       </h3>
                       <a
@@ -316,19 +316,19 @@ export default function Contact() {
                     </Card>
 
                     <Card>
-                      <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-3">
+                      <h3 className="text-lg font-semibold text-primary-500 mb-3">
                         Office Addresses
                       </h3>
-                      <div className="space-y-3 text-sm text-primary-500 dark:text-neutral-400">
+                      <div className="space-y-3 text-sm text-primary-500/80">
                         <div>
-                          <p className="font-semibold text-neutral-900 dark:text-white">
+                          <p className="font-semibold text-primary-500">
                             1st floor,
                           </p>
                           <p>North westgate house, Harlow, Essex</p>
                           <p>United Kingdom</p>
                         </div>
                         <div>
-                          <p className="font-semibold text-neutral-900 dark:text-white">
+                          <p className="font-semibold text-primary-500">
                             7th floor
                           </p>
                           <p>Churchgate tower, Central Business District,</p>
@@ -348,7 +348,7 @@ export default function Contact() {
           <Section className="bg-neutral-50 dark:bg-neutral-900">
             <Container>
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-neutral-900 dark:text-white">
+                <h2 className="text-3xl font-bold text-primary-500">
                   Frequently Asked Questions
                 </h2>
               </div>
@@ -373,7 +373,7 @@ export default function Contact() {
                   },
                 ].map((faq, index) => (
                   <Card key={index}>
-                    <h3 className="font-semibold text-neutral-900 dark:text-white mb-2">
+                    <h3 className="font-semibold text-primary-500 mb-2">
                       {faq.q}
                     </h3>
                     <p className="text-primary-500 dark:text-neutral-400">

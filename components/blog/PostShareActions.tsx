@@ -30,7 +30,7 @@ export default function PostShareActions({
   return (
     <button
       onClick={handleShare}
-      className="flex items-center gap-2 text-gray-400 hover:text-accent-500 transition-colors"
+      className="flex items-center gap-2 text-primary-400 hover:text-accent-500 transition-colors"
     >
       <Share2 className="w-4 h-4" />
       <span className="text-sm font-bold">Share</span>

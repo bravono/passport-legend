@@ -50,7 +50,7 @@ export default function PostCard({ post }: PostCardProps) {
           <Link href={`/blog/${slug}`}>{title}</Link>
         </h3>
 
-        <p className="text-gray-500 text-sm mb-8 line-clamp-3 leading-relaxed">
+        <p className="text-primary-500/70 text-sm mb-8 line-clamp-3 leading-relaxed">
           {excerpt}
         </p>
 

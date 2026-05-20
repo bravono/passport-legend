@@ -10,29 +10,29 @@ const config: Config = {
       colors: {
         // Primary: Navy Blue
         primary: {
-          50: "#f0f4f8",
-          100: "#d9e2ec",
-          200: "#bcccdc",
-          300: "#9fb3c8",
-          400: "#829ab1",
-          500: "#1b365d", // Main navy
-          600: "#183154",
-          700: "#152946",
-          800: "#112139",
-          900: "#0e1a2b",
+          50: "#f0f3f6",
+          100: "#d9e0e9",
+          200: "#b9c6d6",
+          300: "#8ea5bf",
+          400: "#5d7ca4",
+          500: "#0c2043", // Main navy
+          600: "#0a1b39",
+          700: "#08162e",
+          800: "#061022",
+          900: "#040916",
         },
         // Accent: Gold
         accent: {
-          50: "#fcf9f2",
-          100: "#faf3e5",
-          200: "#f5e7cc",
-          300: "#f0dbb3",
-          400: "#e6c180",
-          500: "#d4af37", // Main gold
-          600: "#bf9d32",
-          700: "#a98b2c",
-          800: "#947a27",
-          900: "#7f6821",
+          50: "#fff9ed",
+          100: "#fef1db",
+          200: "#fde2b6",
+          300: "#fbcf8a",
+          400: "#f8b85b",
+          500: "#e3ab50", // Main gold
+          600: "#cc9a48",
+          700: "#aa803c",
+          800: "#896730",
+          900: "#705427",
         },
         // Neutrals
         neutral: {
@@ -55,10 +55,10 @@ const config: Config = {
       },
       boxShadow: {
         premium:
-          "0 10px 30px -5px rgba(27, 54, 93, 0.1), 0 4px 10px -2px rgba(212, 175, 55, 0.05)",
+          "0 10px 30px -5px rgba(12, 32, 67, 0.1), 0 4px 10px -2px rgba(227, 171, 80, 0.05)",
         "premium-hover":
-          "0 20px 40px -5px rgba(27, 54, 93, 0.2), 0 10px 20px -2px rgba(212, 175, 55, 0.1)",
-        glass: "0 8px 32px 0 rgba(27, 54, 93, 0.1)",
+          "0 20px 40px -5px rgba(12, 32, 67, 0.2), 0 10px 20px -2px rgba(227, 171, 80, 0.1)",
+        glass: "0 8px 32px 0 rgba(12, 32, 67, 0.1)",
       },
       borderRadius: {
         xl: "1rem",

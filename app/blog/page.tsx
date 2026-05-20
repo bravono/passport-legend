@@ -88,7 +88,7 @@ export default function BlogHub() {
                       </div>
                     </div>
                     <div className="p-10 bg-white">
-                      <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                      <p className="text-primary-500/70 text-lg leading-relaxed mb-8">
                         {featuredPost.excerpt}
                       </p>
                       <div className="flex items-center justify-between">
@@ -128,7 +128,7 @@ export default function BlogHub() {
               )}
 
               <div className="space-y-12">
-                <div className="flex items-center justify-between border-b border-gray-100 pb-6">
+                <div className="flex items-center justify-between border-b border-primary-100 pb-6">
                   <h2
                     className={`${outfit.className} text-3xl font-black text-primary-500`}
                   >

@@ -323,7 +323,7 @@ export default function Home() {
                       className={`flex-1 group ${isLeft ? "md:text-right" : "md:text-left"}`}
                     >
                       <div
-                        className={`p-8 md:p-10 rounded-3xl border border-primary-500/20 bg-primary-500 shadow-lg hover:shadow-premium-hover transition-all duration-500 ${isLeft ? "md:ml-auto" : "md:mr-auto"} max-w-lg`}
+                        className={`p-8 md:p-10 rounded-3xl border border-primary-500/20 bg-primary-600 shadow-lg hover:shadow-premium-hover transition-all duration-500 ${isLeft ? "md:ml-auto" : "md:mr-auto"} max-w-lg`}
                       >
                         <div
                           className={`flex items-center gap-4 mb-6 ${isLeft ? "md:flex-row-reverse" : ""}`}
@@ -346,7 +346,7 @@ export default function Home() {
                     {/* Center Step Number */}
                     <div className="relative z-10 shrink-0 order-first md:order-none">
                       <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary-800 to-primary-900 shadow-xl flex items-center justify-center border-4 border-accent-500">
-                        <span className="text-xl font-bold text-accent-400">
+                        <span className="text-xl font-bold text-accent-500">
                           {step.step}
                         </span>
                       </div>
@@ -374,10 +374,12 @@ export default function Home() {
               </div>
               <Button
                 variant="outline"
-                className="border-accent-500/30 !text-white [&_a]:!text-white hover:bg-accent-500/10"
+                className="border-accent-500/30 !text-white hover:bg-accent-500/10"
                 asChild
               >
-                <Link href="/blog">View All Articles</Link>
+                <Link href="/blog" className="!text-white">
+                  View All Articles
+                </Link>
               </Button>
             </div>
 

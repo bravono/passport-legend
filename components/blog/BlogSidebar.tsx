@@ -89,7 +89,7 @@ export default function BlogSidebar() {
             <Link
               key={tag}
               href={`/blog/tag/${tag.toLowerCase()}`}
-              className="px-4 py-2 bg-gray-50 hover:bg-primary-500-500 hover:text-white text-gray-600 text-sm font-semibold rounded-2xl transition-all duration-300"
+              className="px-4 py-2 bg-primary-50 hover:bg-primary-500 hover:text-white text-primary-500 text-sm font-semibold rounded-2xl transition-all duration-300"
             >
               #{tag}
             </Link>
