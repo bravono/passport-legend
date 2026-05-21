@@ -85,7 +85,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:khadijat.abdul@passport-legend.com"
+                  href="mailto:info@passport-legend.com"
                   className="text-primary-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-500"
                 >
                   Email Us
@@ -108,7 +108,13 @@ export function Footer() {
               Contact
             </h3>
             <address className="not-italic text-sm space-y-2 text-primary-500 dark:text-neutral-400">
-              <p>1st floor,</p>
+              <p className="font-semibold text-primary-500">7th floor</p>
+              <p>Churchgate tower, Central Business District,</p>
+              <p>Abuja, Nigeria</p>
+            </address>
+            <br />
+            <address className="not-italic text-sm space-y-2 text-primary-500 dark:text-neutral-400">
+              <p className="font-semibold text-primary-500">1th floor</p>
               <p>North westgate house, Harlow, Essex</p>
               <p>United Kingdom</p>
             </address>

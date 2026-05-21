@@ -290,10 +290,10 @@ export default function Contact() {
                         Email
                       </h3>
                       <a
-                        href="mailto:khadijat.abdul@passport-legend.com"
+                        href="mailto:info@passport-legend.com"
                         className="text-primary-600 dark:text-primary-500 hover:underline"
                       >
-                        khadijat.abdul@passport-legend.com
+                        info@passport-legend.com
                       </a>
                       <p className="text-sm text-primary-400 dark:text-neutral-400 mt-2">
                         We respond to all inquiries within 24 hours
@@ -322,17 +322,17 @@ export default function Contact() {
                       <div className="space-y-3 text-sm text-primary-500/80">
                         <div>
                           <p className="font-semibold text-primary-500">
-                            1st floor,
-                          </p>
-                          <p>North westgate house, Harlow, Essex</p>
-                          <p>United Kingdom</p>
-                        </div>
-                        <div>
-                          <p className="font-semibold text-primary-500">
                             7th floor
                           </p>
                           <p>Churchgate tower, Central Business District,</p>
                           <p>Abuja, Nigeria</p>
+                        </div>
+                        <div>
+                          <p className="font-semibold text-primary-500">
+                            1st floor,
+                          </p>
+                          <p>North westgate house, Harlow, Essex</p>
+                          <p>United Kingdom</p>
                         </div>
                       </div>
                     </Card>
